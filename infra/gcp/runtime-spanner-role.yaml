@@ -1,0 +1,14 @@
+title: RegImpact Spanner Runtime
+description: Runtime reads and transactional demo-session writes; no schema or IAM administration.
+stage: GA
+includedPermissions:
+  - spanner.databases.get
+  - spanner.databases.beginReadOnlyTransaction
+  - spanner.databases.beginOrRollbackReadWriteTransaction
+  - spanner.databases.read
+  - spanner.databases.select
+  - spanner.databases.write
+  - spanner.sessions.create
+  - spanner.sessions.delete
+  - spanner.sessions.get
+  - spanner.sessions.list

@@ -1,0 +1,79 @@
+{
+  "dataset_id": "synthetic-scoring-test",
+  "run_id": "SOFTWARE-TEST-1",
+  "execution_mode": "SYNTHETIC_SOFTWARE_TEST",
+  "model": null,
+  "started_at": "2026-01-02T00:00:00Z",
+  "completed_at": "2026-01-02T00:00:00Z",
+  "started_from_commit": null,
+  "labels_manifest_sha256": null,
+  "cases": [
+    {
+      "id": "CASE-1",
+      "raw_output": {
+        "mandate_ids": [
+          "M-A"
+        ],
+        "evidence": [
+          {
+            "source_id": "DOC-1",
+            "segment_id": "S-1",
+            "excerpt": "gift review"
+          },
+          {
+            "source_id": "DOC-1",
+            "segment_id": "S-1",
+            "excerpt": "invented excerpt"
+          }
+        ],
+        "mapping_candidates": {
+          "M-A": [
+            "P-A"
+          ],
+          "M-B": [
+            "P-X",
+            "P-B"
+          ],
+          "M-C": []
+        },
+        "changes": {
+          "M-A": "MODIFIED",
+          "M-B": "MODIFIED",
+          "M-C": "UNCHANGED"
+        },
+        "carry_forward_ids": [
+          "M-A",
+          "M-C"
+        ],
+        "ask": {
+          "run_id": "ASK-1",
+          "answer": "This is proposed. [M-A]",
+          "tool_results": [
+            {
+              "run_id": "ASK-1",
+              "tool": "get_lineage",
+              "facts": [
+                {
+                  "text": "This is proposed.",
+                  "entity_ids": [
+                    "M-A"
+                  ],
+                  "legal_status": "PROPOSED"
+                }
+              ]
+            }
+          ],
+          "claims": [
+            {
+              "text": "This is proposed.",
+              "entity_ids": [
+                "M-A"
+              ],
+              "legal_status": "PROPOSED"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+name: Quality gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -c backend/requirements-gcp.lock -e './backend[dev,gcp]'
+      - run: python -m pip check
+      - run: python -m ruff check --config backend/pyproject.toml backend scripts data/public/fetch_sources.py
+      - run: python -m pytest backend/tests -q
+      - run: python scripts/export_contracts.py --check
+      - run: python scripts/scan_secrets.py
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test -- --run
+      - run: npm run build

@@ -1,0 +1,15 @@
+# Non-secret environment for the dedicated demonstration project.
+# Replace the bucket and optional Model Armor template after verifying actual resources.
+REGIMPACT_MODE: gcp
+REGIMPACT_ENABLE_LIVE_AI: "true"
+REGIMPACT_AI_CALLS_PER_MINUTE: "5"
+REGIMPACT_AI_CALLS_PER_DAY: "100"
+GCP_PROJECT_ID: regimpact-ai
+GCP_REGION: asia-south1
+VERTEX_LOCATION: global
+GEMINI_MODEL: gemini-3.5-flash
+EMBEDDING_MODEL: gemini-embedding-001
+SPANNER_INSTANCE: regimpact-ai-spanner-1
+SPANNER_DATABASE: regimpact
+GCS_BUCKET: REPLACE_WITH_VERIFIED_SOURCE_BUCKET
+MODEL_ARMOR_TEMPLATE: ""

@@ -1,0 +1,142 @@
+{
+  "disclosure": "Original SYNTHETIC_HACKATHON policies, controls and risk taxonomy; no employer data.",
+  "nodes": [
+    {
+      "id": "PR-GIFT-01",
+      "title": "Responsible gifts and customer inducements",
+      "type": "POLICY_REQUIREMENT",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Gifts and promotional incentives must not pressure customers to purchase. Campaign owners review value, messaging and eligibility, including telemarketing scripts, and keep an approval record."
+    },
+    {
+      "id": "PR-IDENTITY-01",
+      "title": "Transparent representative identification",
+      "type": "POLICY_REQUIREMENT",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Representatives identify themselves, their institution and relevant third-party relationships before customer prospecting. Identification checks do not by themselves establish marketing-purpose disclosure or consent."
+    },
+    {
+      "id": "PR-CONSENT-01",
+      "title": "Permission before marketing contact",
+      "type": "POLICY_REQUIREMENT",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Disclose the purpose of marketing contact and obtain permission before prospecting. Record verbal, written or event-registration consent and respect withdrawals across in-person and telephone channels."
+    },
+    {
+      "id": "CO-GIFT-01",
+      "title": "Campaign gift approval and monitoring",
+      "type": "CONTROL_OBJECTIVE",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Review gift eligibility and campaign messaging before release; sample approved campaigns for inducement concerns and retain review evidence."
+    },
+    {
+      "id": "CO-GIFT-02",
+      "title": "Sales and telemarketing script assurance",
+      "type": "CONTROL_OBJECTIVE",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Check sales and telephone scripts for inappropriate gift inducements; record assurance findings and remediation decisions."
+    },
+    {
+      "id": "CO-IDENTITY-01",
+      "title": "Representative identification spot checks",
+      "type": "CONTROL_OBJECTIVE",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Sample prospecting interactions for representative and institution identification; retain results and refer exceptions for review."
+    },
+    {
+      "id": "RT-CONDUCT",
+      "title": "Conduct risk",
+      "type": "RISK_TYPE",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Risk of unfair customer outcomes caused by inappropriate marketing or sales conduct."
+    },
+    {
+      "id": "RD-INDUCEMENT",
+      "title": "Inappropriate sales inducement",
+      "type": "RISK_DRIVER",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Gifts, incentives or pressure may inappropriately influence a purchase decision."
+    },
+    {
+      "id": "RD-TRANSPARENCY",
+      "title": "Unclear customer communication",
+      "type": "RISK_DRIVER",
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "text": "Customers may not understand the representative identity, institution relationship, marketing purpose or consent choice."
+    }
+  ],
+  "edges": [
+    {
+      "id": "E-GIFT-CONTROL-01",
+      "source_id": "PR-GIFT-01",
+      "target_id": "CO-GIFT-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: gift approval and monitoring implements the gifts policy.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    },
+    {
+      "id": "E-GIFT-CONTROL-02",
+      "source_id": "PR-GIFT-01",
+      "target_id": "CO-GIFT-02",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: script assurance implements responsible gift communication.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    },
+    {
+      "id": "E-IDENTITY-CONTROL-01",
+      "source_id": "PR-IDENTITY-01",
+      "target_id": "CO-IDENTITY-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: spot checks implement representative identification policy.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    }
+  ]
+}

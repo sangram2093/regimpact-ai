@@ -1,0 +1,16 @@
+# Non-secret configuration for the user's dedicated competition demonstration.
+# Cloud Run authenticates through regimpact-runtime; never add credential files here.
+REGIMPACT_MODE: gcp
+REGIMPACT_ENABLE_LIVE_AI: "true"
+REGIMPACT_AI_CALLS_PER_MINUTE: "5"
+REGIMPACT_AI_CALLS_PER_DAY: "100"
+GCP_PROJECT_ID: regimpact-ai
+GCP_REGION: asia-south1
+VERTEX_LOCATION: global
+GEMINI_MODEL: gemini-3.5-flash
+EMBEDDING_MODEL: gemini-embedding-001
+SPANNER_INSTANCE: regimpact-ai-spanner-1
+SPANNER_DATABASE: regimpact
+GCS_BUCKET: regimpact-ai-sources-61760046387
+FIRESTORE_DATABASE: "(default)"
+MODEL_ARMOR_TEMPLATE: projects/regimpact-ai/locations/asia-south1/templates/regimpact-ask

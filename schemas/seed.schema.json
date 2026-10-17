@@ -1,0 +1,880 @@
+{
+  "$defs": {
+    "BaselineEdge": {
+      "additionalProperties": false,
+      "properties": {
+        "data_origin": {
+          "const": "SYNTHETIC_HACKATHON",
+          "default": "SYNTHETIC_HACKATHON",
+          "title": "Data Origin",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "provenance": {
+          "$ref": "#/$defs/EdgeProvenance"
+        },
+        "relationship": {
+          "$ref": "#/$defs/Relationship"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "status": {
+          "default": "APPROVED",
+          "enum": [
+            "APPROVED",
+            "PROPOSED",
+            "REJECTED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "target_id": {
+          "title": "Target Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_id",
+        "target_id",
+        "relationship",
+        "provenance"
+      ],
+      "title": "BaselineEdge",
+      "type": "object"
+    },
+    "CatalogNode": {
+      "additionalProperties": false,
+      "properties": {
+        "data_origin": {
+          "const": "SYNTHETIC_HACKATHON",
+          "default": "SYNTHETIC_HACKATHON",
+          "title": "Data Origin",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "default": "",
+          "title": "Text",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/NodeType"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "type"
+      ],
+      "title": "CatalogNode",
+      "type": "object"
+    },
+    "ChangeItem": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Baseline Evidence Ids",
+          "type": "array"
+        },
+        "change_nature": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Change Nature",
+          "type": "array"
+        },
+        "classification": {
+          "$ref": "#/$defs/Classification"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "is_proposal": {
+          "const": true,
+          "default": true,
+          "title": "Is Proposal",
+          "type": "boolean"
+        },
+        "mandate_id": {
+          "title": "Mandate Id",
+          "type": "string"
+        },
+        "proposal_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Proposal Evidence Ids",
+          "type": "array"
+        },
+        "safety_checks": {
+          "$ref": "#/$defs/SafetyChecks"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "classification",
+        "change_nature",
+        "summary",
+        "mandate_id",
+        "baseline_evidence_ids",
+        "proposal_evidence_ids",
+        "safety_checks"
+      ],
+      "title": "ChangeItem",
+      "type": "object"
+    },
+    "ChangeProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_version_id": {
+          "title": "Baseline Version Id",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "legal_force_after": {
+          "const": "PROPOSED_BINDING",
+          "default": "PROPOSED_BINDING",
+          "title": "Legal Force After",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "status": {
+          "const": "PROPOSED",
+          "default": "PROPOSED",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_id",
+        "baseline_version_id"
+      ],
+      "title": "ChangeProposal",
+      "type": "object"
+    },
+    "Classification": {
+      "enum": [
+        "UNCHANGED",
+        "MODIFIED",
+        "NEW",
+        "REMOVED",
+        "UNRESOLVED"
+      ],
+      "title": "Classification",
+      "type": "string"
+    },
+    "EdgeProvenance": {
+      "additionalProperties": false,
+      "properties": {
+        "agent_run_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Agent Run Id"
+        },
+        "alternative": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Alternative"
+        },
+        "alternative_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Alternative Reason"
+        },
+        "decision_source": {
+          "default": "GOLDEN_LABELS",
+          "enum": [
+            "GOLDEN_LABELS",
+            "HUMAN_REVIEW"
+          ],
+          "title": "Decision Source",
+          "type": "string"
+        },
+        "lexical_rank": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lexical Rank"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model"
+        },
+        "prompt_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Version"
+        },
+        "proposed_by": {
+          "default": "SEED",
+          "enum": [
+            "SEED",
+            "DETERMINISTIC_RETRIEVAL",
+            "AI"
+          ],
+          "title": "Proposed By",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        },
+        "reviewer": {
+          "default": "Curated demonstration fixture",
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "rrf_rank": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rrf Rank"
+        },
+        "rrf_score": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rrf Score"
+        },
+        "vector_rank": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vector Rank"
+        }
+      },
+      "required": [
+        "reason"
+      ],
+      "title": "EdgeProvenance",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "data_origin": {
+          "enum": [
+            "PUBLIC_REGULATORY_SOURCE",
+            "SYNTHETIC_HACKATHON"
+          ],
+          "title": "Data Origin",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        },
+        "paragraph_ref": {
+          "title": "Paragraph Ref",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "text_kind": {
+          "enum": [
+            "VERIFIED_EXCERPT",
+            "PARAPHRASE"
+          ],
+          "title": "Text Kind",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "verification_status": {
+          "title": "Verification Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_id",
+        "title",
+        "source_url",
+        "paragraph_ref",
+        "text",
+        "text_kind",
+        "verification_status",
+        "data_origin"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "ImpactScenario": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_label": {
+          "title": "Baseline Label",
+          "type": "string"
+        },
+        "baseline_mandate_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Baseline Mandate Ids",
+          "type": "array"
+        },
+        "baseline_version_id": {
+          "title": "Baseline Version Id",
+          "type": "string"
+        },
+        "disclosure": {
+          "title": "Disclosure",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "proposal_id": {
+          "title": "Proposal Id",
+          "type": "string"
+        },
+        "proposal_label": {
+          "title": "Proposal Label",
+          "type": "string"
+        },
+        "proposal_notice": {
+          "default": "PROPOSED — NOT AN IN-FORCE REQUIREMENT",
+          "title": "Proposal Notice",
+          "type": "string"
+        },
+        "regulator": {
+          "title": "Regulator",
+          "type": "string"
+        },
+        "status": {
+          "const": "PROPOSED",
+          "default": "PROPOSED",
+          "title": "Status",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "regulator",
+        "baseline_label",
+        "proposal_label",
+        "baseline_version_id",
+        "proposal_id",
+        "baseline_mandate_ids",
+        "disclosure"
+      ],
+      "title": "ImpactScenario",
+      "type": "object"
+    },
+    "Mandate": {
+      "additionalProperties": false,
+      "properties": {
+        "data_origin": {
+          "enum": [
+            "PUBLIC_REGULATORY_SOURCE",
+            "SYNTHETIC_HACKATHON"
+          ],
+          "title": "Data Origin",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "provision_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Provision Id"
+        },
+        "status": {
+          "enum": [
+            "BASELINE_APPROVED",
+            "PROPOSED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "provision_id",
+        "evidence_ids",
+        "status",
+        "data_origin"
+      ],
+      "title": "Mandate",
+      "type": "object"
+    },
+    "NodeType": {
+      "enum": [
+        "MANDATE",
+        "POLICY_REQUIREMENT",
+        "CONTROL_OBJECTIVE",
+        "RISK_TYPE",
+        "RISK_DRIVER"
+      ],
+      "title": "NodeType",
+      "type": "string"
+    },
+    "ProposedChangeStatement": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "global_scope": {
+          "default": false,
+          "title": "Global Scope",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "proposal_id": {
+          "title": "Proposal Id",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "target_mandate_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Target Mandate Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "proposal_id",
+        "summary",
+        "target_mandate_ids",
+        "evidence_ids"
+      ],
+      "title": "ProposedChangeStatement",
+      "type": "object"
+    },
+    "Provision": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "regulation_version_id": {
+          "title": "Regulation Version Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "regulation_version_id",
+        "title",
+        "evidence_ids"
+      ],
+      "title": "Provision",
+      "type": "object"
+    },
+    "RegulationVersion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "instrument_id": {
+          "title": "Instrument Id",
+          "type": "string"
+        },
+        "legal_force": {
+          "const": "GUIDANCE",
+          "default": "GUIDANCE",
+          "title": "Legal Force",
+          "type": "string"
+        },
+        "status": {
+          "const": "IN_FORCE",
+          "default": "IN_FORCE",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "instrument_id"
+      ],
+      "title": "RegulationVersion",
+      "type": "object"
+    },
+    "RegulatoryInstrument": {
+      "additionalProperties": false,
+      "properties": {
+        "data_origin": {
+          "const": "PUBLIC_REGULATORY_SOURCE",
+          "default": "PUBLIC_REGULATORY_SOURCE",
+          "title": "Data Origin",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "publication_date": {
+          "title": "Publication Date",
+          "type": "string"
+        },
+        "regulator": {
+          "title": "Regulator",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "status": {
+          "title": "Status",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "verification_status": {
+          "default": "PENDING_VERIFICATION",
+          "title": "Verification Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "regulator",
+        "publication_date",
+        "status",
+        "source_url"
+      ],
+      "title": "RegulatoryInstrument",
+      "type": "object"
+    },
+    "Relationship": {
+      "enum": [
+        "ADDRESSED_BY",
+        "IMPLEMENTED_BY",
+        "CLASSIFIED_AS",
+        "DRIVEN_BY"
+      ],
+      "title": "Relationship",
+      "type": "string"
+    },
+    "SafetyChecks": {
+      "additionalProperties": false,
+      "properties": {
+        "applicable_global_overlay": {
+          "title": "Applicable Global Overlay",
+          "type": "boolean"
+        },
+        "decision_source": {
+          "const": "GOLDEN_LABELS",
+          "default": "GOLDEN_LABELS",
+          "title": "Decision Source",
+          "type": "string"
+        },
+        "high_confidence_pcs_target": {
+          "title": "High Confidence Pcs Target",
+          "type": "boolean"
+        },
+        "human_change_confirmed": {
+          "title": "Human Change Confirmed",
+          "type": "boolean"
+        },
+        "no_effect_result": {
+          "enum": [
+            "NO_EFFECT_SUPPORTED",
+            "EFFECT_POSSIBLE",
+            "NOT_RUN"
+          ],
+          "title": "No Effect Result",
+          "type": "string"
+        },
+        "scope_basis": {
+          "title": "Scope Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "high_confidence_pcs_target",
+        "applicable_global_overlay",
+        "no_effect_result",
+        "human_change_confirmed",
+        "scope_basis"
+      ],
+      "title": "SafetyChecks",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "catalog": {
+      "items": {
+        "$ref": "#/$defs/CatalogNode"
+      },
+      "title": "Catalog",
+      "type": "array"
+    },
+    "changes": {
+      "items": {
+        "$ref": "#/$defs/ChangeItem"
+      },
+      "title": "Changes",
+      "type": "array"
+    },
+    "edges": {
+      "items": {
+        "$ref": "#/$defs/BaselineEdge"
+      },
+      "title": "Edges",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "instruments": {
+      "items": {
+        "$ref": "#/$defs/RegulatoryInstrument"
+      },
+      "title": "Instruments",
+      "type": "array"
+    },
+    "mandates": {
+      "items": {
+        "$ref": "#/$defs/Mandate"
+      },
+      "title": "Mandates",
+      "type": "array"
+    },
+    "proposals": {
+      "items": {
+        "$ref": "#/$defs/ChangeProposal"
+      },
+      "title": "Proposals",
+      "type": "array"
+    },
+    "proposed_change_statements": {
+      "items": {
+        "$ref": "#/$defs/ProposedChangeStatement"
+      },
+      "title": "Proposed Change Statements",
+      "type": "array"
+    },
+    "provisions": {
+      "items": {
+        "$ref": "#/$defs/Provision"
+      },
+      "title": "Provisions",
+      "type": "array"
+    },
+    "scenario": {
+      "$ref": "#/$defs/ImpactScenario"
+    },
+    "versions": {
+      "items": {
+        "$ref": "#/$defs/RegulationVersion"
+      },
+      "title": "Versions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "instruments",
+    "versions",
+    "proposals",
+    "provisions",
+    "mandates",
+    "evidence",
+    "catalog",
+    "edges",
+    "proposed_change_statements",
+    "changes",
+    "scenario"
+  ],
+  "title": "SeedBundle",
+  "type": "object"
+}

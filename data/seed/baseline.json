@@ -1,0 +1,452 @@
+{
+  "instruments": [
+    {
+      "id": "MAS-FSG-G02-2016",
+      "title": "Guidelines on Standards of Conduct for Marketing and Distribution Activities by Financial Institutions [FSG-G02]",
+      "regulator": "MAS",
+      "publication_date": "2016-12-23",
+      "status": "IN_FORCE",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities-fsg-g02",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "MAS-P002-2023",
+      "title": "Consultation Paper on Enhancing Safeguards for Proper Conduct of Prospecting Activities at Public Places and Telemarketing",
+      "regulator": "MAS",
+      "publication_date": "2023-04-25",
+      "status": "PROPOSED",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    }
+  ],
+  "versions": [
+    {
+      "id": "VERSION-FSG-2016",
+      "instrument_id": "MAS-FSG-G02-2016"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "PROPOSAL-MAS-2023",
+      "source_id": "MAS-P002-2023",
+      "baseline_version_id": "VERSION-FSG-2016"
+    }
+  ],
+  "provisions": [
+    {
+      "id": "PROVISION-GIFT",
+      "regulation_version_id": "VERSION-FSG-2016",
+      "title": "Gift safeguard",
+      "evidence_ids": [
+        "SEG-FSG-GIFT"
+      ]
+    },
+    {
+      "id": "PROVISION-IDENTITY",
+      "regulation_version_id": "VERSION-FSG-2016",
+      "title": "Identity disclosure safeguard",
+      "evidence_ids": [
+        "SEG-FSG-IDENTITY"
+      ]
+    }
+  ],
+  "mandates": [
+    {
+      "id": "M-GIFT",
+      "title": "Prevent undue influence from gift offers",
+      "provision_id": "PROVISION-GIFT",
+      "evidence_ids": [
+        "SEG-FSG-GIFT"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-IDENTITY",
+      "title": "Identify the representative and institution",
+      "provision_id": "PROVISION-IDENTITY",
+      "evidence_ids": [
+        "SEG-FSG-IDENTITY"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-INTENT-CONSENT",
+      "title": "Disclose marketing intent and obtain consent",
+      "provision_id": null,
+      "evidence_ids": [
+        "SEG-CP-CONSENT"
+      ],
+      "status": "PROPOSED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "SEG-FSG-IDENTITY",
+      "source_id": "MAS-FSG-G02-2016",
+      "title": "Marketing and distribution safeguards > Identity disclosure",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities-fsg-g02",
+      "paragraph_ref": "Safeguard 6; 2.2.5-2.2.6",
+      "page": 13,
+      "text": "Representatives should identify themselves and their institution before prospecting, and explain relevant third-party relationships. This existing identity safeguard is distinct from the later proposal about marketing intent and consent.",
+      "text_kind": "PARAPHRASE",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "SEG-FSG-GIFT",
+      "source_id": "MAS-FSG-G02-2016",
+      "title": "Marketing and distribution safeguards > Gifts",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities-fsg-g02",
+      "paragraph_ref": "Safeguard 10; 2.2.17-2.2.20 (pages 16-17)",
+      "page": 16,
+      "text": "Financial institutions should prevent gifts and gift promotion from improperly influencing purchases. Related guidance discourages drawing customers' attention to gifts and describes approval, value limits and monitoring practices.",
+      "text_kind": "PARAPHRASE",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "SEG-CP-GIFT",
+      "source_id": "MAS-P002-2023",
+      "title": "Proposed measures > Measure 4",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "paragraph_ref": "3.21",
+      "page": 11,
+      "text": "MAS proposes explicitly prohibiting representatives and institutions from invoking gift offers to induce a purchase or a larger purchase.",
+      "text_kind": "PARAPHRASE",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "SEG-CP-TELEMARKETING",
+      "source_id": "MAS-P002-2023",
+      "title": "Proposals for telemarketing",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "paragraph_ref": "4.1(a)-(b); footnotes 29-30",
+      "page": 15,
+      "text": "The proposal applies Measures 2 and 4 to telemarketing: upfront disclosure and consent, plus protection against gift-based inducement. Identity disclosure already exists in baseline Safeguard 6.",
+      "text_kind": "PARAPHRASE",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "SEG-CP-LEGAL-FORCE",
+      "source_id": "MAS-P002-2023",
+      "title": "Proposed measures > Measure 1",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "paragraph_ref": "3.2-3.4",
+      "page": 6,
+      "text": "Proposed Notices cover investment products and long-term accident and health policies. Other products retain guideline treatment. This is a proposed legal-force change, not an enacted requirement.",
+      "text_kind": "PARAPHRASE",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "SEG-CP-CONSENT",
+      "source_id": "MAS-P002-2023",
+      "title": "Proposed measures > Measure 2",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "paragraph_ref": "3.8-3.9 (pages 7-8)",
+      "page": 7,
+      "text": "MAS proposes disclosing the marketing purpose upfront and obtaining verbal or written permission before prospecting. Registration for a scheduled event may constitute consent.",
+      "text_kind": "PARAPHRASE",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E-GIFT-POLICY",
+      "source_id": "M-GIFT",
+      "target_id": "PR-GIFT-01",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "SEG-FSG-GIFT"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Curated golden-label mapping connects the public safeguard to a synthetic policy. It is a demonstration fixture, not a live AI recommendation or institutional approval.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    },
+    {
+      "id": "E-GIFT-RISK",
+      "source_id": "M-GIFT",
+      "target_id": "RT-CONDUCT",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "SEG-FSG-GIFT"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Curated conduct-risk classification provides context only; it never propagates impact.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    },
+    {
+      "id": "E-GIFT-DRIVER",
+      "source_id": "M-GIFT",
+      "target_id": "RD-INDUCEMENT",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "SEG-FSG-GIFT"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Curated risk-driver classification provides context only; it never propagates impact.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    },
+    {
+      "id": "E-IDENTITY-POLICY",
+      "source_id": "M-IDENTITY",
+      "target_id": "PR-IDENTITY-01",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "SEG-FSG-IDENTITY"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Curated golden-label mapping connects the public safeguard to a synthetic policy. It is a demonstration fixture, not a live AI recommendation or institutional approval.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    },
+    {
+      "id": "E-IDENTITY-RISK",
+      "source_id": "M-IDENTITY",
+      "target_id": "RT-CONDUCT",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "SEG-FSG-IDENTITY"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Curated conduct-risk classification provides context only; it never propagates impact.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    },
+    {
+      "id": "E-IDENTITY-DRIVER",
+      "source_id": "M-IDENTITY",
+      "target_id": "RD-TRANSPARENCY",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "SEG-FSG-IDENTITY"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Curated risk-driver classification provides context only; it never propagates impact.",
+        "reviewer": "Curated demonstration fixture",
+        "reviewed_at": null,
+        "model": null,
+        "prompt_version": null,
+        "vector_rank": null,
+        "lexical_rank": null,
+        "rrf_rank": null,
+        "rrf_score": null,
+        "alternative": null,
+        "alternative_reason": null
+      }
+    }
+  ],
+  "proposed_change_statements": [
+    {
+      "id": "PCS-GIFT",
+      "proposal_id": "PROPOSAL-MAS-2023",
+      "summary": "Explicit gift inducement prohibition and telemarketing extension proposed.",
+      "target_mandate_ids": [
+        "M-GIFT"
+      ],
+      "evidence_ids": [
+        "SEG-CP-GIFT",
+        "SEG-CP-TELEMARKETING"
+      ]
+    },
+    {
+      "id": "PCS-LEGAL-FORCE",
+      "proposal_id": "PROPOSAL-MAS-2023",
+      "summary": "Proposed Notices affect safeguards for investment products and long-term A&H.",
+      "target_mandate_ids": [
+        "M-GIFT",
+        "M-IDENTITY"
+      ],
+      "global_scope": true,
+      "evidence_ids": [
+        "SEG-CP-LEGAL-FORCE"
+      ]
+    },
+    {
+      "id": "PCS-INTENT-CONSENT",
+      "proposal_id": "PROPOSAL-MAS-2023",
+      "summary": "Disclose marketing purpose and obtain consent before prospecting.",
+      "target_mandate_ids": [
+        "M-INTENT-CONSENT"
+      ],
+      "evidence_ids": [
+        "SEG-CP-CONSENT"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "CHANGE-GIFT",
+      "title": "Gift offers: stronger safeguards, wider reach",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "STRENGTHENED",
+        "SCOPE_CHANGED",
+        "LEGAL_FORCE_CHANGE_PROPOSED"
+      ],
+      "summary": "MAS proposes an explicit prohibition on gift-based purchase inducement, telemarketing coverage and binding treatment for specified product categories.",
+      "mandate_id": "M-GIFT",
+      "baseline_evidence_ids": [
+        "SEG-FSG-GIFT"
+      ],
+      "proposal_evidence_ids": [
+        "SEG-CP-GIFT",
+        "SEG-CP-TELEMARKETING",
+        "SEG-CP-LEGAL-FORCE"
+      ],
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": true,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": false,
+        "scope_basis": "Gift language and channel scope are directly targeted. For the investment-product scenario, the proposed legal-force overlay also applies. All mandate mappings need individual review.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-INTENT-CONSENT",
+      "title": "Upfront intent disclosure and consent",
+      "classification": "NEW",
+      "change_nature": [
+        "NEW_OBLIGATION",
+        "SCOPE_CHANGED"
+      ],
+      "summary": "If adopted, marketing purpose disclosure and consent would precede prospecting. This is distinct from the existing identity-disclosure safeguard.",
+      "mandate_id": "M-INTENT-CONSENT",
+      "baseline_evidence_ids": [
+        "SEG-FSG-IDENTITY"
+      ],
+      "proposal_evidence_ids": [
+        "SEG-CP-CONSENT",
+        "SEG-CP-TELEMARKETING"
+      ],
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": true,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": false,
+        "scope_basis": "A genuinely new proposed intent/consent obligation. No approved mandate-specific mapping exists to reuse.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-IDENTITY",
+      "title": "Identity safeguard: scope review remains open",
+      "classification": "UNRESOLVED",
+      "change_nature": [
+        "LEGAL_FORCE_CHANGE_PROPOSED"
+      ],
+      "summary": "Identity disclosure has baseline treatment, but the proposed Notices and interaction with intent/consent need specialist confirmation. No unchanged classification is asserted.",
+      "mandate_id": "M-IDENTITY",
+      "baseline_evidence_ids": [
+        "SEG-FSG-IDENTITY"
+      ],
+      "proposal_evidence_ids": [
+        "SEG-CP-LEGAL-FORCE",
+        "SEG-CP-CONSENT"
+      ],
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": true,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": false,
+        "scope_basis": "Absence of a direct wording change cannot establish no effect. Proposed binding treatment for investment products requires a scoped legal-force review before reuse.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    }
+  ],
+  "scenario": {
+    "id": "SCENARIO-MAS-2023",
+    "title": "Public prospecting & telemarketing safeguards",
+    "regulator": "MAS",
+    "baseline_label": "IN FORCE — MAS Guideline (2016)",
+    "proposal_label": "MAS consultation P002-2023",
+    "baseline_version_id": "VERSION-FSG-2016",
+    "proposal_id": "PROPOSAL-MAS-2023",
+    "baseline_mandate_ids": [
+      "M-GIFT",
+      "M-IDENTITY"
+    ],
+    "disclosure": "Curated local scenario for investment-product prospecting. Public MAS content is paraphrased; enterprise mappings are synthetic golden-label fixtures. No live AI run or real specialist approval is claimed. Legal-force scope blocks safe carry-forward in this fixture; test cases exercise eligible reuse."
+  }
+}

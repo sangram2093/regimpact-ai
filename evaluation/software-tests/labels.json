@@ -1,0 +1,57 @@
+{
+  "dataset_id": "synthetic-scoring-test",
+  "split": "software-test",
+  "provenance": {
+    "origin": "SYNTHETIC_SOFTWARE_TEST",
+    "annotator": "Synthetic test author",
+    "labeled_at": "2026-01-01T00:00:00Z",
+    "independent_of_predictions": false,
+    "notes": "Software fixture only; not a regulatory label."
+  },
+  "cases": [
+    {
+      "id": "CASE-1",
+      "input_reference": "synthetic fixture",
+      "expected_mandate_ids": [
+        "M-A",
+        "M-B"
+      ],
+      "acceptable_policy_ids": {
+        "M-A": [
+          "P-A"
+        ],
+        "M-B": [
+          "P-B"
+        ],
+        "M-C": []
+      },
+      "expected_changes": {
+        "M-A": "MODIFIED",
+        "M-B": "NEW",
+        "M-C": "UNCHANGED"
+      },
+      "carry_forward_allowed": {
+        "M-A": false,
+        "M-C": true
+      },
+      "source_segments": [
+        {
+          "id": "S-1",
+          "source_id": "DOC-1",
+          "text": "Synthetic source sentence about gift review.",
+          "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "evaluate_ask": true,
+      "ask_allowed_facts": [
+        {
+          "text": "This is proposed.",
+          "entity_ids": [
+            "M-A"
+          ],
+          "legal_status": "PROPOSED"
+        }
+      ]
+    }
+  ]
+}

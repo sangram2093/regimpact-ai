@@ -1,0 +1,21 @@
+{
+  "filterConfig": {
+    "raiSettings": {
+      "raiFilters": [
+        {"filterType": "HATE_SPEECH", "confidenceLevel": "MEDIUM_AND_ABOVE"},
+        {"filterType": "HARASSMENT", "confidenceLevel": "MEDIUM_AND_ABOVE"},
+        {"filterType": "DANGEROUS", "confidenceLevel": "MEDIUM_AND_ABOVE"},
+        {"filterType": "SEXUALLY_EXPLICIT", "confidenceLevel": "MEDIUM_AND_ABOVE"}
+      ]
+    },
+    "piAndJailbreakFilterSettings": {
+      "filterEnforcement": "ENABLED",
+      "confidenceLevel": "MEDIUM_AND_ABOVE"
+    }
+  },
+  "templateMetadata": {
+    "logTemplateOperations": false,
+    "logSanitizeOperations": false,
+    "ignorePartialInvocationFailures": false
+  }
+}

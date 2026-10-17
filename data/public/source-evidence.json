@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-27",
+  "page_convention": "One-based physical PDF page; printed page numbers match for these references.",
+  "sources": [
+    {
+      "source_id": "MAS-FSG-G02-2016",
+      "title": "Guidelines on Standards of Conduct for Marketing and Distribution Activities by Financial Institutions [FSG-G02]",
+      "instrument_status": "IN_FORCE",
+      "legal_force": "GUIDANCE",
+      "publication_date": "2016-12-23",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities-fsg-g02",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/securities-futures-and-fund-management/regulations-guidance-and-licensing/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities.pdf",
+      "status_verification": "Official MAS page still lists the 2016 guideline and links this PDF. IN_FORCE is the demo baseline status; no withdrawal notice was displayed on that page. This check is not an exhaustive currency determination.",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "source_id": "MAS-P002-2023",
+      "title": "Consultation Paper on Enhancing Safeguards for Proper Conduct of Prospecting Activities at Public Places and Telemarketing",
+      "instrument_status": "PROPOSED",
+      "legal_force": "PROPOSED_BINDING",
+      "publication_date": "2023-04-25",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/cp-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities-at-public-places-and-telemar.pdf",
+      "status_verification": "Consultation status and P002-2023 confirmed in the official PDF. Its landing page did not display a final response or replacement instrument. Related P003-2023 digital-prospecting responses concern a different consultation; absence on this page does not prove no later instrument exists elsewhere.",
+      "legal_force_note": "PROPOSED_BINDING applies only to the proposed Notices for investment products and long-term accident and health policies; other products retain guideline treatment under the proposal.",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "SEG-FSG-IDENTITY",
+      "source_id": "MAS-FSG-G02-2016",
+      "page": 13,
+      "paragraph_ref": "Safeguard 6; 2.2.5-2.2.6",
+      "section_path": "Marketing and distribution safeguards > Identity disclosure",
+      "text": "Representatives should identify themselves and their institution before prospecting, and explain relevant third-party relationships. This existing identity safeguard is distinct from the later proposal about marketing intent and consent.",
+      "text_kind": "PARAPHRASE",
+      "short_quote": null,
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities-fsg-g02",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/securities-futures-and-fund-management/regulations-guidance-and-licensing/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities.pdf#page=13"
+    },
+    {
+      "segment_id": "SEG-FSG-GIFT",
+      "source_id": "MAS-FSG-G02-2016",
+      "page": 16,
+      "paragraph_ref": "Safeguard 10; 2.2.17-2.2.20 (pages 16-17)",
+      "section_path": "Marketing and distribution safeguards > Gifts",
+      "text": "Financial institutions should prevent gifts and gift promotion from improperly influencing purchases. Related guidance discourages drawing customers' attention to gifts and describes approval, value limits and monitoring practices.",
+      "text_kind": "PARAPHRASE",
+      "short_quote": "any gift offered to customers does not unduly influence",
+      "quote_paragraph_ref": "Safeguard 10",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities-fsg-g02",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/securities-futures-and-fund-management/regulations-guidance-and-licensing/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities.pdf#page=16"
+    },
+    {
+      "segment_id": "SEG-CP-GIFT",
+      "source_id": "MAS-P002-2023",
+      "page": 11,
+      "paragraph_ref": "3.21",
+      "section_path": "Proposed measures > Measure 4",
+      "text": "MAS proposes explicitly prohibiting representatives and institutions from invoking gift offers to induce a purchase or a larger purchase.",
+      "text_kind": "PARAPHRASE",
+      "short_quote": "shall not use or mention gift offers to entice customers",
+      "quote_paragraph_ref": "3.21",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/cp-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities-at-public-places-and-telemar.pdf#page=11"
+    },
+    {
+      "segment_id": "SEG-CP-TELEMARKETING",
+      "source_id": "MAS-P002-2023",
+      "page": 15,
+      "paragraph_ref": "4.1(a)-(b); footnotes 29-30",
+      "section_path": "Proposals for telemarketing",
+      "text": "The proposal applies Measures 2 and 4 to telemarketing: upfront disclosure and consent, plus protection against gift-based inducement. Identity disclosure already exists in baseline Safeguard 6.",
+      "text_kind": "PARAPHRASE",
+      "short_quote": null,
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/cp-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities-at-public-places-and-telemar.pdf#page=15"
+    },
+    {
+      "segment_id": "SEG-CP-LEGAL-FORCE",
+      "source_id": "MAS-P002-2023",
+      "page": 6,
+      "paragraph_ref": "3.2-3.4",
+      "section_path": "Proposed measures > Measure 1",
+      "text": "Proposed Notices cover investment products and long-term accident and health policies. Other products retain guideline treatment. This is a proposed legal-force change, not an enacted requirement.",
+      "text_kind": "PARAPHRASE",
+      "short_quote": null,
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/cp-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities-at-public-places-and-telemar.pdf#page=6"
+    },
+    {
+      "segment_id": "SEG-CP-CONSENT",
+      "source_id": "MAS-P002-2023",
+      "page": 7,
+      "paragraph_ref": "3.8-3.9 (pages 7-8)",
+      "section_path": "Proposed measures > Measure 2",
+      "text": "MAS proposes disclosing the marketing purpose upfront and obtaining verbal or written permission before prospecting. Registration for a scheduled event may constitute consent.",
+      "text_kind": "PARAPHRASE",
+      "short_quote": "obtain customers’ consent",
+      "quote_paragraph_ref": "3.8",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/cp-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities-at-public-places-and-telemar.pdf#page=7"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a reproducible RegImpact issue using public or synthetic data only.
+title: "bug: "
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the local/cloud mode. Never include credentials or private documents.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Relevant test results or sanitized screenshots

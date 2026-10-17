@@ -1,0 +1,55 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+**/credentials.json
+**/application_default_credentials.json
+**/*service-account*.json
+**/*service_account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+
+# Frontend
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.vite/
+
+# Runtime and downloads
+.local/
+*.log
+data/public/downloads/
+data/public/**/*.pdf
+playwright-report/
+test-results/
+.firebase/
+.firebaserc
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+
+# Local conversation reference is preserved on disk, not published
+regimpact_ai_chatgpt_prompt.txt
+
+# Editors / operating system
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

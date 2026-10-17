@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "source_id": "MAS-FSG-G02-2016",
+      "title": "Guidelines on Standards of Conduct for Marketing and Distribution Activities by Financial Institutions [FSG-G02]",
+      "instrument_status": "IN_FORCE",
+      "legal_force": "GUIDANCE",
+      "publication_date": "2016-12-23",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities-fsg-g02",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/securities-futures-and-fund-management/regulations-guidance-and-licensing/guidelines/guidelines-on-standards-of-conduct-for-marketing-and-distribution-activities.pdf",
+      "status_verification": "The exact 23 December 2016 FSG-G02 edition is the historical demo baseline; IN_FORCE/GUIDANCE is retained as that scenario metadata, not an exhaustive determination of current law.",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "current_status_checked_at": "2026-10-17",
+      "current_status_verification": "Checked 17 October 2026: the official consultation page now marks the consultation Responded and links the 12 October 2026 response. MAS announced on 12 October 2026 that updated Guidelines will be issued in 2027, followed by a nine-month transition period. The 2026 response is outside the preserved 2016-to-2023 scenario; these observations are not an exhaustive current-law determination.",
+      "current_status_sources": [
+        "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+        "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/response-to-feedback-received-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities.pdf",
+        "https://www.mas.gov.sg/news/media-releases/2026/mas-enhances-safeguards-for-public-prospecting-activities"
+      ],
+      "evidence_verification": "PRIMARY_SOURCE_TEXT_AND_PDF_BYTES_VERIFIED",
+      "attempted_at": "2026-10-17T16:58:48.285310+00:00",
+      "retrieved_at": "2026-10-17T16:58:49.419803+00:00",
+      "sha256": "e3d4f8d8b3372805b87f13f87a6369ddc0467cc559ad80584adddbe33e9142f6",
+      "local_path": "downloads/MAS-FSG-G02-2016.pdf",
+      "byte_length": 228147,
+      "fetch_status": "FETCHED"
+    },
+    {
+      "source_id": "MAS-P002-2023",
+      "title": "Consultation Paper on Enhancing Safeguards for Proper Conduct of Prospecting Activities at Public Places and Telemarketing",
+      "instrument_status": "PROPOSED",
+      "legal_force": "PROPOSED_BINDING",
+      "publication_date": "2023-04-25",
+      "source_url": "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+      "pdf_url": "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/cp-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities-at-public-places-and-telemar.pdf",
+      "status_verification": "The exact April 2023 P002-2023 consultation edition remains the historical proposal input. PROPOSED/PROPOSED_BINDING describes that source and scenario, not the current consultation response status.",
+      "legal_force_note": "PROPOSED_BINDING applies only to the proposed Notices for investment products and long-term accident and health policies; other products retain guideline treatment under the proposal.",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE",
+      "current_status_checked_at": "2026-10-17",
+      "current_status_verification": "Checked 17 October 2026: the official consultation page now marks the consultation Responded and links the 12 October 2026 response. MAS announced on 12 October 2026 that updated Guidelines will be issued in 2027, followed by a nine-month transition period. The 2026 response is outside the preserved 2016-to-2023 scenario; these observations are not an exhaustive current-law determination.",
+      "current_status_sources": [
+        "https://www.mas.gov.sg/publications/consultations/2023/consultation-paper-on-enhancing-safeguards-for-prospecting-activities-at-public-places",
+        "https://www.mas.gov.sg/-/media/mas/regulations-and-financial-stability/regulations-guidance-and-licensing/financial-advisers/consultation-paper/response-to-feedback-received-on-enhancing-safeguards-for-proper-conduct-of-prospecting-activities.pdf",
+        "https://www.mas.gov.sg/news/media-releases/2026/mas-enhances-safeguards-for-public-prospecting-activities"
+      ],
+      "evidence_verification": "PRIMARY_SOURCE_TEXT_AND_PDF_BYTES_VERIFIED",
+      "attempted_at": "2026-10-17T16:58:49.419803+00:00",
+      "retrieved_at": "2026-10-17T16:58:50.761196+00:00",
+      "sha256": "cda3420f0467f0fff17fd7eb84768e615ddf0868c8d211319e346366f4ea73d1",
+      "local_path": "downloads/MAS-P002-2023.pdf",
+      "byte_length": 995662,
+      "fetch_status": "FETCHED"
+    }
+  ],
+  "checked_at": "2026-10-17",
+  "verification_method": "Official MAS landing pages, linked PDF editions, and 12 October 2026 announcement checked through research tools. Exact allowlisted MAS PDF URLs retrieved directly over HTTPS with browser-compatible headers; signatures, SHA-256, editions, page counts, and complete pypdf extraction validated locally. No mirror or cloud retrieval was used."
+}

@@ -1,0 +1,17 @@
+.git
+.venv
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+.env
+.env.*
+**/credentials.json
+**/*service-account*.json
+**/*service_account*.json
+**/*.pem
+**/*.key
+data/public/downloads
+regimpact_ai_chatgpt_prompt.txt
+.local
+frontend

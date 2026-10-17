@@ -1,0 +1,15 @@
+{
+  "scenario_id": "SCENARIO-MAS-2023",
+  "title": "One rulebook, one complete review journey",
+  "baseline": "Previous baseline: MAS FSG-G02 marketing and prospecting safeguards (2016)",
+  "comparison": "Comparison version: MAS P002-2023 proposed amendments (2023 consultation)",
+  "notice": "Historical baseline-to-proposal example. The comparison is a proposal, not a claim about current binding law. Both official source PDFs are ingested; policy and control examples are synthetic.",
+  "source_ids": ["MAS-FSG-G02-2016", "MAS-P002-2023"],
+  "steps": [
+    {"label": "1. Inspect both source versions", "path": "/sources"},
+    {"label": "2. Review classified changes", "path": "/delta-review"},
+    {"label": "3. Inspect gift safeguards", "path": "/changes/CHANGE-GIFT"},
+    {"label": "4. Trace affected controls", "path": "/impact"},
+    {"label": "5. Ask Gemini with evidence", "path": "/ask"}
+  ]
+}

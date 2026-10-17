@@ -1,0 +1,24 @@
+{
+  "dataset_id": "REPLACE-WITH-REVIEWED-DATASET-ID",
+  "split": "test",
+  "provenance": {
+    "origin": "UNLABELED",
+    "annotator": null,
+    "labeled_at": null,
+    "independent_of_predictions": false,
+    "notes": "Unlabelled template. A human must supply independent labels from verified sources; do not relabel machine output as independent human judgment."
+  },
+  "cases": [
+    {
+      "id": "REPLACE-WITH-CASE-ID",
+      "input_reference": "REPLACE-WITH-PUBLIC-SOURCE-AND-SEGMENT-REFERENCE",
+      "expected_mandate_ids": [],
+      "acceptable_policy_ids": {},
+      "expected_changes": {},
+      "carry_forward_allowed": {},
+      "source_segments": [],
+      "evaluate_ask": false,
+      "ask_allowed_facts": []
+    }
+  ]
+}
