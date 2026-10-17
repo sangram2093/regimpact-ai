@@ -30,7 +30,9 @@ def test_sources_do_not_claim_missing_pdf_is_extracted(
             result = client.post(f"/api/v1/sources/{source['id']}/ingest", headers=session_headers)
             assert result.status_code == 409
             assert result.json()["error"]["code"] == "SOURCE_PDF_UNAVAILABLE"
-            assert source["sha256"] is None
+            # A pinned expected checksum does not mean PDF bytes were extracted.
+            assert not source["ingestion_status"].startswith("EXTRACTED_")
+            assert source["segment_count"] == 0
 
 
 def test_specialist_resolves_unknown_without_mutating_baseline(
