@@ -7,16 +7,16 @@ Regulatory Change-to-Control Intelligence · Team RegNexus AI
 ## Submission links
 
 - **Working prototype:** https://regimpact-ai.web.app
-- **3–4 minute demonstration:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
-- **Pitch deck in the prescribed template:** https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pptx
+- **2:47 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
+- **Pitch deck (PDF):** https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pdf · [PPTX in the prescribed template](https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pptx)
 
 ## Working example
 
 The complete example uses the official MAS FSG-G02 marketing and distribution guideline (2016) and its 2023 consultation proposal. It is explicitly a historical baseline-versus-proposed-revision scenario, **not a claim that the proposal is current binding law**. A later October 2026 response is recorded separately in the source manifest. Both official PDFs are completely extracted and stored with source hashes; enterprise policies and controls are synthetic demonstration data.
 
-Open **Source register → Delta Review → Gift offers → Impact lineage → Explain Edge → Ask RegImpact**. In the policy-owner demo role, record a prospective review with a rationale. Reset affects your browser session only. Ask: “Which controls need review for the proposed gift change, and why?”
+Open **Source register → Change analysis → Delta Review → Impact lineage → Explain Edge → Workflow runs → Ask RegImpact**. In Workflow runs, run **Classify the change effect (Gemini)** for a live, validated classification. In the policy-owner demo role, record a prospective review with a rationale. Reset affects your browser session only.
 
-This example has six approved baseline mappings, six rechecks and one new proposed obligation. Zero mappings initially qualify for safe carry-forward. The app does not fabricate savings or automatically approve model output.
+**What the real MAS example shows:** Delta Review routes all six approved baseline mappings to individual review and carries nothing forward silently. The identity safeguard's wording is unchanged, yet its mappings are held because the proposal would make the safeguards binding for investment products: the false carry-forward a wording-only comparison would make. Reuse requires four safeguards (no targeted change statement, no instrument-wide scope or legal-force proposal, a supported no-effect check and specialist confirmation). One genuinely new obligation, upfront intent and consent, is mapped separately. The app does not fabricate savings or automatically approve model output.
 
 ## Google Cloud technology
 

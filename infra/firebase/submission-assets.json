@@ -1,11 +1,11 @@
 {
   "bucket": "regimpact-ai-builds-61760046387",
-  "prefix": "submission-assets/20261018-video-v2",
+  "prefix": "submission-assets/20261018-video-v3",
   "files": [
     {
       "name": "index.html",
-      "sha256": "bc676b68e644f32f7ec12816030a427923157c28419e86771ae9c79386bf9128",
-      "bytes": 3020
+      "sha256": "3e55ea867784fb0e3369d5ae7ac7b9a005faa0215d3384651a7b06b46aa3a361",
+      "bytes": 3602
     },
     {
       "name": "submission.css",
@@ -14,24 +14,29 @@
     },
     {
       "name": "RegImpact_AI_Submission.pptx",
-      "sha256": "b549fef946cd27c5cdc672ec508a980cbdde5f55142b15bcd54195a2a42f0a66",
-      "bytes": 994765
+      "sha256": "10d53b152efd321eed2e03e8f28830b25b2882048bb8a577fb4c8a2fe3f88c29",
+      "bytes": 1477808
+    },
+    {
+      "name": "RegImpact_AI_Submission.pdf",
+      "sha256": "9e28c620df884f626bf62335b4946a8f61369203b3aff81df6fb875cc94be7d0",
+      "bytes": 604187
     },
     {
       "name": "RegImpact_AI_Demo.mp4",
-      "sha256": "5e490ba8d4a3aabcf463c2b33d0d58642603be786bbf651c4546b761359471c7",
-      "bytes": 9616367
+      "sha256": "38bee47ba3257a9b51b5fc23e4893a069d3543eaf8bc023cd2d9f37930512f75",
+      "bytes": 8368521
     },
     {
       "name": "RegImpact_AI_Demo.vtt",
-      "sha256": "62cef5583881f1f22642db5887400bac1fa9488b0ed69c09814ab53a08d5f608",
-      "bytes": 4432
+      "sha256": "05dae89311197cd06bc34fbd095b4ff9b180ecd0d163c90adfde90a01b5b94c5",
+      "bytes": 3669
     },
     {
       "name": "prototype.png",
-      "sha256": "c5ec6ab5805d760a3bd4f832e1b014ff47b47c97a873ca0ccdf95d76e2d45f56",
-      "bytes": 63440
+      "sha256": "15239c11ea8e8036227623dcf756b1ee4d5cb3296d1817a3802efe9054e59db2",
+      "bytes": 406785
     }
   ],
-  "note": "Revised 3:50 demonstration with unaccelerated neural narration and synchronized captions; public assets stored privately for reproducible Hosting deployment and hash verification."
+  "note": "Revised 2:47 demonstration with a live Gemini run, revised deck with searchable PDF; stored privately for reproducible Hosting deployment and hash verification."
 }
