@@ -134,3 +134,28 @@ def test_failed_release_preserves_or_restores_previous_production(
         assert traffic_updates == ["--to-revisions=new=100", "--to-revisions=old=100"]
         assert firebase_calls[-1][0] == "POST"
         assert firebase_calls[-1][1]["params"]["versionName"] == "sites/regimpact-ai/versions/old"
+
+
+def test_hosting_verification_waits_for_edge_propagation_but_requires_exact_bytes(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    new, old = b"revised deck", b"previous deck"
+    manifest = {"files": [{"name": "deck.pdf", "sha256": hashlib.sha256(new).hexdigest()}]}
+    served = {"count": 0}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path.startswith("/api/v1/nonexistent"):
+            return httpx.Response(404, json={"error": {}})
+        if request.url.path == "/submission/deck.pdf":
+            served["count"] += 1
+            assert request.url.params["verify"] == manifest["files"][0]["sha256"][:16]
+            return httpx.Response(200, content=old if served["count"] < 3 else new)
+        return httpx.Response(200, headers={"content-type": "text/html"}, text="ok")
+
+    monkeypatch.setattr(deployment, "verify_api", lambda *args: None)
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    deployment.verify_hosting(manifest, client, attempts=5, delay=0)
+    assert served["count"] == 3
+    served["count"] = -100
+    with pytest.raises(ValueError, match="artifact mismatch: deck.pdf"):
+        deployment.verify_hosting(manifest, client, attempts=3, delay=0)

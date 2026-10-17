@@ -12,6 +12,7 @@ import os
 import re
 import shutil
 import subprocess
+import time
 from pathlib import Path
 from typing import Any
 
@@ -99,7 +100,9 @@ def verify_api(base: str, client: httpx.Client) -> None:
         raise ValueError("The real-store dashboard is unavailable")
 
 
-def verify_hosting(manifest: dict, client: httpx.Client) -> None:
+def verify_hosting(
+    manifest: dict, client: httpx.Client, *, attempts: int = 12, delay: float = 10.0
+) -> None:
     verify_api(HOSTING, client)
     for path in ("/dashboard", "/delta-review", "/ask", "/submission/"):
         response = client.get(HOSTING + path)
@@ -111,11 +114,26 @@ def verify_hosting(manifest: dict, client: httpx.Client) -> None:
         "content-type", ""
     ):
         raise ValueError("The Hosting API rewrite returned a SPA instead of a JSON 404")
-    for item in manifest["files"]:
-        response = client.get(HOSTING + "/submission/" + item["name"])
-        response.raise_for_status()
-        if hashlib.sha256(response.content).hexdigest() != item["sha256"]:
-            raise ValueError(f"Published submission artifact mismatch: {item['name']}")
+    # A new release takes a moment to reach every Hosting edge. Only the exact bytes
+    # count, so re-check mismatches (bypassing edge caches) before declaring failure.
+    pending = list(manifest["files"])
+    for attempt in range(attempts):
+        mismatched = []
+        for item in pending:
+            response = client.get(
+                HOSTING + "/submission/" + item["name"],
+                params={"verify": item["sha256"][:16]},
+                headers={"Cache-Control": "no-cache"},
+            )
+            response.raise_for_status()
+            if hashlib.sha256(response.content).hexdigest() != item["sha256"]:
+                mismatched.append(item)
+        if not mismatched:
+            return
+        pending = mismatched
+        if attempt + 1 < attempts:
+            time.sleep(delay)
+    raise ValueError(f"Published submission artifact mismatch: {pending[0]['name']}")
 
 
 def firebase_request(session: Any, method: str, path: str, **kwargs: Any) -> dict:
