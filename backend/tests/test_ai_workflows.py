@@ -113,17 +113,39 @@ def test_source_must_exist_separately_from_segment() -> None:
     assert result.status == "MANUAL_REVIEW_REQUIRED"
 
 
-def test_paraphrase_can_be_referenced_but_not_quoted() -> None:
+def test_paraphrase_is_cited_but_a_model_quotation_of_it_is_removed() -> None:
     inputs = context()
     inputs["segments"][0]["text_kind"] = "PARAPHRASE"
-    transport = FakeTransport([json.dumps(policy())] * 2)
-    assert asyncio.run(BoundedWorkflowService(transport).run("policy-map", inputs)).output is None
+    transport = FakeTransport([json.dumps(policy())])
+    result = asyncio.run(BoundedWorkflowService(transport).run("policy-map", inputs))
+    assert result.status == "HUMAN_REVIEW_REQUIRED"
+    assert len(transport.calls) == 1
+    assert result.output["evidence"] == [
+        {"source_id": "SOURCE-1", "segment_id": "SEGMENT-1", "excerpt": None}
+    ]
+    assert result.run.steps[0].name == "cite-paraphrases-attempt-1"
     output = policy()
     output["evidence"][0]["excerpt"] = None
     transport = FakeTransport([json.dumps(output)])
-    assert (
-        asyncio.run(BoundedWorkflowService(transport).run("policy-map", inputs)).output is not None
+    result = asyncio.run(BoundedWorkflowService(transport).run("policy-map", inputs))
+    assert result.output is not None
+    assert [step.name for step in result.run.steps] == ["validate-output"]
+
+
+def test_quotation_tolerates_pdf_whitespace_and_typography_only() -> None:
+    inputs = context()
+    inputs["segments"][0]["text"] = "Gift  offers\nshould not “unduly” influence."
+    output = policy()
+    output["evidence"][0]["excerpt"] = 'offers should not "unduly" influence'
+    result = asyncio.run(
+        BoundedWorkflowService(FakeTransport([json.dumps(output)])).run("policy-map", inputs)
     )
+    assert result.output["evidence"][0]["excerpt"] == 'offers should not "unduly" influence'
+    output["evidence"][0]["excerpt"] = 'offers must not "unduly" influence'
+    result = asyncio.run(
+        BoundedWorkflowService(FakeTransport([json.dumps(output)] * 2)).run("policy-map", inputs)
+    )
+    assert result.output is None
 
 
 def test_unchanged_cannot_bypass_global_scope_or_missing_blocker_check() -> None:
@@ -354,7 +376,7 @@ def test_excerpts_require_explicit_raw_or_verified_text_kind(text_kind) -> None:
     result = asyncio.run(
         BoundedWorkflowService(FakeTransport([json.dumps(policy())] * 2)).run("policy-map", inputs)
     )
-    assert result.output is None
+    assert result.output["evidence"][0]["excerpt"] is None
 
 
 def test_guideline_evidence_cannot_be_promoted_to_proposed_binding() -> None:

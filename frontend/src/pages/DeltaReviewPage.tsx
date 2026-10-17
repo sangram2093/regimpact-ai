@@ -67,11 +67,11 @@ export function DeltaReviewPage() {
           <p>
             {eligible
               ? 'These mappings passed the scenario safeguards and are ready for specialist acknowledgement.'
-              : 'No mappings meet all carry-forward safeguards in this scenario. Proposed scope and legal-force changes require individual review.'}
+              : 'Unsafe reuse blocked. No mapping meets all four carry-forward safeguards: the gift safeguard is directly targeted, and the identity safeguard — whose wording is unchanged — is caught by the proposed binding treatment for investment products. A text diff would have carried it forward silently.'}
           </p>
           <p className="fine-print">
-            No matching change statement is never sufficient by itself. A no-effect check and
-            specialist confirmation are also required.
+            Reuse needs all four: no targeted change statement, no instrument-wide scope or
+            legal-force proposal, a supported no-effect check and specialist confirmation.
           </p>
           <button
             className="button button-primary"

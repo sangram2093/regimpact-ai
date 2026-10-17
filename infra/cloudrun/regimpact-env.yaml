@@ -2,8 +2,8 @@
 # Cloud Run authenticates through regimpact-runtime; never add credential files here.
 REGIMPACT_MODE: gcp
 REGIMPACT_ENABLE_LIVE_AI: "true"
-REGIMPACT_AI_CALLS_PER_MINUTE: "5"
-REGIMPACT_AI_CALLS_PER_DAY: "100"
+REGIMPACT_AI_CALLS_PER_MINUTE: "20"
+REGIMPACT_AI_CALLS_PER_DAY: "400"
 GCP_PROJECT_ID: regimpact-ai
 GCP_REGION: asia-south1
 VERTEX_LOCATION: global

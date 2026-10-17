@@ -11,6 +11,63 @@ from app.ai.prompts import load_prompt
 from app.ai.transport import StructuredTransport
 from app.domain.errors import DomainError
 
+QUOTABLE_TEXT_KINDS = {"EXTRACTED_TEXT", "VERIFIED_EXCERPT"}
+_TYPOGRAPHY = str.maketrans(
+    {
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u2013": "-",
+        "\u2014": "-",
+        "\u00a0": " ",
+        "\u00ad": "",
+    }
+)
+
+
+def _comparable(text: str) -> str:
+    """Compare quotations without depending on PDF whitespace or typographic quotes."""
+    return " ".join(text.translate(_TYPOGRAPHY).split())
+
+
+def _segments(context: dict[str, Any]) -> dict[Any, dict[str, Any]]:
+    return {
+        segment.get("id", segment.get("segment_id")): segment
+        for segment in context.get("evidence", context.get("segments", []))
+    }
+
+
+def _clear_unquotable_excerpts(output: Any, context: dict[str, Any]) -> int:
+    """Drop model quotations of evidence that may only be cited, never quoted.
+
+    Curated paraphrases can support a citation but are not source text, so a quoted
+    excerpt of one is removed instead of being shown as a quotation. The citation and
+    every other grounding check are kept. Returns how many excerpts were cleared.
+    """
+    segments = _segments(context)
+    cleared = 0
+
+    def visit(value: Any) -> None:
+        nonlocal cleared
+        if isinstance(value, dict):
+            segment = segments.get(value.get("segment_id"))
+            if (
+                segment is not None
+                and value.get("excerpt") is not None
+                and segment.get("text_kind") not in QUOTABLE_TEXT_KINDS
+            ):
+                value["excerpt"] = None
+                cleared += 1
+            for item in value.values():
+                visit(item)
+        elif isinstance(value, list):
+            for item in value:
+                visit(item)
+
+    visit(output)
+    return cleared
+
 
 def _ground_output(output: dict[str, Any], context: dict[str, Any]) -> None:
     sources = {
@@ -19,10 +76,7 @@ def _ground_output(output: dict[str, Any], context: dict[str, Any]) -> None:
     source_ids = set(context.get("source_ids", [])) | {
         source.get("id", source.get("source_id")) for source in context.get("sources", [])
     }
-    segments = {
-        segment.get("id", segment.get("segment_id")): segment
-        for segment in context.get("evidence", context.get("segments", []))
-    }
+    segments = _segments(context)
     candidates = {candidate["id"]: candidate for candidate in context.get("candidates", [])}
     mandate_ids = set(context.get("mandate_ids", [])) | {
         mandate["id"] for mandate in context.get("mandates", [])
@@ -56,8 +110,8 @@ def _ground_output(output: dict[str, Any], context: dict[str, Any]) -> None:
                 excerpt = value.get("excerpt")
                 if excerpt is not None and (
                     not excerpt.strip()
-                    or excerpt not in segment["text"]
-                    or segment.get("text_kind") not in {"EXTRACTED_TEXT", "VERIFIED_EXCERPT"}
+                    or _comparable(excerpt) not in _comparable(segment["text"])
+                    or segment.get("text_kind") not in QUOTABLE_TEXT_KINDS
                 ):
                     raise ValueError(
                         "Quoted evidence must be an exact excerpt from a source segment"
@@ -182,6 +236,18 @@ class BoundedWorkflowService:
             try:
                 parsed = schema.model_validate_json(response.text)
                 output = parsed.model_dump(mode="json")
+                cleared = _clear_unquotable_excerpts(output, context)
+                if cleared:
+                    parsed = schema.model_validate(output)
+                    output = parsed.model_dump(mode="json")
+                    steps.append(
+                        RunStep(
+                            name=f"cite-paraphrases-attempt-{attempt}",
+                            status="SUCCEEDED",
+                            detail=f"Removed {cleared} quotation(s) of paraphrased evidence; "
+                            "citations kept, nothing shown as a quote.",
+                        )
+                    )
                 _ground_output(output, context)
                 if validator:
                     validator(parsed)

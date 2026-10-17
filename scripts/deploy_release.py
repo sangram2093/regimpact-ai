@@ -183,7 +183,7 @@ def main() -> None:
             f"--image={args.image}",
             "--service-account=regimpact-runtime@regimpact-ai.iam.gserviceaccount.com",
             "--env-vars-file=infra/cloudrun/regimpact-env.yaml",
-            "--min-instances=0",
+            "--min-instances=1",
             "--max-instances=2",
             "--cpu=1",
             "--memory=1Gi",

@@ -215,11 +215,31 @@ class ReadOnlyTools:
                     "PROPOSED",
                 )
             )
+        mandate = self.citations[change.mandate_id].label
+        nature = ", ".join(item.lower().replace("_", " ") for item in change.change_nature)
         for control in impact.controls:
+            # Explain the approved path that makes this control relevant; the policy comes
+            # from the same traversal, so the reason never relies on shared risk tags.
+            policy_ids = tuple(
+                dict.fromkeys(
+                    edge.source
+                    for edge in impact.edges
+                    if edge.target == control.id and edge.source in self.citations
+                )
+            )
+            policies = " and ".join(self.citations[item].label for item in policy_ids)
+            why = (
+                f" Why: it implements {policies}, which addresses the "
+                f"{change.classification.value.lower()} mandate '{mandate}'"
+                + (f"; change nature: {nature}." if nature else ".")
+                if policy_ids
+                else ""
+            )
             facts.append(
                 self.fact(
-                    f"Prospective control to review if the proposal is adopted: {control.title}.",
-                    refs + (control.id,),
+                    f"Prospective control to review if the proposal is adopted: {control.title}."
+                    + why,
+                    refs + policy_ids + (control.id,),
                     "PROPOSED",
                 )
             )

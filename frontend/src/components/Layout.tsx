@@ -148,9 +148,9 @@ export function Layout() {
             <div className="seed-strip">
               <Activity size={14} />
               <span>
-                SEED / GOLDEN LABELS{' '}
+                CURATED BASELINE · GOLDEN LABELS{' '}
                 <span className="seed-description">
-                  · Baseline fixture · No live AI run represented in baseline
+                  · Live Gemini runs appear in Workflow runs and Ask RegImpact
                 </span>
               </span>
               <button

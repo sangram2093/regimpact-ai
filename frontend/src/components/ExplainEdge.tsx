@@ -10,6 +10,15 @@ export function ExplainEdge({ id, onClose }: { id: string; onClose: () => void }
   const query = useQuery(edgeQuery(id));
   const edge = query.data;
   const scenario = edge?.status === 'SCENARIO_APPROVED';
+  const provenance = edge?.provenance;
+  const hasRun = Boolean(
+    provenance &&
+      (provenance.model ||
+        provenance.prompt_version ||
+        provenance.vector_rank != null ||
+        provenance.lexical_rank != null ||
+        provenance.rrf_rank != null),
+  );
   return (
     <Dialog title="Explain this relationship" onClose={onClose}>
       {query.isPending ? (
@@ -43,7 +52,7 @@ export function ExplainEdge({ id, onClose }: { id: string; onClose: () => void }
                   {edge.provenance.decision_source}.{' '}
                   {scenario
                     ? 'This prospective relationship is separate from the approved baseline. Only recorded retrieval and decision metadata are shown.'
-                    : 'No live AI inference or retrieval rankings are represented.'}
+                    : 'Curated by the team as a golden label. Run live hybrid retrieval and Gemini from Mandates & mappings to compare a fresh recommendation.'}
                 </p>
               </div>
             </div>
@@ -61,27 +70,34 @@ export function ExplainEdge({ id, onClose }: { id: string; onClose: () => void }
                 <dt>Reviewed at</dt>
                 <dd>{edge.provenance.reviewed_at ?? 'Not recorded'}</dd>
               </div>
-              <div>
-                <dt>Model / prompt</dt>
-                <dd>
-                  {edge.provenance.model ?? 'No model run'} /{' '}
-                  {edge.provenance.prompt_version ?? 'Not applicable'}
-                </dd>
-              </div>
-              <div>
-                <dt>Vector / lexical rank</dt>
-                <dd>
-                  {edge.provenance.vector_rank ?? 'Not available'} /{' '}
-                  {edge.provenance.lexical_rank ?? 'Not available'}
-                </dd>
-              </div>
-              <div>
-                <dt>RRF rank / score</dt>
-                <dd>
-                  {edge.provenance.rrf_rank ?? 'Not available'} /{' '}
-                  {edge.provenance.rrf_score ?? 'Not available'}
-                </dd>
-              </div>
+              {hasRun ? (
+                <>
+                  <div>
+                    <dt>Model / prompt</dt>
+                    <dd>
+                      {edge.provenance.model ?? 'No model run'} /{' '}
+                      {edge.provenance.prompt_version ?? 'Not applicable'}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Vector / lexical rank</dt>
+                    <dd>
+                      {edge.provenance.vector_rank ?? '—'} / {edge.provenance.lexical_rank ?? '—'}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>RRF rank / score</dt>
+                    <dd>
+                      {edge.provenance.rrf_rank ?? '—'} / {edge.provenance.rrf_score ?? '—'}
+                    </dd>
+                  </div>
+                </>
+              ) : (
+                <div>
+                  <dt>Model / retrieval</dt>
+                  <dd>Golden label — no model run or retrieval ranks recorded</dd>
+                </div>
+              )}
             </dl>
             <h3>Source evidence</h3>
             {edge.evidence.length ? (

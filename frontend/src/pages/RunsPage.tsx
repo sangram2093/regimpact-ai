@@ -6,22 +6,30 @@ import { runsQuery, useWorkflowRun } from '../api/workflows';
 import type { WorkflowKind } from '../types/workflows';
 import { Badge, ErrorState, LoadingState, PageHeading } from '../components/Primitives';
 import { WorkflowRunCard } from '../components/WorkflowRunCard';
-import { humanize } from '../utils/format';
 
 const kinds: WorkflowKind[] = [
-  'interpret',
-  'risk-map',
-  'policy-map',
-  'pcs-extract',
   'change-effect',
+  'pcs-extract',
+  'interpret',
+  'policy-map',
+  'risk-map',
   'impact-explain',
 ];
+
+const kindLabels: Record<WorkflowKind, string> = {
+  'change-effect': 'Classify the change effect (Gemini)',
+  'pcs-extract': 'Extract proposed changes from the consultation PDF (Gemini)',
+  interpret: 'Interpret baseline obligations from the guideline PDF (Gemini)',
+  'policy-map': 'Recommend a policy mapping from hybrid search (Gemini)',
+  'risk-map': 'Suggest a risk classification (Gemini)',
+  'impact-explain': 'Explain control impact from approved paths (Gemini)',
+};
 
 export function RunsPage() {
   const query = useQuery(runsQuery);
   const dashboard = useQuery(dashboardQuery);
   const mutation = useWorkflowRun();
-  const [kind, setKind] = useState<WorkflowKind>('interpret');
+  const [kind, setKind] = useState<WorkflowKind>('change-effect');
   const [changeId, setChangeId] = useState('');
   const change =
     dashboard.data?.changes.find((item) => item.id === changeId) ?? dashboard.data?.changes[0];
@@ -50,7 +58,7 @@ export function RunsPage() {
             >
               {kinds.map((item) => (
                 <option key={item} value={item}>
-                  {humanize(item.replaceAll('-', '_'))}
+                  {kindLabels[item]}
                 </option>
               ))}
             </select>

@@ -56,11 +56,11 @@ describe('RegImpact review workflows', () => {
     expect(
       await screen.findByRole('heading', { name: 'Review only what changed.' }),
     ).toBeInTheDocument();
-    expect(screen.getByText('Estimated')).toBeInTheDocument();
+    expect(screen.getByText('Safety net engaged')).toBeInTheDocument();
     expect(screen.getByText('PROPOSED — NOT AN IN-FORCE REQUIREMENT')).toBeInTheDocument();
-    expect(screen.getByText(/No live AI run/)).toBeInTheDocument();
+    expect(screen.getByText(/Live Gemini runs appear/)).toBeInTheDocument();
     expect(
-      screen.getByText(/Scope and legal-force changes require fresh judgment/),
+      screen.getByText(/0 silent carry-forwards/),
     ).toBeInTheDocument();
     expect(screen.getByText(/synthetic hackathon data/)).toBeInTheDocument();
   });
@@ -70,7 +70,7 @@ describe('RegImpact review workflows', () => {
     expect(
       await screen.findByRole('button', { name: 'Acknowledge safe candidates' }),
     ).toBeDisabled();
-    expect(screen.getByText(/No mappings meet all carry-forward safeguards/)).toBeInTheDocument();
+    expect(screen.getByText(/Unsafe reuse blocked/)).toBeInTheDocument();
   });
 
   it('acknowledges an explicitly synthetic eligible batch through the API', async () => {
@@ -172,8 +172,10 @@ describe('RegImpact review workflows', () => {
       await screen.findByText('Gift policy directly addresses the gift safeguard mandate.'),
     ).toBeInTheDocument();
     expect(screen.getByText('Paraphrase')).toBeInTheDocument();
-    expect(screen.getByText(/No live AI inference/)).toBeInTheDocument();
-    expect(screen.getByText('No model run / Not applicable')).toBeInTheDocument();
+    expect(screen.getByText(/Curated by the team as a golden label/)).toBeInTheDocument();
+    expect(
+      screen.getByText('Golden label — no model run or retrieval ranks recorded'),
+    ).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'Close dialog' }));
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
