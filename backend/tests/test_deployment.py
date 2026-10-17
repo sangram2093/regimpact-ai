@@ -67,7 +67,7 @@ def test_corrupt_or_unsafe_submission_assets_never_reach_publish_directory(
     assert not (tmp_path / "escape.pptx").exists()
 
 
-@pytest.mark.parametrize("failure_stage", ["candidate", "hosting"])
+@pytest.mark.parametrize("failure_stage", ["candidate", "promotion", "hosting"])
 def test_failed_release_preserves_or_restores_previous_production(
     monkeypatch: pytest.MonkeyPatch, failure_stage: str, tmp_path: Path
 ) -> None:
@@ -83,6 +83,8 @@ def test_failed_release_preserves_or_restores_previous_production(
 
     def cli(*args, **kwargs):
         commands.append(args)
+        if failure_stage == "promotion" and "--to-revisions=new=100" in args:
+            raise ValueError("Release readiness failed after a network interruption")
         if args[:4] == ("gcloud", "run", "services", "describe"):
             return {"status": {"traffic": [{"revisionName": "old", "percent": 100}]}}
         if args[:3] == ("gcloud", "run", "deploy"):

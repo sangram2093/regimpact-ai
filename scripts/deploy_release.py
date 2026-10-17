@@ -201,8 +201,10 @@ def main() -> None:
         )
         verify_api(candidate_url, client)
         print(f"Candidate real-store verification passed: {revision}", flush=True)
-        promoted = False
+        promotion_attempted = False
         try:
+            # A client failure can occur after the server changed traffic.
+            promotion_attempted = True
             cli(
                 "gcloud",
                 "run",
@@ -212,7 +214,6 @@ def main() -> None:
                 f"--region={REGION}",
                 f"--to-revisions={revision}=100",
             )
-            promoted = True
             cli(
                 "firebase",
                 "deploy",
@@ -226,7 +227,7 @@ def main() -> None:
             )
             verify_hosting(manifest, client)
         except Exception:
-            if promoted:
+            if promotion_attempted:
                 print(
                     "Publication verification failed; restoring the previous release.",
                     flush=True,
