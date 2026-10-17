@@ -1,9 +1,10 @@
-name: Quality gates
+name: CI and deployment
 
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -39,3 +40,62 @@ jobs:
       - run: npm run typecheck
       - run: npm run test -- --run
       - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist/
+          retention-days: 7
+
+  deploy:
+    name: Deploy verified main to Google Cloud
+    needs: [backend, frontend]
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    concurrency:
+      group: regimpact-production
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      GCP_PROJECT_ID: regimpact-ai
+      GCP_REGION: asia-south1
+      DEPLOY_SERVICE_ACCOUNT: regimpact-deployer@regimpact-ai.iam.gserviceaccount.com
+      WIF_PROVIDER: projects/61760046387/locations/global/workloadIdentityPools/github-regimpact/providers/github
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
+      - name: Authenticate build identity without a key
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ env.GCP_PROJECT_ID }}
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.DEPLOY_SERVICE_ACCOUNT }}
+      - uses: google-github-actions/setup-gcloud@v3
+      - name: Build immutable backend image
+        id: build
+        run: python scripts/build_release.py --commit "$GITHUB_SHA"
+      - name: Refresh short-lived deployment credentials after the build
+        uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ env.GCP_PROJECT_ID }}
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.DEPLOY_SERVICE_ACCOUNT }}
+      - name: Install deployment clients
+        run: |
+          python -m pip install -c backend/requirements-gcp.lock google-auth google-cloud-storage httpx
+          npm install --global firebase-tools@13.11.2
+      - name: Verify candidate, publish API and Hosting, verify or roll back
+        env:
+          RELEASE_IMAGE: ${{ steps.build.outputs.image }}
+        run: python scripts/deploy_release.py --image "$RELEASE_IMAGE" --commit "$GITHUB_SHA"

@@ -40,6 +40,7 @@ playwright-report/
 test-results/
 .firebase/
 .firebaserc
+gha-creds-*.json
 *.tfstate
 *.tfstate.*
 .terraform/

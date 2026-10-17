@@ -59,3 +59,15 @@ Independent specialist labels and blind quality evaluation remain future work. D
 This repository is a clean source snapshot. It excludes private development history, conversations, master design files, pitch/video binaries, downloaded regulatory PDFs and documentation other than this README. Runtime `.prompt` assets, JSON demonstration data, tests, schema and deployment configuration are included because the application requires them. Submission artifacts are hosted separately.
 
 The repository includes CI configuration; the Actions tab shows actual run status. Availability requires the cloud deployment and its trial resources to remain active throughout evaluation.
+
+## CI and continuous deployment
+
+The [CI and deployment workflow](https://github.com/sangram2093/regimpact-ai/actions) runs backend lint/tests/contracts/secret checks and frontend lint/types/tests/build on pull requests and main pushes. Only successful main pushes or manual main runs may deploy. Pull requests never receive deployment credentials.
+
+The deployment job uses GitHub OIDC and Google Workload Identity Federation, restricted to this repository's numeric identity, owner, main branch and workflow. No service-account key or password is stored in GitHub. A dedicated deployer can stage builds, invoke the scoped builder, update the existing Cloud Run service and publish Hosting; it does not receive runtime database or model permissions directly.
+
+Cloud Build produces an image identified by its digest. The job deploys a candidate with no production traffic, checks GCP mode, real Firestore and complete source evidence, then publishes Cloud Run and its paired Firebase Hosting release. Post-release checks verify deep links, API routing and exact submission-asset hashes. A failed publication attempts to restore the previous Hosting version and Cloud Run traffic. Rollback failures make the job fail for operator attention.
+
+The deck and video are restored from a private, immutable Cloud Storage asset bundle declared in `infra/firebase/submission-assets.json`. Their bytes are hash-checked before and after release, so routine code deployments preserve the submission files without committing documents or video to this repository. Database schema changes, corpus imports and billable AI quality evaluations remain explicit operator actions.
+
+To release a code change, push it to main and inspect the workflow's deployment summary. To rerun the same verified release, use **Actions → CI and deployment → Run workflow → main**. Keep the trial resources active during evaluation.

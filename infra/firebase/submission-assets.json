@@ -1,0 +1,37 @@
+{
+  "bucket": "regimpact-ai-builds-61760046387",
+  "prefix": "submission-assets/20261018-impact-v3",
+  "files": [
+    {
+      "name": "index.html",
+      "sha256": "958d086a8ac30b799e7a20f5f21f1fd90b188223b21319165ee7f9834e393d11",
+      "bytes": 2968
+    },
+    {
+      "name": "submission.css",
+      "sha256": "b0682a148afcfda3c5408ebe17b78d6480d738ae56dc3bc6d8d29e04360071a8",
+      "bytes": 714
+    },
+    {
+      "name": "RegImpact_AI_Submission.pptx",
+      "sha256": "b549fef946cd27c5cdc672ec508a980cbdde5f55142b15bcd54195a2a42f0a66",
+      "bytes": 994765
+    },
+    {
+      "name": "RegImpact_AI_Demo.mp4",
+      "sha256": "1aa7860437b2bf168272818c64d929e10c785fc553baa973fe72281b10a0db28",
+      "bytes": 8052870
+    },
+    {
+      "name": "RegImpact_AI_Demo.vtt",
+      "sha256": "842f6841d7a85f17738de0523c3884167ee86892c6ca9ebd3acb6b41db433c4b",
+      "bytes": 4358
+    },
+    {
+      "name": "prototype.png",
+      "sha256": "c5ec6ab5805d760a3bd4f832e1b014ff47b47c97a873ca0ccdf95d76e2d45f56",
+      "bytes": 63440
+    }
+  ],
+  "note": "Public submission assets stored privately for reproducible Hosting deployment; hashes checked before and after publication."
+}
