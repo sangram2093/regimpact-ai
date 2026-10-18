@@ -11,6 +11,7 @@ import {
   Menu,
   Network,
   RotateCcw,
+  UserCheck,
   ScanLine,
   ShieldCheck,
   X,
@@ -37,6 +38,24 @@ const navigation = [
   { to: '/ask', label: 'Ask RegImpact', icon: MessageSquareText },
   { to: '/runs', label: 'Workflow runs', icon: Workflow },
 ];
+
+const ROLE_INFO: Record<ReviewerRole, { initials: string; tone: string; can: string }> = {
+  'Regulatory Specialist': {
+    initials: 'RS',
+    tone: 'specialist',
+    can: 'confirm change effects, acknowledge safe carry-forward and review change-effect runs',
+  },
+  'Policy Owner': {
+    initials: 'PO',
+    tone: 'owner',
+    can: 'approve or reject policy mappings, authorize control impact and review policy and impact-explanation runs',
+  },
+  'Risk Steward': {
+    initials: 'RK',
+    tone: 'steward',
+    can: 'approve or reject risk mappings and review risk-classification runs',
+  },
+};
 
 function ScenarioSwitcher() {
   const client = useQueryClient();
@@ -180,12 +199,22 @@ export function Layout() {
                   <option>Risk Steward</option>
                 </select>
               </label>
-              <span className="reviewer-avatar" title="Demo reviewer">
-                DR
+              <span
+                className={`reviewer-avatar role-${ROLE_INFO[role].tone}`}
+                title={`Acting as ${role}`}
+              >
+                {ROLE_INFO[role].initials}
               </span>
             </div>
           </header>
           <main id="main-content">
+            <p className={`role-strip role-${ROLE_INFO[role].tone}`} aria-live="polite">
+              <UserCheck size={15} />
+              <span>
+                Acting as <strong>{role}</strong>: you can {ROLE_INFO[role].can}. Other decisions
+                stay locked until you switch role.
+              </span>
+            </p>
             <div className="seed-strip">
               <Activity size={14} />
               <span>

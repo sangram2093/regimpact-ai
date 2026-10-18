@@ -43,7 +43,7 @@ Regulatory text comes from the two official MAS PDFs. The bank's policies and co
 |---|---|
 | **Text size** (A− · 100% · A+) | Enlarges all text in four steps (100%, 113%, 125%, 138%). Click the percentage to return to 100%. Your choice is remembered in this browser. |
 | **Regulation** | Switches between the two worked examples: **Technology risk · 2021 final** and **Marketing rules · 2023 proposal**. Switching returns you to Overview. |
-| **Demo reviewer role** | Chooses who you are acting as: **Regulatory Specialist**, **Policy Owner** or **Risk Steward**. Each decision needs a specific role (see section 5). This demonstrates authorization; it is not a login. |
+| **Demo reviewer role** | Chooses who you are acting as: **Regulatory Specialist** (avatar RS, teal), **Policy Owner** (PO, amber) or **Risk Steward** (RK, blue). A strip at the top of every page says what the current role can decide. Each decision needs a specific role (see section 5): with the wrong role, its button stays disabled and names the role to switch to. Viewing pages is the same for every role. This demonstrates authorization; it is not a login. |
 
 Below the top bar, the strip **CURATED BASELINE · GOLDEN LABELS** reminds you that the starting data is reviewed demonstration data. Live Gemini runs appear in **Workflow runs** and **Ask RegImpact**. **Reset demo** (right) clears the decisions and runs in your current session. The approved baseline is never changed.
 

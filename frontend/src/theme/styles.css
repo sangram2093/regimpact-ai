@@ -377,6 +377,48 @@ code {
   border-radius: 50%;
   display: grid;
   place-items: center;
+  font-weight: 700;
+}
+.reviewer-avatar.role-specialist {
+  background: #dff0ea;
+  color: #0b6b63;
+}
+.reviewer-avatar.role-owner {
+  background: #f6ead2;
+  color: #85601c;
+}
+.reviewer-avatar.role-steward {
+  background: #e3e9f5;
+  color: #34518a;
+}
+.role-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 8px 12px;
+  border-radius: 7px;
+  border-left: 4px solid currentColor;
+  font-size: calc(12px * var(--text-scale));
+  line-height: 1.45;
+}
+.role-strip > svg {
+  flex-shrink: 0;
+}
+.role-strip span {
+  color: #24343c;
+}
+.role-strip.role-specialist {
+  background: #e9f5f1;
+  color: #0b6b63;
+}
+.role-strip.role-owner {
+  background: #fbf3e2;
+  color: #a2751f;
+}
+.role-strip.role-steward {
+  background: #edf1f9;
+  color: #3c5a96;
 }
 main {
   padding: 0 40px 32px;
