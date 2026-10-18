@@ -20,7 +20,7 @@ import { useScenarioMode } from '../hooks/scenario';
 export function ImpactPage() {
   const { id } = useParams();
   const dashboard = useQuery(dashboardQuery);
-  const { copy } = useScenarioMode();
+  const { copy, final } = useScenarioMode();
   // Unchanged obligations reuse prior review; tabs focus on what changed.
   const tabs = (dashboard.data?.changes ?? []).filter(
     (item) => item.classification !== 'UNCHANGED' || item.id === id,
@@ -88,7 +88,7 @@ export function ImpactPage() {
       <section className="panel lineage-panel">
         <div className="panel-header">
           <div>
-            <p className="eyebrow">PROSPECTIVE CONTROL IMPACT</p>
+            <p className="eyebrow">{final ? 'CONTROL IMPACT' : 'PROSPECTIVE CONTROL IMPACT'}</p>
             <h2>{change?.title ?? changeId}</h2>
           </div>
           <Badge tone={impact.coverage === 'COMPLETE' ? 'teal' : 'amber'}>

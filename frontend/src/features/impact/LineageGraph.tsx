@@ -1,6 +1,7 @@
 import { humanize } from '../../utils/format';
 import { ArrowRight, FileCheck2, GitBranch, ShieldCheck } from 'lucide-react';
 import type { Impact } from '../../types/api';
+import { useScenarioMode } from '../../hooks/scenario';
 
 const groups = [
   { match: 'MANDATE', label: '01 / MANDATE', icon: GitBranch },
@@ -17,6 +18,7 @@ export function LineageGraph({
   onExplain: (id: string) => void;
   unfilteredNodes?: Impact['nodes'];
 }) {
+  const { final } = useScenarioMode();
   return (
     <div className="lineage-graph" aria-label="Mandate to policy to control lineage">
       {groups.map(({ match, label, icon: Icon }, index) => (
@@ -31,7 +33,9 @@ export function LineageGraph({
                   <code>{node.id}</code>
                   <strong>{node.label}</strong>
                   {impact.controls.some((control) => control.id === node.id) && (
-                    <span className="graph-impact-label">Prospective impact</span>
+                    <span className="graph-impact-label">
+                      {final ? 'Review needed' : 'Prospective impact'}
+                    </span>
                   )}
                   <span
                     className={`graph-status ${['PROPOSED', 'SCENARIO_APPROVED'].includes(node.status) ? 'graph-status-proposed' : ''}`}

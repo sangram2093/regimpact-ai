@@ -13,11 +13,11 @@ import { useScenarioMode } from '../hooks/scenario';
 
 export function CoveragePage() {
   const query = useQuery(dashboardQuery);
-  const { copy } = useScenarioMode();
+  const { copy, final } = useScenarioMode();
   return (
     <>
       <PageHeading
-        eyebrow="PROSPECTIVE COVERAGE"
+        eyebrow={final ? 'COVERAGE OF NEW RULES' : 'PROSPECTIVE COVERAGE'}
         title="Make the gaps visible."
         description={`${copy.newObligations} need explicit mapping. They are never silently absorbed into the approved graph.`}
       />
