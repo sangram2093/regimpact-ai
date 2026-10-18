@@ -12,6 +12,9 @@ class ImpactService:
         self.catalog = {n.id: n for n in bundle.catalog}
         self.evidence = {e.id: e for e in bundle.evidence}
         self.edges = {edge.id: edge for edge in bundle.edges}
+        # The approved baseline is immutable for the life of the process, so baseline
+        # impact can be computed once per change instead of on every dashboard load.
+        self._impact_cache: dict[str, ImpactResponse] = {}
 
     def risk_tags(self, mandate_id: str) -> tuple[str, ...]:
         return tuple(
@@ -21,6 +24,13 @@ class ImpactService:
         )
 
     def change_impact(self, change_id: str) -> ImpactResponse:
+        cached = self._impact_cache.get(change_id)
+        if cached is None:
+            cached = self._compute_change_impact(change_id)
+            self._impact_cache[change_id] = cached
+        return cached.model_copy(deep=True)
+
+    def _compute_change_impact(self, change_id: str) -> ImpactResponse:
         change = next((c for c in self.bundle.changes if c.id == change_id), None)
         if change is None:
             raise DomainError("CHANGE_NOT_FOUND", "The requested change was not found.", 404)

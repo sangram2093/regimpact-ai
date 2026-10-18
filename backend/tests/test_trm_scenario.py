@@ -93,3 +93,25 @@ def test_final_mode_change_detail_and_ask_do_not_use_proposal_wording(
     assert [e["paragraph_ref"] for e in detail["proposal_evidence"]] == ["13.4.1"]
     config = server.get("/api/v1/ask/config", headers=headers()).json()["data"]
     assert any("adversarial" in q for q in config["suggested_questions"])
+
+
+def test_baseline_impact_is_computed_once_per_change() -> None:
+    from app.services.impact import ImpactService
+
+    bundle = LocalJsonRepository(Settings().data_dir, TRM_2021).snapshot()
+    repository = LocalJsonRepository(Settings().data_dir, TRM_2021)
+    calls = []
+
+    class CountingGraph:
+        def approved_outgoing(self, node_id):
+            return repository.approved_outgoing(node_id)
+
+        def approved_control_paths(self, mandate_id):
+            calls.append(mandate_id)
+            return repository.approved_control_paths(mandate_id)
+
+    service = ImpactService(bundle, CountingGraph())
+    first = service.change_impact("CHANGE-TRM-13-4-1")
+    second = service.change_impact("CHANGE-TRM-13-4-1")
+    assert first == second and first is not second
+    assert calls == ["M-TRM-13-4-1"]
