@@ -1,11 +1,11 @@
 {
   "bucket": "regimpact-ai-builds-61760046387",
-  "prefix": "submission-assets/20261018-video-v4",
+  "prefix": "submission-assets/20261018-video-v5",
   "files": [
     {
       "name": "index.html",
-      "sha256": "85080df7ad6b2a0bd2a1b8ecd8a3d7f6e81e1b82419d7daaccead3c847d0438c",
-      "bytes": 3869
+      "sha256": "cf9a265997f8d2913664bd7ce15164199c5e918d3c19537b7e424da3b7adc6b5",
+      "bytes": 4164
     },
     {
       "name": "submission.css",
@@ -14,13 +14,13 @@
     },
     {
       "name": "RegImpact_AI_Submission.pptx",
-      "sha256": "adfd1890888155af0ea9acad6c56afebd0cdaba35ce1dc8439779d293084bdbe",
-      "bytes": 1450975
+      "sha256": "62d8748861d8a5dbeb1d878c887fc1d44f8015275966e9c4436c9c86ca66373e",
+      "bytes": 1451075
     },
     {
       "name": "RegImpact_AI_Submission.pdf",
-      "sha256": "212a2dfb01aa60a88127ac4e752148af946d06d82d76a56d1bf9b2f13ce88395",
-      "bytes": 617859
+      "sha256": "e7caff022272b63d68a76fc398b343814284f70011e1f1af7d2ef8569c09855d",
+      "bytes": 614186
     },
     {
       "name": "RegImpact_AI_Demo.mp4",

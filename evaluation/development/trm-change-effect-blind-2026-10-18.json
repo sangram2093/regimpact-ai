@@ -1,0 +1,353 @@
+{
+  "summary": {
+    "kind": "LABEL_BLIND_DEVELOPMENT_CHECK",
+    "inputs": "draft and final paragraph text only; no stored label, summary or change statements",
+    "label_source": "Team golden labels; not independent",
+    "model": "gemini-3.5-flash, prompt change-effect-v1",
+    "runs": 36,
+    "validated_outputs": 36,
+    "agreement": 29,
+    "unsafe_unchanged_predictions": [],
+    "by_label": {
+      "UNCHANGED": "15/19",
+      "MODIFIED": "14/14",
+      "REMOVED": "0/1",
+      "NEW": "0/2"
+    },
+    "disagreements": [
+      {
+        "change_id": "CHANGE-TRM-13-1-1",
+        "golden": "UNCHANGED",
+        "predicted": "MODIFIED",
+        "reason": "The text was modified to specify 'IT systems' instead of 'systems' in both sentences of the paragraph, clarifying the scope of the systems subject to vulnerability assessments."
+      },
+      {
+        "change_id": "CHANGE-TRM-13-2-2",
+        "golden": "UNCHANGED",
+        "predicted": "MODIFIED",
+        "reason": "The final 2021 guidelines contain minor textual changes compared to the 2019 consultation draft, modifying 'another mean' to 'another means', 'systems' to 'IT systems', and 'test their systems' to 'conduct PT on their sy"
+      },
+      {
+        "change_id": "CHANGE-TRM-13-6-1",
+        "golden": "UNCHANGED",
+        "predicted": "MODIFIED",
+        "reason": "The text was modified slightly from the 2019 consultation draft to the 2021 final version, changing 'remediation management process' to 'remediation process'. While the core requirements (a), (b), and (c) remain unchange"
+      },
+      {
+        "change_id": "CHANGE-TRM-6-4-1",
+        "golden": "UNCHANGED",
+        "predicted": "MODIFIED",
+        "reason": "The text of paragraph 6.4.1 has been modified in the final 2021 Guidelines compared to the 2019 consultation draft. Notable changes include relaxing the collaboration description from 'FIs collaborate' to 'FIs may collab"
+      },
+      {
+        "change_id": "CHANGE-TRM-6-4-2",
+        "golden": "REMOVED",
+        "predicted": "UNRESOLVED",
+        "reason": "The proposed change evidence or comparison text for the January 2021 final guideline is missing from the provided sources, making it impossible to determine if the requirement has been modified, removed, or remains uncha"
+      },
+      {
+        "change_id": "CHANGE-TRM-NEW-6-1-3",
+        "golden": "NEW",
+        "predicted": "UNRESOLVED",
+        "reason": "The baseline evidence from the 2019 consultation draft (MAS-TRM-CP-2019) is not provided in the evidence list, making it impossible to compare and determine whether this is a new, modified, or unchanged requirement."
+      },
+      {
+        "change_id": "CHANGE-TRM-NEW-6-1-4",
+        "golden": "NEW",
+        "predicted": "UNRESOLVED",
+        "reason": "No baseline evidence from MAS-TRM-CP-2019 was provided to confirm whether this requirement is entirely new or if it existed in the 2019 consultation draft. Therefore, a definitive comparison cannot be performed."
+      }
+    ],
+    "run_date": "2026-10-18"
+  },
+  "rows": [
+    {
+      "change_id": "CHANGE-TRM-9-1-1",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The provision has been modified between the 2019 consultation draft and the 2021 final version. Specifically, the scope of access control principles has been altered from preventing access to 'critical system functions' "
+    },
+    {
+      "change_id": "CHANGE-TRM-9-1-2",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The final 2021 guidelines modify the user access management process requirement by adding the need to 'change' access rights (in addition to provisioning and revoking them) and expanding who can authorize and approve acc"
+    },
+    {
+      "change_id": "CHANGE-TRM-9-1-3",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The addition of the word \"proper\" before \"accountability\" in the final January 2021 guidelines is a minor stylistic enhancement. It does not alter the substance, legal force, or operational requirements of the mandate to"
+    },
+    {
+      "change_id": "CHANGE-TRM-9-1-4",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text of the guidelines remains identical between the 2019 consultation draft and the final January 2021 guidelines, requiring the FI to establish a password policy and enforce strong password controls for users' acce"
+    },
+    {
+      "change_id": "CHANGE-TRM-9-1-5",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The requirement has been modified. The scope of implementation for multi-factor authentication was altered from users with access to \"critical system functions\" to those with access to \"sensitive system functions\", and t"
+    },
+    {
+      "change_id": "CHANGE-TRM-9-1-6",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The guideline paragraph was modified in the final 2021 version. Specifically, the responsibility of performing periodic user access reviews was broadened from 'information asset owners' to 'appropriate parties such as in"
+    },
+    {
+      "change_id": "CHANGE-TRM-9-1-7",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The change between the 2019 consultation draft and the final 2021 guidelines is purely stylistic, altering 'The FI should ensure users are granted system access rights on a need-to-use basis' to 'Users should only be gra"
+    },
+    {
+      "change_id": "CHANGE-TRM-9-1-8",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text of the provision in the January 2021 final guideline is identical to the text in the 2019 consultation draft."
+    },
+    {
+      "change_id": "CHANGE-TRM-9-2-1",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The minor phrasing edit from 'Users granted with privileged system access' in the 2019 draft to 'Users granted privileged system access' in the 2021 guidelines does not change the core requirements to restrict, log, and "
+    },
+    {
+      "change_id": "CHANGE-TRM-9-2-2",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The guideline on managing and monitoring system and service accounts remains unchanged between the 2019 consultation draft and the final 2021 guideline, with only a minor, non-semantic grammatical adjustment (removal of "
+    },
+    {
+      "change_id": "CHANGE-TRM-9-3-1",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The only difference between the 2019 consultation draft and the 2021 final guideline is the trivial correction of 'Remote connection' to 'Remote connections' in the second sentence. There is no change to the regulatory r"
+    },
+    {
+      "change_id": "CHANGE-TRM-9-3-2",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The baseline requirement from the 2019 consultation draft has been modified in the final January 2021 Technology Risk Management Guidelines. The term 'hardened' has been updated to 'secured' in paragraph 9.3.2 regarding "
+    },
+    {
+      "change_id": "CHANGE-TRM-13-1-1",
+      "golden": "UNCHANGED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text was modified to specify 'IT systems' instead of 'systems' in both sentences of the paragraph, clarifying the scope of the systems subject to vulnerability assessments."
+    },
+    {
+      "change_id": "CHANGE-TRM-13-1-2",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The baseline mandate's scope for vulnerability assessment (VA) has been modified between the 2019 consultation draft and the final January 2021 guidelines. The new version replaces the identification of 'applications and"
+    },
+    {
+      "change_id": "CHANGE-TRM-13-2-1",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The requirement text remains identical between the 2019 consultation draft and the final 2021 guidelines, with no changes made to the wording regarding penetration testing."
+    },
+    {
+      "change_id": "CHANGE-TRM-13-2-2",
+      "golden": "UNCHANGED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The final 2021 guidelines contain minor textual changes compared to the 2019 consultation draft, modifying 'another mean' to 'another means', 'systems' to 'IT systems', and 'test their systems' to 'conduct PT on their sy"
+    },
+    {
+      "change_id": "CHANGE-TRM-13-2-3",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text of the guidance in paragraph 13.2.3 of the 2019 consultation draft is identical to the text in paragraph 13.2.3 of the final January 2021 Technology Risk Management Guidelines. Therefore, there is no change to t"
+    },
+    {
+      "change_id": "CHANGE-TRM-13-2-4",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text of the provision remains identical between the 2019 consultation draft and the final 2021 guidelines, indicating that the mandate remains unchanged."
+    },
+    {
+      "change_id": "CHANGE-TRM-13-3-1",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text was modified by removing the phrase 'and review' from 'validate and review its response and recovery' in the final 2021 guidelines compared to the 2019 consultation draft."
+    },
+    {
+      "change_id": "CHANGE-TRM-13-3-2",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text in paragraph 13.3.2 remains exactly identical between the 2019 consultation draft and the final January 2021 guidelines, indicating no change in requirements."
+    },
+    {
+      "change_id": "CHANGE-TRM-13-4-1",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The guideline evolved from a voluntary or encouraging statement in the 2019 consultation draft ('The FI is encouraged to perform...') to a stronger expectation in the final 2021 guidelines ('The FI should perform...'). T"
+    },
+    {
+      "change_id": "CHANGE-TRM-13-4-2",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text of paragraph 13.4.2 in the MAS Technology Risk Management Guidelines January 2021 final version is completely identical to the text in the 2019 consultation draft. Therefore, there is no change to this mandate."
+    },
+    {
+      "change_id": "CHANGE-TRM-13-5-1",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The guideline statement has changed between the 2019 consultation draft and the final 2021 guidelines. The scope of testing has expanded from 'on an FI during a red team exercise' to 'during any cyber security assessment"
+    },
+    {
+      "change_id": "CHANGE-TRM-13-5-2",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The baseline text from the 2019 consultation draft was slightly modified in the final 2021 guidelines by removing the opening phrase 'As an alternative, the' and replacing it with 'The', while keeping the rest of the sen"
+    },
+    {
+      "change_id": "CHANGE-TRM-13-6-1",
+      "golden": "UNCHANGED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text was modified slightly from the 2019 consultation draft to the 2021 final version, changing 'remediation management process' to 'remediation process'. While the core requirements (a), (b), and (c) remain unchange"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-1",
+      "golden": "UNCHANGED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text of paragraph 6.4.1 has been modified in the final 2021 Guidelines compared to the 2019 consultation draft. Notable changes include relaxing the collaboration description from 'FIs collaborate' to 'FIs may collab"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-2",
+      "golden": "REMOVED",
+      "predicted": "UNRESOLVED",
+      "no_effect": "AMBIGUOUS_SOURCE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The proposed change evidence or comparison text for the January 2021 final guideline is missing from the provided sources, making it impossible to determine if the requirement has been modified, removed, or remains uncha"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-3",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The requirement has been modified. The term 'security policy' was updated to 'cyber security posture' in the final 2021 guidelines, and the phrasing 'amongst others' was refined to 'factors such as' in the vetting criter"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-4",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The minor textual changes between the 2019 consultation draft and the 2021 final guidelines (adding 'a' before risk assessment, modifying 'systems' to 'IT systems', and changing 'security implementation' to 'implementati"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-5",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text of the guideline concerning secure API standards, key/token protection, and token expiry timeframes remains completely identical between the 2019 consultation draft (6.4.5) and the 2021 final version (6.4.4), wi"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-6",
+      "golden": "UNCHANGED",
+      "predicted": "UNCHANGED",
+      "no_effect": "NO_EFFECT_SUPPORTED",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text in the 2019 consultation draft is identical to the text in the final January 2021 guidelines, meaning there is no change in the regulatory expectation or mandate."
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-7",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The 2021 final guideline introduces more stringent and detailed requirements compared to the 2019 consultation draft. Specifically, it changes the expectation from having the 'ability to log' to actively requiring that t"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-8",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The text was modified in the 2021 final guidelines to frame the requirements under 'Detective measures, such as technologies that provide real-time monitoring and alerting' instead of simply referring to 'Real-time monit"
+    },
+    {
+      "change_id": "CHANGE-TRM-6-4-9",
+      "golden": "MODIFIED",
+      "predicted": "MODIFIED",
+      "no_effect": "EFFECT_POSSIBLE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The baseline mandate (from 2019 paragraph 6.4.9) on handling high volumes of API call requests and mitigating DoS attacks has been modified in the 2021 final version (paragraph 6.4.8). The text was revised to explicitly "
+    },
+    {
+      "change_id": "CHANGE-TRM-NEW-6-1-3",
+      "golden": "NEW",
+      "predicted": "UNRESOLVED",
+      "no_effect": "AMBIGUOUS_SOURCE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "The baseline evidence from the 2019 consultation draft (MAS-TRM-CP-2019) is not provided in the evidence list, making it impossible to compare and determine whether this is a new, modified, or unchanged requirement."
+    },
+    {
+      "change_id": "CHANGE-TRM-NEW-6-1-4",
+      "golden": "NEW",
+      "predicted": "UNRESOLVED",
+      "no_effect": "AMBIGUOUS_SOURCE",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "reason": "No baseline evidence from MAS-TRM-CP-2019 was provided to confirm whether this requirement is entirely new or if it existed in the 2019 consultation draft. Therefore, a definitive comparison cannot be performed."
+    }
+  ]
+}
