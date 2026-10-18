@@ -1,10 +1,10 @@
 {
   "bucket": "regimpact-ai-builds-61760046387",
-  "prefix": "submission-assets/20261018-video-v7",
+  "prefix": "submission-assets/20261018-video-v8",
   "files": [
     {
       "name": "index.html",
-      "sha256": "42d25d484194bfd129e8de9f0c243224f18f017b7d6cab3177062994a4fa60cc",
+      "sha256": "81b6b9a5867b373a03d4824fa42078bc9ff50a71df3233ed5db77e7d71a5be31",
       "bytes": 5324
     },
     {
@@ -14,23 +14,23 @@
     },
     {
       "name": "RegImpact_AI_Submission.pptx",
-      "sha256": "bd63333a2d066c590bd01fbf45a4040410c983047f7365cb8f5d244b3a8b82c8",
-      "bytes": 1456212
+      "sha256": "928fb99d6ca124d68e7ebeda1776b332913f32fe886f2c4cb24dd2b8873dae42",
+      "bytes": 1461543
     },
     {
       "name": "RegImpact_AI_Submission.pdf",
-      "sha256": "c2e91a23d310f2faed1553b97fb8e1f0cf8d30177dd0224fae42556d6c19d554",
-      "bytes": 644717
+      "sha256": "9dfafba2cb286ac344c7dee128e74b942b996d9630687e97797a9964682e852d",
+      "bytes": 650115
     },
     {
       "name": "RegImpact_AI_Demo.mp4",
-      "sha256": "02f4fc38f21d5b07eb1ae70e759ea465f11f0cbaa4dcaed23341196a7e6d7138",
-      "bytes": 8393660
+      "sha256": "eb5c82487b6b9559cf97742177f38795d67b1255db759e895f7b09650a9ec2b7",
+      "bytes": 8434509
     },
     {
       "name": "RegImpact_AI_Demo.vtt",
-      "sha256": "c5cc123f3bca92e2c2c86913b5ecd12cde38d040de884a6aa17eceeaba0901c5",
-      "bytes": 3833
+      "sha256": "353b0acdd7349a52262afc1df3103b5ca198f9808cdd51e2b561bbfe877b6b98",
+      "bytes": 3877
     },
     {
       "name": "prototype.png",
@@ -38,5 +38,5 @@
       "bytes": 392123
     }
   ],
-  "note": "2:51 demonstration opening with 2024 enforcement cases and the four-member team; deck v8 with team members and Why it matters; stored privately for reproducible Hosting deployment and hash verification."
+  "note": "2:53 demonstration with the 54.9% hook and Sarah story; deck v9 after judge review (hook, comparison, vision); stored privately for reproducible Hosting deployment and hash verification."
 }

@@ -11,7 +11,7 @@ Large penalties often follow controls that did not keep pace with known obligati
 ## Submission links
 
 - **Working prototype:** https://regimpact-ai.web.app
-- **2:51 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
+- **2:53 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
 - **Pitch deck (PDF):** https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pdf · [PPTX in the prescribed template](https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pptx)
 
 ## User guide
