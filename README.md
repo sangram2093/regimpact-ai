@@ -1,6 +1,6 @@
 # RegImpact AI
 
-Regulatory Change-to-Control Intelligence · Team RegNexus AI
+Regulatory Change-to-Control Intelligence · Team RegNexus AI: Sangram Jadhav (team leader), Abhijeet Lele, Mansi Dwivedi and Bhavinkumar Parmar.
 
 **Review only what changed.** RegImpact AI helps compliance teams trace a regulatory revision to the enterprise policies and controls that require human review. Evidence, proposed legal status, mapping rationale and reviewer decisions stay visible.
 
@@ -11,8 +11,12 @@ Large penalties often follow controls that did not keep pace with known obligati
 ## Submission links
 
 - **Working prototype:** https://regimpact-ai.web.app
-- **2:50 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
+- **2:51 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
 - **Pitch deck (PDF):** https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pdf · [PPTX in the prescribed template](https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pptx)
+
+## User guide
+
+The [step-by-step user guide](docs/REGIMPACT_UI_USER_GUIDE.md) walks through every screen, from loading the official MAS documents to an audited, human-approved review, using the Technology risk 2021 example.
 
 ## Two worked examples
 

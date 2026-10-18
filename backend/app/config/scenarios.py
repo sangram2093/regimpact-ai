@@ -15,6 +15,7 @@ class ScenarioSpec:
     source_manifest: str
     demo_catalog: str
     label: str
+    source_note: str
 
 
 MAS_2023 = ScenarioSpec(
@@ -26,6 +27,9 @@ MAS_2023 = ScenarioSpec(
     source_manifest="source-manifest.json",
     demo_catalog="seed/demo_catalog.json",
     label="Marketing rules · 2023 proposal",
+    source_note=(
+        "The 2023 consultation is a historical proposal scenario, not a statement of current law."
+    ),
 )
 TRM_2021 = ScenarioSpec(
     key="trm-2021",
@@ -36,6 +40,10 @@ TRM_2021 = ScenarioSpec(
     source_manifest="trm-source-manifest.json",
     demo_catalog="seed/trm_demo_catalog.json",
     label="Technology risk · 2021 final",
+    source_note=(
+        "The 2019 consultation draft is the prepared baseline; the January 2021 Guidelines are the "
+        "final text it is compared with."
+    ),
 )
 SCENARIOS = (MAS_2023, TRM_2021)
 

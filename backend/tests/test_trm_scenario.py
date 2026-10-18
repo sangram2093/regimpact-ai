@@ -115,3 +115,11 @@ def test_baseline_impact_is_computed_once_per_change() -> None:
     second = service.change_impact("CHANGE-TRM-13-4-1")
     assert first == second and first is not second
     assert calls == ["M-TRM-13-4-1"]
+
+
+def test_source_register_note_matches_each_scenario(server: TestClient) -> None:
+    mas = server.get("/api/v1/sources").json()["data"]["disclosures"]
+    trm = server.get("/api/v1/sources", headers=TRM).json()["data"]["disclosures"]
+    assert any("2023 consultation" in note for note in mas)
+    assert any("January 2021 Guidelines are the final text" in note for note in trm)
+    assert not any("2023 consultation" in note for note in trm)

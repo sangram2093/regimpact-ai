@@ -1,11 +1,11 @@
 {
   "bucket": "regimpact-ai-builds-61760046387",
-  "prefix": "submission-assets/20261018-video-v6",
+  "prefix": "submission-assets/20261018-video-v7",
   "files": [
     {
       "name": "index.html",
-      "sha256": "1d0ffdc7d991387c9b5a9799739e57fb0b5e2f797fbeda42483c80eb2c8892c4",
-      "bytes": 5215
+      "sha256": "42d25d484194bfd129e8de9f0c243224f18f017b7d6cab3177062994a4fa60cc",
+      "bytes": 5324
     },
     {
       "name": "submission.css",
@@ -14,23 +14,23 @@
     },
     {
       "name": "RegImpact_AI_Submission.pptx",
-      "sha256": "0b030eb1be102b1e59d85b38631314983dd03a2ae189f5adef69ef152168732f",
-      "bytes": 1456139
+      "sha256": "bd63333a2d066c590bd01fbf45a4040410c983047f7365cb8f5d244b3a8b82c8",
+      "bytes": 1456212
     },
     {
       "name": "RegImpact_AI_Submission.pdf",
-      "sha256": "b3cc98400877d7aee40a63959c1e3e47b25263783b2892f7bce62d1c1e660451",
-      "bytes": 644496
+      "sha256": "c2e91a23d310f2faed1553b97fb8e1f0cf8d30177dd0224fae42556d6c19d554",
+      "bytes": 644717
     },
     {
       "name": "RegImpact_AI_Demo.mp4",
-      "sha256": "fb464e45562b774b2263b9b6eeb2220afe5cdde50dec407802076fa7a391a916",
-      "bytes": 8373751
+      "sha256": "02f4fc38f21d5b07eb1ae70e759ea465f11f0cbaa4dcaed23341196a7e6d7138",
+      "bytes": 8393660
     },
     {
       "name": "RegImpact_AI_Demo.vtt",
-      "sha256": "33ed98ac2e2d71126cde5149f96d847383d166e9f18dbc346aadd2d5a2c01450",
-      "bytes": 3817
+      "sha256": "c5cc123f3bca92e2c2c86913b5ecd12cde38d040de884a6aa17eceeaba0901c5",
+      "bytes": 3833
     },
     {
       "name": "prototype.png",
@@ -38,5 +38,5 @@
       "bytes": 392123
     }
   ],
-  "note": "2:50 demonstration opening with 2024 enforcement cases and the team; hard-g Reg pronunciation; deck v7 with Why it matters; stored privately for reproducible Hosting deployment and hash verification."
+  "note": "2:51 demonstration opening with 2024 enforcement cases and the four-member team; deck v8 with team members and Why it matters; stored privately for reproducible Hosting deployment and hash verification."
 }

@@ -4,6 +4,7 @@ import { Check, X } from 'lucide-react';
 import type { Assessment } from '../../types/api';
 import { useReview } from '../../api/queries';
 import { useDemo } from '../../hooks/demo';
+import { useScenarioMode } from '../../hooks/scenario';
 import { Dialog } from '../../components/Dialog';
 import { Badge, ErrorState } from '../../components/Primitives';
 import { Link } from 'react-router-dom';
@@ -17,6 +18,7 @@ export function ReviewDialog({
 }) {
   const [rationale, setRationale] = useState('');
   const { role } = useDemo();
+  const { final } = useScenarioMode();
   const review = useReview();
   const authorized = role === assessment.required_role;
   const decided = Boolean(assessment.reviewed_by);
@@ -34,7 +36,7 @@ export function ReviewDialog({
       title={decided ? 'Recorded scenario decision' : 'Review prospective mapping'}
       onClose={onClose}
     >
-      <Badge tone="amber">Proposal · baseline remains unchanged</Badge>
+      <Badge tone="amber">{final ? 'Final rules' : 'Proposal'} · baseline remains unchanged</Badge>
       <h3>{assessment.mandate_title}</h3>
       <div className="mapping-target">
         <span className="eyebrow">PROPOSED SCENARIO TREATMENT</span>

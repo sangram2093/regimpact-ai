@@ -114,7 +114,11 @@ def create_app(
     app.state.scenarios = scenarios
     app.state.sessions = sessions
     app.state.sources = SourceService(
-        settings.data_dir, settings.runtime_dir, adapters.storage, spec.source_manifest
+        settings.data_dir,
+        settings.runtime_dir,
+        adapters.storage,
+        spec.source_manifest,
+        spec.source_note,
     )
     catalog = DemoCatalogService(
         mode=settings.mode,

@@ -24,6 +24,7 @@ import { useReset } from '../api/queries';
 import { DemoContext } from '../hooks/demo';
 import type { ReviewerRole, ScenarioOption } from '../types/api';
 import { ErrorState, Trail } from './Primitives';
+import { TextSizeControl } from './TextSizeControl';
 
 const navigation = [
   { to: '/dashboard', label: 'Overview', icon: LayoutDashboard },
@@ -166,6 +167,7 @@ export function Layout() {
               <Trail current={current} />
             </div>
             <div className="topbar-actions">
+              <TextSizeControl />
               <ScenarioSwitcher />
               <label className="reviewer-select">
                 <span>DEMO REVIEWER ROLE</span>

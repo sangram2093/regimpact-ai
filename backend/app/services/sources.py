@@ -18,7 +18,12 @@ class SourceService:
         runtime_dir: Path,
         storage: ObjectStorage | None = None,
         manifest: str = "source-manifest.json",
+        scenario_note: str = (
+            "The 2023 consultation is a historical proposal scenario, "
+            "not a statement of current law."
+        ),
     ) -> None:
+        self.scenario_note = scenario_note
         self.public_dir = data_dir / "public"
         self.output_dir = runtime_dir / "sources"
         self.storage = storage
@@ -182,8 +187,7 @@ class SourceService:
             "disclosures": [
                 "Regulatory documents are public MAS sources. "
                 "Enterprise catalog data is synthetic.",
-                "The 2023 consultation is a historical proposal scenario, "
-                "not a statement of current law.",
+                self.scenario_note,
                 "Curated source paraphrases are distinct from byte-verified extracted PDF text.",
             ],
         }
