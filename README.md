@@ -4,10 +4,14 @@ Regulatory Change-to-Control Intelligence · Team RegNexus AI
 
 **Review only what changed.** RegImpact AI helps compliance teams trace a regulatory revision to the enterprise policies and controls that require human review. Evidence, proposed legal status, mapping rationale and reviewer decisions stay visible.
 
+## Why it matters
+
+Large penalties often follow controls that did not keep pace with known obligations, not rules nobody knew about. In 2024, US regulators announced penalties of US$3.09 billion for TD Bank (transaction monitoring not updated from 2014 to late 2022), US$348 million for JPMorgan Chase (trading on at least 30 venues not surveilled) and US$135.6 million for Citigroup (insufficient progress fixing data problems under its 2020 orders). In November 2023, MAS paused DBS's non-essential IT changes for six months after repeated outages. RegImpact AI keeps an evidence-backed link from each obligation to the policies and controls that implement it, and shows which links to re-check when the rules change. It complements monitoring systems; we do not claim it would have prevented these penalties.
+
 ## Submission links
 
 - **Working prototype:** https://regimpact-ai.web.app
-- **2:53 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
+- **2:50 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
 - **Pitch deck (PDF):** https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pdf · [PPTX in the prescribed template](https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pptx)
 
 ## Two worked examples

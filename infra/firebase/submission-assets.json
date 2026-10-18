@@ -1,11 +1,11 @@
 {
   "bucket": "regimpact-ai-builds-61760046387",
-  "prefix": "submission-assets/20261018-video-v5",
+  "prefix": "submission-assets/20261018-video-v6",
   "files": [
     {
       "name": "index.html",
-      "sha256": "cf9a265997f8d2913664bd7ce15164199c5e918d3c19537b7e424da3b7adc6b5",
-      "bytes": 4164
+      "sha256": "1d0ffdc7d991387c9b5a9799739e57fb0b5e2f797fbeda42483c80eb2c8892c4",
+      "bytes": 5215
     },
     {
       "name": "submission.css",
@@ -14,23 +14,23 @@
     },
     {
       "name": "RegImpact_AI_Submission.pptx",
-      "sha256": "62d8748861d8a5dbeb1d878c887fc1d44f8015275966e9c4436c9c86ca66373e",
-      "bytes": 1451075
+      "sha256": "0b030eb1be102b1e59d85b38631314983dd03a2ae189f5adef69ef152168732f",
+      "bytes": 1456139
     },
     {
       "name": "RegImpact_AI_Submission.pdf",
-      "sha256": "e7caff022272b63d68a76fc398b343814284f70011e1f1af7d2ef8569c09855d",
-      "bytes": 614186
+      "sha256": "b3cc98400877d7aee40a63959c1e3e47b25263783b2892f7bce62d1c1e660451",
+      "bytes": 644496
     },
     {
       "name": "RegImpact_AI_Demo.mp4",
-      "sha256": "27873d84fb7d9f2ac3b0c75982a2c2f63c77f8b292b03fc56e5aa7f5979d57e3",
-      "bytes": 8257656
+      "sha256": "fb464e45562b774b2263b9b6eeb2220afe5cdde50dec407802076fa7a391a916",
+      "bytes": 8373751
     },
     {
       "name": "RegImpact_AI_Demo.vtt",
-      "sha256": "fc3a9f74cf94f71609ddf9503412d815a29354e2ea183276af0765ead025efff",
-      "bytes": 3653
+      "sha256": "33ed98ac2e2d71126cde5149f96d847383d166e9f18dbc346aadd2d5a2c01450",
+      "bytes": 3817
     },
     {
       "name": "prototype.png",
@@ -38,5 +38,5 @@
       "bytes": 392123
     }
   ],
-  "note": "Story-led 2:53 demonstration with Google Cloud TTS narration and the MAS TRM reuse scenario; stored privately for reproducible Hosting deployment and hash verification."
+  "note": "2:50 demonstration opening with 2024 enforcement cases and the team; hard-g Reg pronunciation; deck v7 with Why it matters; stored privately for reproducible Hosting deployment and hash verification."
 }
