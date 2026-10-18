@@ -6,12 +6,31 @@ import { ErrorState, LoadingState, ProposalBanner } from '../components/Primitiv
 import { ReviewMetric } from '../features/dashboard/ReviewMetric';
 import { ChangeCard } from '../features/dashboard/ChangeCard';
 import { DemoGuide } from '../components/DemoGuide';
+import { useScenarioMode } from '../hooks/scenario';
 
 export function DashboardPage() {
   const query = useQuery(dashboardQuery);
+  const { copy, final } = useScenarioMode();
   if (query.isPending) return <LoadingState />;
   if (query.error) return <ErrorState error={query.error} retry={() => void query.refetch()} />;
   const { metrics, scenario, changes } = query.data;
+  const rank = (classification: string, nature: string[]) =>
+    classification === 'NEW'
+      ? 0
+      : nature.includes('STRENGTHENED')
+        ? 1
+        : classification === 'REMOVED'
+          ? 3
+          : 2;
+  const attention = final
+    ? changes
+        .filter((change) => change.classification !== 'UNCHANGED')
+        .sort(
+          (a, b) =>
+            rank(a.classification, a.change_nature) - rank(b.classification, b.change_nature),
+        )
+    : changes;
+  const unchanged = changes.length - attention.length;
   const stats = [
     {
       label: 'Existing approved mappings',
@@ -32,7 +51,7 @@ export function DashboardPage() {
       icon: ListChecks,
     },
     {
-      label: 'New proposed obligations',
+      label: copy.newObligations,
       value: metrics.new_obligations,
       detail: 'Assessed separately from reuse',
       icon: Sparkles,
@@ -87,16 +106,20 @@ export function DashboardPage() {
       <section className="changes-section">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">ACTIVE HORIZON SCENARIO</p>
+            <p className="eyebrow">{copy.scenarioEyebrow}</p>
             <h2>What needs your attention</h2>
-            <p>{scenario.title}</p>
+            <p>
+              {scenario.title}
+              {unchanged > 0 &&
+                ` · ${attention.length} changed, ${unchanged} unchanged obligations reuse their approved mappings`}
+            </p>
           </div>
           <Link className="text-link" to="/changes">
             View change analysis <ArrowRight size={15} />
           </Link>
         </div>
         <div className="change-grid">
-          {changes.map((change, index) => (
+          {attention.slice(0, final ? 6 : attention.length).map((change, index) => (
             <ChangeCard key={change.id} change={change} index={index} />
           ))}
         </div>

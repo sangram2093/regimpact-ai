@@ -1,0 +1,4192 @@
+{
+  "instruments": [
+    {
+      "id": "MAS-TRM-CP-2019",
+      "title": "Technology Risk Management Guidelines — consultation draft (P003-2019)",
+      "regulator": "MAS",
+      "publication_date": "2019-03-07",
+      "status": "CONSULTATION_DRAFT",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE"
+    },
+    {
+      "id": "MAS-TRM-2021",
+      "title": "Technology Risk Management Guidelines (January 2021)",
+      "regulator": "MAS",
+      "publication_date": "2021-01-18",
+      "status": "IN_FORCE",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "verification_status": "VERIFIED_PRIMARY_SOURCE"
+    }
+  ],
+  "versions": [
+    {
+      "id": "VERSION-TRM-2019",
+      "instrument_id": "MAS-TRM-CP-2019",
+      "legal_force": "GUIDANCE",
+      "status": "CONSULTATION_DRAFT"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "CHANGE-SOURCE-TRM-2021",
+      "source_id": "MAS-TRM-2021",
+      "baseline_version_id": "VERSION-TRM-2019",
+      "status": "FINAL",
+      "legal_force_after": "GUIDANCE"
+    }
+  ],
+  "provisions": [
+    {
+      "id": "PROV-TRM-9-1",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "9.1 User access management",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-1",
+        "EV-TRM-2019-9-1-2",
+        "EV-TRM-2019-9-1-3",
+        "EV-TRM-2019-9-1-4",
+        "EV-TRM-2019-9-1-5",
+        "EV-TRM-2019-9-1-6",
+        "EV-TRM-2019-9-1-7",
+        "EV-TRM-2019-9-1-8"
+      ]
+    },
+    {
+      "id": "PROV-TRM-9-2",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "9.2 Privileged access management",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-1",
+        "EV-TRM-2019-9-2-2"
+      ]
+    },
+    {
+      "id": "PROV-TRM-9-3",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "9.3 Remote access management",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-1",
+        "EV-TRM-2019-9-3-2"
+      ]
+    },
+    {
+      "id": "PROV-TRM-13-1",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "13.1 Vulnerability assessment",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-1",
+        "EV-TRM-2019-13-1-2"
+      ]
+    },
+    {
+      "id": "PROV-TRM-13-2",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "13.2 Penetration testing",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-1",
+        "EV-TRM-2019-13-2-2",
+        "EV-TRM-2019-13-2-3",
+        "EV-TRM-2019-13-2-4"
+      ]
+    },
+    {
+      "id": "PROV-TRM-13-3",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "13.3 Cyber exercises",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-1",
+        "EV-TRM-2019-13-3-2"
+      ]
+    },
+    {
+      "id": "PROV-TRM-13-4",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "13.4 Adversarial attack simulation exercise",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-1",
+        "EV-TRM-2019-13-4-2"
+      ]
+    },
+    {
+      "id": "PROV-TRM-13-5",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "13.5 Intelligence-based scenario design",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-1",
+        "EV-TRM-2019-13-5-2"
+      ]
+    },
+    {
+      "id": "PROV-TRM-13-6",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "13.6 Remediation management",
+      "evidence_ids": [
+        "EV-TRM-2019-13-6-1"
+      ]
+    },
+    {
+      "id": "PROV-TRM-6-4",
+      "regulation_version_id": "VERSION-TRM-2019",
+      "title": "6.4 Application programming interface development",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-1",
+        "EV-TRM-2019-6-4-2",
+        "EV-TRM-2019-6-4-3",
+        "EV-TRM-2019-6-4-4",
+        "EV-TRM-2019-6-4-5",
+        "EV-TRM-2019-6-4-6",
+        "EV-TRM-2019-6-4-7",
+        "EV-TRM-2019-6-4-8",
+        "EV-TRM-2019-6-4-9"
+      ]
+    }
+  ],
+  "mandates": [
+    {
+      "id": "M-TRM-9-1-1",
+      "title": "Apply never-alone, segregation of duties and least privilege",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-1-2",
+      "title": "Run an approved process to provision and revoke access",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-1-3",
+      "title": "Log user access activity under unique identities",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-3"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-1-4",
+      "title": "Enforce a strong password policy",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-4"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-1-5",
+      "title": "Use multi-factor authentication for critical functions",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-5"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-1-6",
+      "title": "Review user access periodically",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-6"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-1-7",
+      "title": "Grant access only on a need-to-use basis and revoke promptly",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-7"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-1-8",
+      "title": "Restrict and monitor service providers like staff",
+      "provision_id": "PROV-TRM-9-1",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-8"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-2-1",
+      "title": "Limit, log and review privileged access",
+      "provision_id": "PROV-TRM-9-2",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-2-2",
+      "title": "Monitor system and service accounts",
+      "provision_id": "PROV-TRM-9-2",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-3-1",
+      "title": "Encrypt remote access and require strong authentication",
+      "provision_id": "PROV-TRM-9-3",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-9-3-2",
+      "title": "Allow remote access only from hardened devices",
+      "provision_id": "PROV-TRM-9-3",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-1-1",
+      "title": "Perform regular vulnerability assessments",
+      "provision_id": "PROV-TRM-13-1",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-1-2",
+      "title": "Cover minimum scope in vulnerability assessments",
+      "provision_id": "PROV-TRM-13-1",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-2-1",
+      "title": "Conduct black-box and grey-box penetration tests",
+      "provision_id": "PROV-TRM-13-2",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-2-2",
+      "title": "Consider a bug bounty programme to complement testing",
+      "provision_id": "PROV-TRM-13-2",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-2-3",
+      "title": "Penetration-test production with proper safeguards",
+      "provision_id": "PROV-TRM-13-2",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-3"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-2-4",
+      "title": "Set penetration test frequency by risk and exposure",
+      "provision_id": "PROV-TRM-13-2",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-4"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-3-1",
+      "title": "Run scenario-based cyber exercises and review plans",
+      "provision_id": "PROV-TRM-13-3",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-3-2",
+      "title": "Involve stakeholders in cyber exercises",
+      "provision_id": "PROV-TRM-13-3",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-4-1",
+      "title": "Consider adversarial attack simulation exercises",
+      "provision_id": "PROV-TRM-13-4",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-4-2",
+      "title": "Define rules of engagement for red-team exercises",
+      "provision_id": "PROV-TRM-13-4",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-5-1",
+      "title": "Base red-team scenarios on real cyber incidents",
+      "provision_id": "PROV-TRM-13-5",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-5-2",
+      "title": "Alternatively design scenarios from threat intelligence",
+      "provision_id": "PROV-TRM-13-5",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-13-6-1",
+      "title": "Track and resolve assessment findings by severity",
+      "provision_id": "PROV-TRM-13-6",
+      "evidence_ids": [
+        "EV-TRM-2019-13-6-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-1",
+      "title": "Safeguard the development and provision of APIs",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-1"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-2",
+      "title": "Control access to designated API services",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-2"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-3",
+      "title": "Vet third parties before granting API access",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-3"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-4",
+      "title": "Assess risk before third parties connect via APIs",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-4"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-5",
+      "title": "Set secure API standards and protect keys and tokens",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-5"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-6",
+      "title": "Encrypt sensitive data sent through APIs",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-6"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-7",
+      "title": "Test APIs before production and log third-party sessions",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-7"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-8",
+      "title": "Monitor APIs in real time and revoke keys on breach",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-8"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-6-4-9",
+      "title": "Handle high API volumes and mitigate denial of service",
+      "provision_id": "PROV-TRM-6-4",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-9"
+      ],
+      "status": "BASELINE_APPROVED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-NEW-6-1-3",
+      "title": "Govern third-party and open-source code before use",
+      "provision_id": null,
+      "evidence_ids": [
+        "EV-TRM-2021-6-1-3"
+      ],
+      "status": "PROPOSED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "M-TRM-NEW-6-1-4",
+      "title": "Track vulnerabilities in third-party and open-source code",
+      "provision_id": null,
+      "evidence_ids": [
+        "EV-TRM-2021-6-1-4"
+      ],
+      "status": "PROPOSED",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-TRM-2019-9-1-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.1",
+      "page": 36,
+      "text": "The principles of ‘never alone’, ‘segregation of duties’, and ‘least privilege’ should be applied when granting staff access to information assets so that no one person has access to perform critical system functions. Access rights and system privileges should be granted according to the staff’s role and job responsibilities.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-1-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.2",
+      "page": 36,
+      "text": "The FI should establish a user access management process to provision and revoke access rights to information assets. Access rights should be authorised and approved by the information asset owner.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-1-3",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.3",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.3",
+      "page": 36,
+      "text": "For accountability, the FI should ensure records of user access and user management activities are uniquely identified and logged for audit and investigation purposes.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-1-4",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.4",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.4",
+      "page": 36,
+      "text": "The FI should establish a password policy and a process to enforce strong password controls for users’ access to IT systems.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-1-5",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.5",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.5",
+      "page": 36,
+      "text": "Multi-factor authentication should be implemented for users with access to critical system functions to safeguard the systems and information from unauthorised access.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-1-6",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.6",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.6",
+      "page": 37,
+      "text": "The FI should ensure information asset owners perform periodic user access review to verify the appropriateness of privileges that are granted to users. The user access review should be used to identify dormant and redundant user accounts, as well as incorrectly provisioned access rights. Exceptions noted from the user access review should be resolved as soon as practicable.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-1-7",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.7",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.7",
+      "page": 37,
+      "text": "The FI should ensure users are granted system access rights on a need-to-use basis. Existing access rights that are no longer needed, as a result of a change in a user’s job responsibilities or employment status (e.g. transfer or termination of employment), should be revoked or disabled promptly.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-1-8",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.1.8",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.1.8",
+      "page": 37,
+      "text": "The FI should subject its service providers, who are given access to the FI’s information assets, to the same monitoring and access restrictions on the FI’s personnel.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-2-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.2.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.2.1",
+      "page": 37,
+      "text": "Users granted with privileged system access have the ability to inflict severe damage on the stability and security of the FI’s IT environment. Access to privileged accounts should only be granted on a need-to-use basis; activities of these accounts should be logged and reviewed as part of the FI’s ongoing monitoring.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-2-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.2.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.2.2",
+      "page": 37,
+      "text": "System and service accounts are used by the operating systems, applications and databases to interact or access other systems’ resources. The FI should establish a process to manage and monitor the use of system and service accounts for suspicious or unauthorised activities.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-3-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.3.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.3.1",
+      "page": 37,
+      "text": "Remote access allows users to connect to the FI’s internal network via an external network to access the FI’s data and systems, such as emails and business applications. Remote connection should be encrypted to prevent data leakage through network sniffing and eavesdropping. Strong authentication, such as multi-factor authentication, should be implemented for users performing remote access to safeguard against unauthorised access to the FI’s IT environment.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-9-3-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 9.3.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "9.3.2",
+      "page": 37,
+      "text": "The FI should ensure remote access to the FI’s information assets is only allowed from devices that have been hardened according to the FI’s security standards.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-1-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.1.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.1.1",
+      "page": 48,
+      "text": "The FI should establish a process to conduct regular vulnerability assessment (VA) on their systems to identify security vulnerabilities and ensure risk arising from these gaps are addressed in a timely manner. The frequency of VA should be commensurate with the criticality of the system and the security risk to which it is exposed.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-1-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.1.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.1.2",
+      "page": 48,
+      "text": "When performing system VA, the scope should minimally include vulnerability discovery, identification of weak security configurations, as well as applications and services that are not approved by business, IT management and other key stakeholders. For web-based systems, the scope of VA should include checks on common web-based vulnerabilities, such as SQL injection and cross-site scripting.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-2-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.2.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.2.1",
+      "page": 48,
+      "text": "The FI should carry out penetration testing (PT) to obtain an in-depth evaluation of its cyber security defences. A combination of blackbox and greybox testing should be conducted for online financial services.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-2-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.2.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.2.2",
+      "page": 48,
+      "text": "A bug bounty programme is another mean by which an FI could discover vulnerabilities in their systems by inviting and incentivising ethical or “white hat” hackers to test their systems. The FI may consider conducting a bug bounty programme to test the security of its IT infrastructure to complement its PT.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-2-3",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.2.3",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.2.3",
+      "page": 48,
+      "text": "To obtain a more accurate assessment of the robustness of the FI’s security measures, PT should be conducted on the production environment. Proper safeguards should be implemented when PT is conducted on the production environment.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-2-4",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.2.4",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.2.4",
+      "page": 49,
+      "text": "The frequency of PT should be determined based on factors such as system criticality and the system’s exposure to cyber risks. For systems that are directly accessible from the Internet, the FI is expected to conduct PT to validate the adequacy of the security controls at least once annually or whenever these systems undergo major changes or updates.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-3-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.3.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.3.1",
+      "page": 49,
+      "text": "The FI should carry out regular scenario-based cyber exercises to validate and review its response and recovery, as well as communication plans against cyber threats. These exercises could include social engineering, table-top, or cyber range exercises.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-3-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.3.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.3.2",
+      "page": 49,
+      "text": "Depending on the exercise objectives, the FI should involve relevant stakeholders, including senior management, business functions, corporate communications, crisis management team, service providers, and technical staff responsible for cyber threat detection, response and recovery.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-4-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.4.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.4.1",
+      "page": 50,
+      "text": "The FI is encouraged to perform an adversarial attack simulation exercise to test and validate the effectiveness of its cyber defence and response plan against prevalent cyber threats.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-4-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.4.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.4.2",
+      "page": 50,
+      "text": "The objectives, scope and rules of engagement should be defined before the commencement of the exercise, and the exercise should be conducted in a controlled manner under close supervision to ensure the activities carried out by the red team do not disrupt the FI’s production systems.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-5-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.5.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.5.1",
+      "page": 50,
+      "text": "To simulate realistic adversarial attacks on an FI during a red team exercise, the threat scenario should be designed and based on real cyber incidents.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-5-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.5.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.5.2",
+      "page": 50,
+      "text": "As an alternative, the FI could also design the exercise scenario by using threat intelligence that is relevant to their IT environment to identify threat actors who are most likely to pose a threat to the FI; and identify the tactics, techniques and procedures most likely to be used in such attacks.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-13-6-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 13.6.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "13.6.1",
+      "page": 50,
+      "text": "A comprehensive remediation management process should be established to track and resolve issues identified from the cyber security assessments or exercises. The process should minimally include the following: (a) severity assessment and classification of an issue; (b) timeframe to remediate issues of different severity; and (c) risk assessment and mitigation strategies to manage deviations from the framework.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-1",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.1",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.1",
+      "page": 23,
+      "text": "Application programming interfaces (APIs) enable various software applications to communicate and interact with each other and exchange data. Open APIs are publicly available APIs that provide developers with programmatic access to a proprietary software application or web service. FIs collaborate with FinTech companies and develop open APIs, which are used by third parties to implement products and services for customers and the marketplace. Hence, it is important for the FI to establish adequate safeguards to manage the development and provision of APIs for secure delivery of such services.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-2",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.2",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.2",
+      "page": 24,
+      "text": "To safeguard customer information and the integrity of its systems, the FI should implement strong controls to authorise and control access to designated API services.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-3",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.3",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.3",
+      "page": 24,
+      "text": "A well-defined vetting process should be implemented for assessing third parties’ suitability in connecting to the FI via APIs, as well as governing third party API access. The vetting criteria should take into account the third party’s nature of business, security policy, industry reputation and track record amongst others.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-4",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.4",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.4",
+      "page": 24,
+      "text": "The FI should perform risk assessment before allowing third parties to connect to its systems via APIs, and ensure the security implementation for each API is commensurate with the sensitivity and business criticality of the data being exchanged, and the confidentiality and integrity requirements of the data.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-5",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.5",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.5",
+      "page": 24,
+      "text": "Security standards for designing and developing secure APIs should be established. The standards should include the measures to protect the API keys or access tokens, which are used to authorise access to APIs to exchange confidential data. A reasonable timeframe should be defined and enforced for access token expiry to reduce the risk of unauthorised access.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-6",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.6",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.6",
+      "page": 24,
+      "text": "Strong encryption standards and key management controls should be adopted to secure transmission of sensitive data through APIs.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-7",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.7",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.7",
+      "page": 24,
+      "text": "A robust security screening and testing of the API should be performed between the FI and third party before it goes into production. The FI should have the ability to log the access sessions by the third party, such as the identity of the third party making the API connections, and the data being accessed.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-8",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.8",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.8",
+      "page": 24,
+      "text": "Real-time monitoring and alerting capabilities should be instituted to provide visibility of the usage and performance of APIs and detect suspicious activities. Robust measures should be established to promptly revoke the API keys or access token in the event of a breach.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2019-6-4-9",
+      "source_id": "MAS-TRM-CP-2019",
+      "title": "TRM consultation draft (2019) · 6.4.9",
+      "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+      "paragraph_ref": "6.4.9",
+      "page": 24,
+      "text": "The FI should implement measures to handle high volumes of API call requests by legitimate applications, and mitigate denial-of-service attacks. The measures to be implemented should be commensurate with the criticality and availability requirements of the application.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.1",
+      "page": 33,
+      "text": "The principles of ‘never alone’, ‘segregation of duties’, and ‘least privilege’ should be applied when granting staff access to information assets so that no one person has access to perform sensitive system functions. Access rights and system privileges should be granted according to the roles and responsibilities of the staff, contractors and service providers.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.2",
+      "page": 33,
+      "text": "The FI should establish a user access management process to provision, change and revoke access rights to information assets. Access rights should be authorised and approved by appropriate parties, such as the information asset owner.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-3",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.3",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.3",
+      "page": 33,
+      "text": "For proper accountability, the FI should ensure records of user access and user management activities are uniquely identified and logged for audit and investigation purposes.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-4",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.4",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.4",
+      "page": 34,
+      "text": "The FI should establish a password policy and a process to enforce strong password controls for users’ access to IT systems.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-5",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.5",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.5",
+      "page": 34,
+      "text": "Multi-factor authentication should be implemented for users with access to sensitive system functions to safeguard the systems and data from unauthorised access.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-6",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.6",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.6",
+      "page": 34,
+      "text": "The FI should ensure appropriate parties such as information asset owners perform periodic user access review to verify the appropriateness of privileges that are granted to users. The user access review should be used to identify dormant and redundant user accounts, as well as inappropriate access rights. Exceptions noted from the user access review should be resolved as soon as practicable.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-7",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.7",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.7",
+      "page": 34,
+      "text": "Users should only be granted access rights on a need-to-use basis. Access rights that are no longer needed, as a result of a change in a user’s job responsibilities or employment status (e.g. transfer or termination of employment), should be revoked or disabled promptly.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-1-8",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.1.8",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.1.8",
+      "page": 34,
+      "text": "The FI should subject its service providers, who are given access to the FI’s information assets, to the same monitoring and access restrictions on the FI’s personnel.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-2-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.2.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.2.1",
+      "page": 34,
+      "text": "Users granted privileged system access have the ability to inflict severe damage on the stability and security of the FI’s IT environment. Access to privileged accounts should only be granted on a need-to-use basis; activities of these accounts should be logged and reviewed as part of the FI’s ongoing monitoring.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-2-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.2.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.2.2",
+      "page": 35,
+      "text": "System and service accounts are used by operating systems, applications and databases to interact or access other systems’ resources. The FI should establish a process to manage and monitor the use of system and service accounts for suspicious or unauthorised activities.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-3-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.3.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.3.1",
+      "page": 35,
+      "text": "Remote access allows users to connect to the FI’s internal network via an external network to access the FI’s data and systems, such as emails and business applications. Remote connections should be encrypted to prevent data leakage through network sniffing and eavesdropping. Strong authentication, such as multi-factor authentication, should be implemented for users performing remote access to safeguard against unauthorised access to the FI’s IT environment.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-9-3-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 9.3.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "9.3.2",
+      "page": 35,
+      "text": "The FI should ensure remote access to the FI’s information assets is only allowed from devices that have been secured according to the FI’s security standards.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-1-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.1.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.1.1",
+      "page": 45,
+      "text": "The FI should establish a process to conduct regular vulnerability assessment (VA) on their IT systems to identify security vulnerabilities and ensure risk arising from these gaps are addressed in a timely manner. The frequency of VA should be commensurate with the criticality of the IT system and the security risk to which it is exposed.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-1-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.1.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.1.2",
+      "page": 45,
+      "text": "When performing VA, the scope should minimally include vulnerability discovery, identification of weak security configurations, and open network ports, as well as application vulnerabilities. For web-based systems, the scope of VA should include checks on common web-based vulnerabilities.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-2-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.2.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.2.1",
+      "page": 45,
+      "text": "The FI should carry out penetration testing (PT) to obtain an in-depth evaluation of its cyber security defences. A combination of blackbox and greybox testing should be conducted for online financial services.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-2-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.2.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.2.2",
+      "page": 45,
+      "text": "A bug bounty programme is another means by which an FI could discover vulnerabilities in their IT systems by inviting and incentivising ethical or “white hat” hackers to conduct PT on their systems. The FI may consider conducting a bug bounty programme to test the security of its IT infrastructure to complement its PT.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-2-3",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.2.3",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.2.3",
+      "page": 45,
+      "text": "To obtain a more accurate assessment of the robustness of the FI’s security measures, PT should be conducted on the production environment. Proper safeguards should be implemented when PT is conducted on the production environment.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-2-4",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.2.4",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.2.4",
+      "page": 45,
+      "text": "The frequency of PT should be determined based on factors such as system criticality and the system’s exposure to cyber risks. For systems that are directly accessible from the Internet, the FI is expected to conduct PT to validate the adequacy of the security controls at least once annually or whenever these systems undergo major changes or updates.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-3-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.3.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.3.1",
+      "page": 46,
+      "text": "The FI should carry out regular scenario-based cyber exercises to validate its response and recovery, as well as communication plans against cyber threats. These exercises could include social engineering, table-top, or cyber range exercises.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-3-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.3.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.3.2",
+      "page": 46,
+      "text": "Depending on the exercise objectives, the FI should involve relevant stakeholders, including senior management, business functions, corporate communications, crisis management team, service providers, and technical staff responsible for cyber threat detection, response and recovery.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-4-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.4.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.4.1",
+      "page": 47,
+      "text": "The FI should perform an adversarial attack simulation exercise to test and validate the effectiveness of its cyber defence and response plan against prevalent cyber threats.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-4-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.4.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.4.2",
+      "page": 47,
+      "text": "The objectives, scope and rules of engagement should be defined before the commencement of the exercise, and the exercise should be conducted in a controlled manner under close supervision to ensure the activities carried out by the red team do not disrupt the FI’s production systems.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-5-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.5.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.5.1",
+      "page": 47,
+      "text": "To simulate realistic adversarial attacks during any cyber security assessment, the threat scenario should be designed and based on challenging but plausible cyber threats.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-5-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.5.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.5.2",
+      "page": 47,
+      "text": "The FI could also design the exercise scenario by using threat intelligence that is relevant to their IT environment to identify threat actors who are most likely to pose a threat to the FI; and identify the tactics, techniques and procedures most likely to be used in such attacks.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-13-6-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 13.6.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "13.6.1",
+      "page": 47,
+      "text": "A comprehensive remediation process should be established to track and resolve issues identified from the cyber security assessments or exercises. The process should minimally include the following: (a) severity assessment and classification of an issue; (b) timeframe to remediate issues of different severity; and (c) risk assessment and mitigation strategies to manage deviations from the framework.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-1",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.1",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.1",
+      "page": 20,
+      "text": "Application programming interfaces (APIs) enable various software applications to communicate and interact with each other and exchange data. Open APIs are publicly available APIs that provide developers with programmatic access to a software application or web service. FIs may collaborate with FinTech companies and develop open APIs, which are used by third parties to implement products and services for customers and the marketplace. Hence, it is important for the FI to establish adequate safeguards to manage the development and provisioning of APIs for secure delivery of such services.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-2",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.2",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.2",
+      "page": 21,
+      "text": "A well-defined vetting process should be implemented for assessing third parties’ suitability in connecting to the FI via APIs, as well as governing third party API access. The vetting criteria should take into account factors such as the third party’s nature of business, cyber security posture, industry reputation and track record.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-3",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.3",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.3",
+      "page": 21,
+      "text": "The FI should perform a risk assessment before allowing third parties to connect to its IT systems via APIs, and ensure the implementation for each API is commensurate with the sensitivity and business criticality of the data being exchanged, and the confidentiality and integrity requirements of the data.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-4",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.4",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.4",
+      "page": 21,
+      "text": "Security standards for designing and developing secure APIs should be established. The standards should include the measures to protect the API keys or access tokens, which are used to authorise access to APIs to exchange confidential data. A reasonable timeframe should be defined and enforced for access token expiry to reduce the risk of unauthorised access.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-5",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.5",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.5",
+      "page": 21,
+      "text": "Strong encryption standards and key management controls should be adopted to secure transmission of sensitive data through APIs.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-6",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.6",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.6",
+      "page": 21,
+      "text": "A robust security screening and testing of the API should be performed between the FI and its third parties before it is deployed into production. The FI should log the access sessions by third parties, such as the identity of the party making the API connections, date and time, as well as the data being accessed.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-7",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.7",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.7",
+      "page": 21,
+      "text": "Detective measures, such as technologies that provide real-time monitoring and alerting, should be instituted to provide visibility of the usage and performance of APIs, and detect suspicious activities. Robust measures should be established to promptly revoke the API keys or access token in the event of a breach.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-4-8",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.4.8",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.4.8",
+      "page": 22,
+      "text": "The FI should ensure adequate system capacity is in place to handle high volumes of API call requests, and implement measures to mitigate cyber threats such as denial of service (DoS) attacks.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-1-3",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.1.3",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.1.3",
+      "page": 19,
+      "text": "A policy and procedure on the use of third party and open-source software codes should be established to ensure these codes are subject to review and testing before they are integrated into the FI’s software.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    },
+    {
+      "id": "EV-TRM-2021-6-1-4",
+      "source_id": "MAS-TRM-2021",
+      "title": "TRM Guidelines (2021) · 6.1.4",
+      "source_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+      "paragraph_ref": "6.1.4",
+      "page": 19,
+      "text": "To facilitate the remediation of vulnerabilities in a timely manner, the FI should keep track of updates and reported vulnerabilities for third party and open-source software codes that are incorporated in the FI’s software.",
+      "text_kind": "VERIFIED_EXCERPT",
+      "verification_status": "EXTRACTED_FROM_OFFICIAL_PDF",
+      "data_origin": "PUBLIC_REGULATORY_SOURCE"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E-TRM-9-1-1-POLICY",
+      "source_id": "M-TRM-9-1-1",
+      "target_id": "PR-TRM-UAM",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: User access management directly implements draft paragraph 9.1.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-1-RISK",
+      "source_id": "M-TRM-9-1-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-1-DRIVER",
+      "source_id": "M-TRM-9-1-1",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.1 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-2-POLICY",
+      "source_id": "M-TRM-9-1-2",
+      "target_id": "PR-TRM-UAM",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: User access management directly implements draft paragraph 9.1.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-2-RISK",
+      "source_id": "M-TRM-9-1-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-2-DRIVER",
+      "source_id": "M-TRM-9-1-2",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.2 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-3-POLICY",
+      "source_id": "M-TRM-9-1-3",
+      "target_id": "PR-TRM-UAM",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: User access management directly implements draft paragraph 9.1.3. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-3-RISK",
+      "source_id": "M-TRM-9-1-3",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.3 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-3-DRIVER",
+      "source_id": "M-TRM-9-1-3",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.3 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-4-POLICY",
+      "source_id": "M-TRM-9-1-4",
+      "target_id": "PR-TRM-AUTH",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Strong authentication standard directly implements draft paragraph 9.1.4. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-4-RISK",
+      "source_id": "M-TRM-9-1-4",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.4 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-4-DRIVER",
+      "source_id": "M-TRM-9-1-4",
+      "target_id": "RD-TRM-AUTH",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.4 addresses the driver 'weak authentication'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-5-POLICY",
+      "source_id": "M-TRM-9-1-5",
+      "target_id": "PR-TRM-AUTH",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-5"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Strong authentication standard directly implements draft paragraph 9.1.5. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-5-RISK",
+      "source_id": "M-TRM-9-1-5",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-5"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.5 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-5-DRIVER",
+      "source_id": "M-TRM-9-1-5",
+      "target_id": "RD-TRM-AUTH",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-5"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.5 addresses the driver 'weak authentication'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-6-POLICY",
+      "source_id": "M-TRM-9-1-6",
+      "target_id": "PR-TRM-UAM",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-6"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: User access management directly implements draft paragraph 9.1.6. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-6-RISK",
+      "source_id": "M-TRM-9-1-6",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-6"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.6 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-6-DRIVER",
+      "source_id": "M-TRM-9-1-6",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-6"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.6 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-7-POLICY",
+      "source_id": "M-TRM-9-1-7",
+      "target_id": "PR-TRM-UAM",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-7"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: User access management directly implements draft paragraph 9.1.7. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-7-RISK",
+      "source_id": "M-TRM-9-1-7",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-7"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.7 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-7-DRIVER",
+      "source_id": "M-TRM-9-1-7",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-7"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.7 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-8-POLICY",
+      "source_id": "M-TRM-9-1-8",
+      "target_id": "PR-TRM-VENDOR",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-8"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Service provider access directly implements draft paragraph 9.1.8. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-8-RISK",
+      "source_id": "M-TRM-9-1-8",
+      "target_id": "RT-TRM-THIRD",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-8"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.8 manages third-party risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-1-8-DRIVER",
+      "source_id": "M-TRM-9-1-8",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-1-8"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.1.8 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-2-1-POLICY",
+      "source_id": "M-TRM-9-2-1",
+      "target_id": "PR-TRM-PAM",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Privileged and service accounts directly implements draft paragraph 9.2.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-2-1-RISK",
+      "source_id": "M-TRM-9-2-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.2.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-2-1-DRIVER",
+      "source_id": "M-TRM-9-2-1",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.2.1 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-2-2-POLICY",
+      "source_id": "M-TRM-9-2-2",
+      "target_id": "PR-TRM-PAM",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Privileged and service accounts directly implements draft paragraph 9.2.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-2-2-RISK",
+      "source_id": "M-TRM-9-2-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.2.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-2-2-DRIVER",
+      "source_id": "M-TRM-9-2-2",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-2-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.2.2 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-3-1-POLICY",
+      "source_id": "M-TRM-9-3-1",
+      "target_id": "PR-TRM-REMOTE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Secure remote access directly implements draft paragraph 9.3.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-3-1-RISK",
+      "source_id": "M-TRM-9-3-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.3.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-3-1-DRIVER",
+      "source_id": "M-TRM-9-3-1",
+      "target_id": "RD-TRM-AUTH",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.3.1 addresses the driver 'weak authentication'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-3-2-POLICY",
+      "source_id": "M-TRM-9-3-2",
+      "target_id": "PR-TRM-REMOTE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Secure remote access directly implements draft paragraph 9.3.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-3-2-RISK",
+      "source_id": "M-TRM-9-3-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.3.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-9-3-2-DRIVER",
+      "source_id": "M-TRM-9-3-2",
+      "target_id": "RD-TRM-ACCESS",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-9-3-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 9.3.2 addresses the driver 'excessive or stale access'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-1-1-POLICY",
+      "source_id": "M-TRM-13-1-1",
+      "target_id": "PR-TRM-VA",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Vulnerability assessment standard directly implements draft paragraph 13.1.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-1-1-RISK",
+      "source_id": "M-TRM-13-1-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.1.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-1-1-DRIVER",
+      "source_id": "M-TRM-13-1-1",
+      "target_id": "RD-TRM-VULN",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.1.1 addresses the driver 'unremediated vulnerabilities'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-1-2-POLICY",
+      "source_id": "M-TRM-13-1-2",
+      "target_id": "PR-TRM-VA",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Vulnerability assessment standard directly implements draft paragraph 13.1.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-1-2-RISK",
+      "source_id": "M-TRM-13-1-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.1.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-1-2-DRIVER",
+      "source_id": "M-TRM-13-1-2",
+      "target_id": "RD-TRM-VULN",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-1-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.1.2 addresses the driver 'unremediated vulnerabilities'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-1-POLICY",
+      "source_id": "M-TRM-13-2-1",
+      "target_id": "PR-TRM-PT",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Penetration testing standard directly implements draft paragraph 13.2.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-1-RISK",
+      "source_id": "M-TRM-13-2-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-1-DRIVER",
+      "source_id": "M-TRM-13-2-1",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.1 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-2-POLICY",
+      "source_id": "M-TRM-13-2-2",
+      "target_id": "PR-TRM-PT",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Penetration testing standard directly implements draft paragraph 13.2.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-2-RISK",
+      "source_id": "M-TRM-13-2-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-2-DRIVER",
+      "source_id": "M-TRM-13-2-2",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.2 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-3-POLICY",
+      "source_id": "M-TRM-13-2-3",
+      "target_id": "PR-TRM-PT",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Penetration testing standard directly implements draft paragraph 13.2.3. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-3-RISK",
+      "source_id": "M-TRM-13-2-3",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.3 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-3-DRIVER",
+      "source_id": "M-TRM-13-2-3",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.3 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-4-POLICY",
+      "source_id": "M-TRM-13-2-4",
+      "target_id": "PR-TRM-PT",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Penetration testing standard directly implements draft paragraph 13.2.4. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-4-RISK",
+      "source_id": "M-TRM-13-2-4",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.4 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-2-4-DRIVER",
+      "source_id": "M-TRM-13-2-4",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-2-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.2.4 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-3-1-POLICY",
+      "source_id": "M-TRM-13-3-1",
+      "target_id": "PR-TRM-EXERCISE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Cyber exercises and attack simulation directly implements draft paragraph 13.3.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-3-1-RISK",
+      "source_id": "M-TRM-13-3-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.3.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-3-1-DRIVER",
+      "source_id": "M-TRM-13-3-1",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.3.1 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-3-2-POLICY",
+      "source_id": "M-TRM-13-3-2",
+      "target_id": "PR-TRM-EXERCISE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Cyber exercises and attack simulation directly implements draft paragraph 13.3.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-3-2-RISK",
+      "source_id": "M-TRM-13-3-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.3.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-3-2-DRIVER",
+      "source_id": "M-TRM-13-3-2",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-3-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.3.2 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-4-1-POLICY",
+      "source_id": "M-TRM-13-4-1",
+      "target_id": "PR-TRM-EXERCISE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Cyber exercises and attack simulation directly implements draft paragraph 13.4.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-4-1-RISK",
+      "source_id": "M-TRM-13-4-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.4.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-4-1-DRIVER",
+      "source_id": "M-TRM-13-4-1",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.4.1 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-4-2-POLICY",
+      "source_id": "M-TRM-13-4-2",
+      "target_id": "PR-TRM-EXERCISE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Cyber exercises and attack simulation directly implements draft paragraph 13.4.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-4-2-RISK",
+      "source_id": "M-TRM-13-4-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.4.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-4-2-DRIVER",
+      "source_id": "M-TRM-13-4-2",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-4-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.4.2 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-5-1-POLICY",
+      "source_id": "M-TRM-13-5-1",
+      "target_id": "PR-TRM-EXERCISE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Cyber exercises and attack simulation directly implements draft paragraph 13.5.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-5-1-RISK",
+      "source_id": "M-TRM-13-5-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.5.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-5-1-DRIVER",
+      "source_id": "M-TRM-13-5-1",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.5.1 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-5-2-POLICY",
+      "source_id": "M-TRM-13-5-2",
+      "target_id": "PR-TRM-EXERCISE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Cyber exercises and attack simulation directly implements draft paragraph 13.5.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-5-2-RISK",
+      "source_id": "M-TRM-13-5-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.5.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-5-2-DRIVER",
+      "source_id": "M-TRM-13-5-2",
+      "target_id": "RD-TRM-UNTESTED",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-5-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.5.2 addresses the driver 'untested cyber defences'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-6-1-POLICY",
+      "source_id": "M-TRM-13-6-1",
+      "target_id": "PR-TRM-REMEDIATE",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-6-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Security issue remediation directly implements draft paragraph 13.6.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-6-1-RISK",
+      "source_id": "M-TRM-13-6-1",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-6-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.6.1 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-13-6-1-DRIVER",
+      "source_id": "M-TRM-13-6-1",
+      "target_id": "RD-TRM-VULN",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-13-6-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 13.6.1 addresses the driver 'unremediated vulnerabilities'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-1-POLICY",
+      "source_id": "M-TRM-6-4-1",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.1. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-1-RISK",
+      "source_id": "M-TRM-6-4-1",
+      "target_id": "RT-TRM-TECH",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.1 manages technology risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-1-DRIVER",
+      "source_id": "M-TRM-6-4-1",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-1"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.1 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-2-POLICY",
+      "source_id": "M-TRM-6-4-2",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.2. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-2-RISK",
+      "source_id": "M-TRM-6-4-2",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.2 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-2-DRIVER",
+      "source_id": "M-TRM-6-4-2",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-2"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.2 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-3-POLICY",
+      "source_id": "M-TRM-6-4-3",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.3. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-3-RISK",
+      "source_id": "M-TRM-6-4-3",
+      "target_id": "RT-TRM-THIRD",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.3 manages third-party risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-3-DRIVER",
+      "source_id": "M-TRM-6-4-3",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-3"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.3 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-4-POLICY",
+      "source_id": "M-TRM-6-4-4",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.4. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-4-RISK",
+      "source_id": "M-TRM-6-4-4",
+      "target_id": "RT-TRM-THIRD",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.4 manages third-party risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-4-DRIVER",
+      "source_id": "M-TRM-6-4-4",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-4"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.4 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-5-POLICY",
+      "source_id": "M-TRM-6-4-5",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-5"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.5. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-5-RISK",
+      "source_id": "M-TRM-6-4-5",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-5"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.5 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-5-DRIVER",
+      "source_id": "M-TRM-6-4-5",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-5"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.5 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-6-POLICY",
+      "source_id": "M-TRM-6-4-6",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-6"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.6. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-6-RISK",
+      "source_id": "M-TRM-6-4-6",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-6"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.6 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-6-DRIVER",
+      "source_id": "M-TRM-6-4-6",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-6"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.6 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-7-POLICY",
+      "source_id": "M-TRM-6-4-7",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-7"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.7. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-7-RISK",
+      "source_id": "M-TRM-6-4-7",
+      "target_id": "RT-TRM-THIRD",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-7"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.7 manages third-party risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-7-DRIVER",
+      "source_id": "M-TRM-6-4-7",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-7"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.7 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-8-POLICY",
+      "source_id": "M-TRM-6-4-8",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-8"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.8. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-8-RISK",
+      "source_id": "M-TRM-6-4-8",
+      "target_id": "RT-TRM-CYBER",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-8"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.8 manages cyber risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-8-DRIVER",
+      "source_id": "M-TRM-6-4-8",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-8"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.8 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-9-POLICY",
+      "source_id": "M-TRM-6-4-9",
+      "target_id": "PR-TRM-API",
+      "relationship": "ADDRESSED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-9"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: API security standard directly implements draft paragraph 6.4.9. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-9-RISK",
+      "source_id": "M-TRM-6-4-9",
+      "target_id": "RT-TRM-TECH",
+      "relationship": "CLASSIFIED_AS",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-9"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.9 manages technology risk. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-TRM-6-4-9-DRIVER",
+      "source_id": "M-TRM-6-4-9",
+      "target_id": "RD-TRM-API",
+      "relationship": "DRIVEN_BY",
+      "status": "APPROVED",
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-9"
+      ],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Approved during consultation preparation: Draft paragraph 6.4.9 addresses the driver 'insecure third-party api connections'. Synthetic enterprise mapping curated as a golden label.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    }
+  ],
+  "proposed_change_statements": [
+    {
+      "id": "PCS-TRM-9-1-1",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Access must now follow the roles of staff, contractors and service providers, and the principles apply to 'sensitive' rather than 'critical' functions.",
+      "target_mandate_ids": [
+        "M-TRM-9-1-1"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-9-1-1"
+      ]
+    },
+    {
+      "id": "PCS-TRM-9-1-2",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "The access process must also cover changes to access rights, and approval may come from appropriate parties such as the asset owner.",
+      "target_mandate_ids": [
+        "M-TRM-9-1-2"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-9-1-2"
+      ]
+    },
+    {
+      "id": "PCS-TRM-9-1-5",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Multi-factor authentication now applies to 'sensitive' rather than 'critical' system functions, and protects 'data' rather than 'information'.",
+      "target_mandate_ids": [
+        "M-TRM-9-1-5"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-9-1-5"
+      ]
+    },
+    {
+      "id": "PCS-TRM-9-1-6",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Reviews may be performed by appropriate parties, and must catch inappropriate access rather than only incorrectly provisioned access.",
+      "target_mandate_ids": [
+        "M-TRM-9-1-6"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-9-1-6"
+      ]
+    },
+    {
+      "id": "PCS-TRM-9-3-2",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Remote devices must be 'secured' rather than 'hardened' according to the security standards, a broader requirement.",
+      "target_mandate_ids": [
+        "M-TRM-9-3-2"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-9-3-2"
+      ]
+    },
+    {
+      "id": "PCS-TRM-13-1-2",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Minimum assessment scope now names open network ports and application vulnerabilities, and drops unapproved applications and services.",
+      "target_mandate_ids": [
+        "M-TRM-13-1-2"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-13-1-2"
+      ]
+    },
+    {
+      "id": "PCS-TRM-13-3-1",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Exercises must 'validate' plans; the words 'and review' were removed, so the expected outcome changed slightly.",
+      "target_mandate_ids": [
+        "M-TRM-13-3-1"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-13-3-1"
+      ]
+    },
+    {
+      "id": "PCS-TRM-13-4-1",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "'Is encouraged to' became 'should': adversarial attack simulation moved from optional good practice to an expected practice.",
+      "target_mandate_ids": [
+        "M-TRM-13-4-1"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-13-4-1"
+      ]
+    },
+    {
+      "id": "PCS-TRM-13-5-1",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Threat scenarios now apply to any cyber security assessment, not only red-team exercises, and use challenging but plausible threats rather than past incidents.",
+      "target_mandate_ids": [
+        "M-TRM-13-5-1"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-13-5-1"
+      ]
+    },
+    {
+      "id": "PCS-TRM-13-5-2",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Threat intelligence is no longer 'an alternative' to incident-based scenarios but an additional design approach.",
+      "target_mandate_ids": [
+        "M-TRM-13-5-2"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-13-5-2"
+      ]
+    },
+    {
+      "id": "PCS-TRM-6-4-2",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "This draft paragraph is not kept as a separate paragraph in the final text; confirm whether other API controls cover it before retiring the mapping.",
+      "target_mandate_ids": [
+        "M-TRM-6-4-2"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2019-6-4-2"
+      ]
+    },
+    {
+      "id": "PCS-TRM-6-4-3",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Vetting criteria now consider the third party's cyber security posture rather than its security policy.",
+      "target_mandate_ids": [
+        "M-TRM-6-4-3"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-6-4-2"
+      ]
+    },
+    {
+      "id": "PCS-TRM-6-4-7",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Third-party API sessions must now be logged, including date and time, instead of the FI only having the ability to log them.",
+      "target_mandate_ids": [
+        "M-TRM-6-4-7"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-6-4-6"
+      ]
+    },
+    {
+      "id": "PCS-TRM-6-4-8",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "Real-time monitoring is now framed as detective measures such as real-time monitoring and alerting technologies.",
+      "target_mandate_ids": [
+        "M-TRM-6-4-8"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-6-4-7"
+      ]
+    },
+    {
+      "id": "PCS-TRM-6-4-9",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "The FI must ensure adequate system capacity and mitigate cyber threats such as DoS attacks; the proportionality wording was removed.",
+      "target_mandate_ids": [
+        "M-TRM-6-4-9"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-6-4-8"
+      ]
+    },
+    {
+      "id": "PCS-TRM-NEW-6-1-3",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "New in the final text: a policy and procedure must ensure third-party and open-source code is reviewed and tested before integration.",
+      "target_mandate_ids": [
+        "M-TRM-NEW-6-1-3"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-6-1-3"
+      ]
+    },
+    {
+      "id": "PCS-TRM-NEW-6-1-4",
+      "proposal_id": "CHANGE-SOURCE-TRM-2021",
+      "summary": "New in the final text: track updates and reported vulnerabilities for third-party and open-source code used in the FI's software.",
+      "target_mandate_ids": [
+        "M-TRM-NEW-6-1-4"
+      ],
+      "global_scope": false,
+      "evidence_ids": [
+        "EV-TRM-2021-6-1-4"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "CHANGE-TRM-9-1-1",
+      "title": "9.1.1 Apply never-alone, segregation of duties and least privilege",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "SCOPE_CHANGED",
+        "CLARIFIED"
+      ],
+      "summary": "Access must now follow the roles of staff, contractors and service providers, and the principles apply to 'sensitive' rather than 'critical' functions.",
+      "mandate_id": "M-TRM-9-1-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.1 and final 9.1.1 compared paragraph by paragraph. Access must now follow the roles of staff, contractors and service providers, and the principles apply to 'sensitive' rather than 'critical' functions.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-1-2",
+      "title": "9.1.2 Run an approved process to provision and revoke access",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "STRENGTHENED",
+        "CLARIFIED"
+      ],
+      "summary": "The access process must also cover changes to access rights, and approval may come from appropriate parties such as the asset owner.",
+      "mandate_id": "M-TRM-9-1-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.2 and final 9.1.2 compared paragraph by paragraph. The access process must also cover changes to access rights, and approval may come from appropriate parties such as the asset owner.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-1-3",
+      "title": "9.1.3 Log user access activity under unique identities",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Only 'For accountability' became 'For proper accountability'; the logging obligation is the same.",
+      "mandate_id": "M-TRM-9-1-3",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-3"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-3"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.3 and final 9.1.3 compared paragraph by paragraph. Only 'For accountability' became 'For proper accountability'; the logging obligation is the same.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-1-4",
+      "title": "9.1.4 Enforce a strong password policy",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-9-1-4",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-4"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-4"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.4 and final 9.1.4 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-1-5",
+      "title": "9.1.5 Use multi-factor authentication for critical functions",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "SCOPE_CHANGED"
+      ],
+      "summary": "Multi-factor authentication now applies to 'sensitive' rather than 'critical' system functions, and protects 'data' rather than 'information'.",
+      "mandate_id": "M-TRM-9-1-5",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-5"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-5"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.5 and final 9.1.5 compared paragraph by paragraph. Multi-factor authentication now applies to 'sensitive' rather than 'critical' system functions, and protects 'data' rather than 'information'.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-1-6",
+      "title": "9.1.6 Review user access periodically",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "CLARIFIED"
+      ],
+      "summary": "Reviews may be performed by appropriate parties, and must catch inappropriate access rather than only incorrectly provisioned access.",
+      "mandate_id": "M-TRM-9-1-6",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-6"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-6"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.6 and final 9.1.6 compared paragraph by paragraph. Reviews may be performed by appropriate parties, and must catch inappropriate access rather than only incorrectly provisioned access.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-1-7",
+      "title": "9.1.7 Grant access only on a need-to-use basis and revoke promptly",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Reworded only: access remains need-to-use and must be revoked promptly when no longer needed.",
+      "mandate_id": "M-TRM-9-1-7",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-7"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-7"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.7 and final 9.1.7 compared paragraph by paragraph. Reworded only: access remains need-to-use and must be revoked promptly when no longer needed.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-1-8",
+      "title": "9.1.8 Restrict and monitor service providers like staff",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-9-1-8",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-1-8"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-1-8"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.1.8 and final 9.1.8 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-2-1",
+      "title": "9.2.1 Limit, log and review privileged access",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Only 'granted with' became 'granted'.",
+      "mandate_id": "M-TRM-9-2-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-2-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-2-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.2.1 and final 9.2.1 compared paragraph by paragraph. Only 'granted with' became 'granted'.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-2-2",
+      "title": "9.2.2 Monitor system and service accounts",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Only 'the operating systems' became 'operating systems'.",
+      "mandate_id": "M-TRM-9-2-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-2-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-2-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.2.2 and final 9.2.2 compared paragraph by paragraph. Only 'the operating systems' became 'operating systems'.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-3-1",
+      "title": "9.3.1 Encrypt remote access and require strong authentication",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Only 'connection' became 'connections'.",
+      "mandate_id": "M-TRM-9-3-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-3-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-3-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.3.1 and final 9.3.1 compared paragraph by paragraph. Only 'connection' became 'connections'.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-9-3-2",
+      "title": "9.3.2 Allow remote access only from hardened devices",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "CLARIFIED"
+      ],
+      "summary": "Remote devices must be 'secured' rather than 'hardened' according to the security standards, a broader requirement.",
+      "mandate_id": "M-TRM-9-3-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-9-3-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-9-3-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 9.3.2 and final 9.3.2 compared paragraph by paragraph. Remote devices must be 'secured' rather than 'hardened' according to the security standards, a broader requirement.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-1-1",
+      "title": "13.1.1 Perform regular vulnerability assessments",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Only the word 'IT' was added twice.",
+      "mandate_id": "M-TRM-13-1-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-1-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-1-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.1.1 and final 13.1.1 compared paragraph by paragraph. Only the word 'IT' was added twice.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-1-2",
+      "title": "13.1.2 Cover minimum scope in vulnerability assessments",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "SCOPE_CHANGED"
+      ],
+      "summary": "Minimum assessment scope now names open network ports and application vulnerabilities, and drops unapproved applications and services.",
+      "mandate_id": "M-TRM-13-1-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-1-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-1-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.1.2 and final 13.1.2 compared paragraph by paragraph. Minimum assessment scope now names open network ports and application vulnerabilities, and drops unapproved applications and services.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-2-1",
+      "title": "13.2.1 Conduct black-box and grey-box penetration tests",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-13-2-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-2-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-2-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.2.1 and final 13.2.1 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-2-2",
+      "title": "13.2.2 Consider a bug bounty programme to complement testing",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Editorial only: 'test' became 'conduct PT on' and 'IT' was added.",
+      "mandate_id": "M-TRM-13-2-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-2-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-2-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.2.2 and final 13.2.2 compared paragraph by paragraph. Editorial only: 'test' became 'conduct PT on' and 'IT' was added.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-2-3",
+      "title": "13.2.3 Penetration-test production with proper safeguards",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-13-2-3",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-2-3"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-2-3"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.2.3 and final 13.2.3 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-2-4",
+      "title": "13.2.4 Set penetration test frequency by risk and exposure",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-13-2-4",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-2-4"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-2-4"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.2.4 and final 13.2.4 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-3-1",
+      "title": "13.3.1 Run scenario-based cyber exercises and review plans",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "CLARIFIED"
+      ],
+      "summary": "Exercises must 'validate' plans; the words 'and review' were removed, so the expected outcome changed slightly.",
+      "mandate_id": "M-TRM-13-3-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-3-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-3-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.3.1 and final 13.3.1 compared paragraph by paragraph. Exercises must 'validate' plans; the words 'and review' were removed, so the expected outcome changed slightly.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-3-2",
+      "title": "13.3.2 Involve stakeholders in cyber exercises",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-13-3-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-3-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-3-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.3.2 and final 13.3.2 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-4-1",
+      "title": "13.4.1 Consider adversarial attack simulation exercises",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "STRENGTHENED"
+      ],
+      "summary": "'Is encouraged to' became 'should': adversarial attack simulation moved from optional good practice to an expected practice.",
+      "mandate_id": "M-TRM-13-4-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-4-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-4-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.4.1 and final 13.4.1 compared paragraph by paragraph. 'Is encouraged to' became 'should': adversarial attack simulation moved from optional good practice to an expected practice.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-4-2",
+      "title": "13.4.2 Define rules of engagement for red-team exercises",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-13-4-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-4-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-4-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.4.2 and final 13.4.2 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-5-1",
+      "title": "13.5.1 Base red-team scenarios on real cyber incidents",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "SCOPE_CHANGED"
+      ],
+      "summary": "Threat scenarios now apply to any cyber security assessment, not only red-team exercises, and use challenging but plausible threats rather than past incidents.",
+      "mandate_id": "M-TRM-13-5-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-5-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-5-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.5.1 and final 13.5.1 compared paragraph by paragraph. Threat scenarios now apply to any cyber security assessment, not only red-team exercises, and use challenging but plausible threats rather than past incidents.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-5-2",
+      "title": "13.5.2 Alternatively design scenarios from threat intelligence",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "CLARIFIED"
+      ],
+      "summary": "Threat intelligence is no longer 'an alternative' to incident-based scenarios but an additional design approach.",
+      "mandate_id": "M-TRM-13-5-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-5-2"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-5-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.5.2 and final 13.5.2 compared paragraph by paragraph. Threat intelligence is no longer 'an alternative' to incident-based scenarios but an additional design approach.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-13-6-1",
+      "title": "13.6.1 Track and resolve assessment findings by severity",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Only 'remediation management process' became 'remediation process'.",
+      "mandate_id": "M-TRM-13-6-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-13-6-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-13-6-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 13.6.1 and final 13.6.1 compared paragraph by paragraph. Only 'remediation management process' became 'remediation process'.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-1",
+      "title": "6.4.1 Safeguard the development and provision of APIs",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Descriptive wording only ('proprietary' removed, 'may collaborate'); the safeguard obligation is the same.",
+      "mandate_id": "M-TRM-6-4-1",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-1"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-1"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.1 and final 6.4.1 compared paragraph by paragraph. Descriptive wording only ('proprietary' removed, 'may collaborate'); the safeguard obligation is the same.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-2",
+      "title": "6.4.2 Control access to designated API services",
+      "classification": "REMOVED",
+      "change_nature": [],
+      "summary": "This draft paragraph is not kept as a separate paragraph in the final text; confirm whether other API controls cover it before retiring the mapping.",
+      "mandate_id": "M-TRM-6-4-2",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-2"
+      ],
+      "proposal_evidence_ids": [],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.2 and the final text compared paragraph by paragraph. This draft paragraph is not kept as a separate paragraph in the final text; confirm whether other API controls cover it before retiring the mapping.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-3",
+      "title": "6.4.3 Vet third parties before granting API access",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "CLARIFIED"
+      ],
+      "summary": "Vetting criteria now consider the third party's cyber security posture rather than its security policy.",
+      "mandate_id": "M-TRM-6-4-3",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-3"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-2"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.3 and final 6.4.2 compared paragraph by paragraph. Vetting criteria now consider the third party's cyber security posture rather than its security policy.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-4",
+      "title": "6.4.4 Assess risk before third parties connect via APIs",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Editorial only: 'a' and 'IT' added.",
+      "mandate_id": "M-TRM-6-4-4",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-4"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-3"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.4 and final 6.4.3 compared paragraph by paragraph. Editorial only: 'a' and 'IT' added.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-5",
+      "title": "6.4.5 Set secure API standards and protect keys and tokens",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-6-4-5",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-5"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-4"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.5 and final 6.4.4 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-6",
+      "title": "6.4.6 Encrypt sensitive data sent through APIs",
+      "classification": "UNCHANGED",
+      "change_nature": [],
+      "summary": "Word for word identical.",
+      "mandate_id": "M-TRM-6-4-6",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-6"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-5"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": false,
+        "applicable_global_overlay": false,
+        "no_effect_result": "NO_EFFECT_SUPPORTED",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.6 and final 6.4.5 compared paragraph by paragraph. Word for word identical.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-7",
+      "title": "6.4.7 Test APIs before production and log third-party sessions",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "STRENGTHENED"
+      ],
+      "summary": "Third-party API sessions must now be logged, including date and time, instead of the FI only having the ability to log them.",
+      "mandate_id": "M-TRM-6-4-7",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-7"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-6"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.7 and final 6.4.6 compared paragraph by paragraph. Third-party API sessions must now be logged, including date and time, instead of the FI only having the ability to log them.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-8",
+      "title": "6.4.8 Monitor APIs in real time and revoke keys on breach",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "CLARIFIED"
+      ],
+      "summary": "Real-time monitoring is now framed as detective measures such as real-time monitoring and alerting technologies.",
+      "mandate_id": "M-TRM-6-4-8",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-8"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-7"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.8 and final 6.4.7 compared paragraph by paragraph. Real-time monitoring is now framed as detective measures such as real-time monitoring and alerting technologies.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-6-4-9",
+      "title": "6.4.9 Handle high API volumes and mitigate denial of service",
+      "classification": "MODIFIED",
+      "change_nature": [
+        "STRENGTHENED"
+      ],
+      "summary": "The FI must ensure adequate system capacity and mitigate cyber threats such as DoS attacks; the proportionality wording was removed.",
+      "mandate_id": "M-TRM-6-4-9",
+      "baseline_evidence_ids": [
+        "EV-TRM-2019-6-4-9"
+      ],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-4-8"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Draft 6.4.9 and final 6.4.8 compared paragraph by paragraph. The FI must ensure adequate system capacity and mitigate cyber threats such as DoS attacks; the proportionality wording was removed.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-NEW-6-1-3",
+      "title": "6.1.3 Govern third-party and open-source code before use",
+      "classification": "NEW",
+      "change_nature": [
+        "NEW_OBLIGATION"
+      ],
+      "summary": "New in the final text: a policy and procedure must ensure third-party and open-source code is reviewed and tested before integration.",
+      "mandate_id": "M-TRM-NEW-6-1-3",
+      "baseline_evidence_ids": [],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-1-3"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Final paragraph 6.1.3 has no counterpart in the 2019 draft.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    },
+    {
+      "id": "CHANGE-TRM-NEW-6-1-4",
+      "title": "6.1.4 Track vulnerabilities in third-party and open-source code",
+      "classification": "NEW",
+      "change_nature": [
+        "NEW_OBLIGATION"
+      ],
+      "summary": "New in the final text: track updates and reported vulnerabilities for third-party and open-source code used in the FI's software.",
+      "mandate_id": "M-TRM-NEW-6-1-4",
+      "baseline_evidence_ids": [],
+      "proposal_evidence_ids": [
+        "EV-TRM-2021-6-1-4"
+      ],
+      "is_proposal": false,
+      "safety_checks": {
+        "high_confidence_pcs_target": true,
+        "applicable_global_overlay": false,
+        "no_effect_result": "EFFECT_POSSIBLE",
+        "human_change_confirmed": true,
+        "scope_basis": "Final paragraph 6.1.4 has no counterpart in the 2019 draft.",
+        "decision_source": "GOLDEN_LABELS"
+      }
+    }
+  ],
+  "scenario": {
+    "id": "SCENARIO-TRM-2021",
+    "title": "Technology risk: from consultation draft to final rules",
+    "regulator": "MAS",
+    "baseline_label": "Prepared from the TRM consultation draft (March 2019)",
+    "proposal_label": "MAS TRM Guidelines, January 2021",
+    "status": "FINAL",
+    "proposal_notice": "FINAL GUIDELINES — ISSUED 18 JANUARY 2021",
+    "context_note": "The bank mapped the March 2019 consultation draft. MAS then issued the final Guidelines; only what changed needs fresh review.",
+    "legal_force_note": "Both texts are MAS guidelines; legal force did not change.",
+    "suggested_questions": [
+      "Which access control obligations changed in the final guidelines, and which controls should we review?",
+      "Why does the adversarial attack simulation obligation need review?",
+      "Where are the coverage gaps for the new open-source code obligations?"
+    ],
+    "baseline_version_id": "VERSION-TRM-2019",
+    "proposal_id": "CHANGE-SOURCE-TRM-2021",
+    "baseline_mandate_ids": [
+      "M-TRM-9-1-1",
+      "M-TRM-9-1-2",
+      "M-TRM-9-1-3",
+      "M-TRM-9-1-4",
+      "M-TRM-9-1-5",
+      "M-TRM-9-1-6",
+      "M-TRM-9-1-7",
+      "M-TRM-9-1-8",
+      "M-TRM-9-2-1",
+      "M-TRM-9-2-2",
+      "M-TRM-9-3-1",
+      "M-TRM-9-3-2",
+      "M-TRM-13-1-1",
+      "M-TRM-13-1-2",
+      "M-TRM-13-2-1",
+      "M-TRM-13-2-2",
+      "M-TRM-13-2-3",
+      "M-TRM-13-2-4",
+      "M-TRM-13-3-1",
+      "M-TRM-13-3-2",
+      "M-TRM-13-4-1",
+      "M-TRM-13-4-2",
+      "M-TRM-13-5-1",
+      "M-TRM-13-5-2",
+      "M-TRM-13-6-1",
+      "M-TRM-6-4-1",
+      "M-TRM-6-4-2",
+      "M-TRM-6-4-3",
+      "M-TRM-6-4-4",
+      "M-TRM-6-4-5",
+      "M-TRM-6-4-6",
+      "M-TRM-6-4-7",
+      "M-TRM-6-4-8",
+      "M-TRM-6-4-9"
+    ],
+    "disclosure": "Public MAS sources: verbatim paragraph excerpts from the March 2019 consultation draft and the January 2021 final Guidelines, chapters 6.4, 9 and 13 plus new paragraphs 6.1.3-6.1.4. Change classifications are team golden labels. Enterprise policies, controls and mappings are synthetic."
+  }
+}

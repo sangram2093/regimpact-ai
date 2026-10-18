@@ -235,9 +235,9 @@ class WorkflowReviewService:
     def _validate_subject(self, run: WorkflowRun, context: dict[str, Any]) -> None:
         if run.workflow in {"interpret", "pcs-extract"}:
             expected = (
-                self.scenarios.bundle.versions[0].instrument_id
+                self.scenarios.baseline_version.instrument_id
                 if run.workflow == "interpret"
-                else self.scenarios.bundle.proposals[0].source_id
+                else self.scenarios.proposal.source_id
             )
             if run.source_id != expected:
                 raise DomainError(
@@ -330,6 +330,11 @@ class WorkflowReviewService:
             evidence_ids=evidence_ids,
         )
 
+    def _scope_note(self, title: str) -> str:
+        if self.scenarios.bundle.scenario.status == "FINAL":
+            return f"Review {title} against the final guideline's changed requirement."
+        return f"If adopted, review {title} for this proposal's scope and implementation."
+
     def impact_assessments(self, change_id: str, session_id: str | None) -> ImpactReviewList:
         impact = HumanReviewService(self.scenarios).prospective_impact(change_id, session_id)
         state = self.sessions.snapshot(session_id)
@@ -337,9 +342,7 @@ class WorkflowReviewService:
         for control in impact.controls:
             assessment_id = f"IMPACT-{change_id}-{control.id}"
             review = state.impact_reviews.get(assessment_id)
-            scope = (
-                f"If adopted, review {control.title} for this proposal's scope and implementation."
-            )
+            scope = self._scope_note(control.title)
             if review and review.final_output:
                 scope = review.final_output["scope_note"]
             values.append(
@@ -378,9 +381,7 @@ class WorkflowReviewService:
             raise DomainError(
                 "IMPACT_ASSESSMENT_NOT_FOUND", "No approved path supports this assessment.", 404
             )
-        base_scope = (
-            f"If adopted, review {assessment.title} for this proposal's scope and implementation."
-        )
+        base_scope = self._scope_note(assessment.title)
         previous = {"impact_type": "PROSPECTIVE_REVIEW", "scope_note": base_scope}
         final = (
             None

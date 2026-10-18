@@ -2,8 +2,9 @@ import json
 import logging
 from collections.abc import Awaitable, Callable
 from contextlib import asynccontextmanager
+from dataclasses import dataclass
 from time import perf_counter
-from typing import Annotated
+from typing import Annotated, Any
 from uuid import uuid4
 
 from fastapi import Depends, FastAPI, Request
@@ -25,7 +26,8 @@ from app.api.schemas import (
 )
 from app.api.workbench import router as workbench_router
 from app.api.workflow_review import router as workflow_review_router
-from app.bootstrap import create_adapters
+from app.bootstrap import Adapters, create_adapters
+from app.config.scenarios import MAS_2023, SCENARIO_HEADER, ScenarioSpec, enabled_scenarios
 from app.config.settings import Settings
 from app.domain.errors import DomainError
 from app.domain.models import RegulatoryInstrument
@@ -58,12 +60,30 @@ if not logger.handlers:
 logger.propagate = False
 
 
-def create_app(settings: Settings | None = None) -> FastAPI:
+@dataclass
+class SharedServices:
+    """Clients, sessions and budgets shared by every scenario in one deployment."""
+
+    adapters: Adapters
+    sessions: SessionRepository
+    limiter: OperationLimiter
+    workflows: BoundedWorkflowService
+
+
+def create_app(
+    settings: Settings | None = None,
+    spec: ScenarioSpec = MAS_2023,
+    shared: SharedServices | None = None,
+) -> FastAPI:
     settings = settings or Settings()
-    adapters = create_adapters(settings)
+    adapters = create_adapters(settings, spec, shared.adapters if shared else None)
     repository = adapters.repository
-    sessions = SessionRepository(
-        settings.session_ttl_seconds, settings.max_sessions, adapters.session_backend
+    sessions = (
+        shared.sessions
+        if shared
+        else SessionRepository(
+            settings.session_ttl_seconds, settings.max_sessions, adapters.session_backend
+        )
     )
     impact = ImpactService(repository.snapshot(), adapters.graph)
     scenarios = ScenarioService(repository, sessions, impact)
@@ -71,7 +91,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI):
         yield
-        if adapters.vertex_client:
+        # Only the primary scenario owns shared clients.
+        if adapters.vertex_client and shared is None:
             await adapters.vertex_client.aio.aclose()
             adapters.vertex_client.close()
 
@@ -92,23 +113,43 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.repository = repository
     app.state.scenarios = scenarios
     app.state.sessions = sessions
-    app.state.sources = SourceService(settings.data_dir, settings.runtime_dir, adapters.storage)
+    app.state.sources = SourceService(
+        settings.data_dir, settings.runtime_dir, adapters.storage, spec.source_manifest
+    )
     catalog = DemoCatalogService(
         mode=settings.mode,
         data_dir=settings.data_dir,
         project=settings.gcp_project_id,
         database=settings.firestore_database,
+        scenario_id=spec.scenario_id,
+        local_file=spec.demo_catalog,
     )
     app.state.candidates = CandidateService(
         repository, adapters.embeddings, adapters.search, settings.embedding_model
     )
-    app.state.workflows = BoundedWorkflowService(adapters.transport)
+    app.state.workflows = shared.workflows if shared else BoundedWorkflowService(adapters.transport)
     app.state.ask = AskService(
         repository.snapshot(), impact, adapters.ask_transport, adapters.screen
     )
-    app.state.limiter = OperationLimiter(
-        settings.ai_calls_per_minute, settings.ai_calls_per_day, adapters.session_backend
+    app.state.limiter = (
+        shared.limiter
+        if shared
+        else OperationLimiter(
+            settings.ai_calls_per_minute, settings.ai_calls_per_day, adapters.session_backend
+        )
     )
+    app.state.shared = shared or SharedServices(
+        adapters, sessions, app.state.limiter, app.state.workflows
+    )
+    bundle_scenario = repository.snapshot().scenario
+    app.state.scenario_list = [
+        {
+            "key": spec.key,
+            "scenario_id": bundle_scenario.id,
+            "label": spec.label,
+            "status": bundle_scenario.status,
+        }
+    ]
     app.include_router(workbench_router)
     app.include_router(workflow_review_router)
 
@@ -192,6 +233,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get(f"{prefix}/demo-catalog", response_model=Envelope[DemoCatalogView])
     def demo_catalog(request: Request) -> Envelope[DemoCatalogView]:
         return respond(request, catalog.read())
+
+    @app.get(f"{prefix}/scenarios", response_model=Envelope[list[dict[str, str]]])
+    def scenario_list(request: Request) -> Envelope[list[dict[str, str]]]:
+        return respond(request, request.app.state.scenario_list)
 
     @app.get(f"{prefix}/health", response_model=Envelope[Health])
     def health(request: Request) -> Envelope[Health]:
@@ -324,4 +369,54 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     return app
 
 
-app = create_app()
+class ScenarioRouter:
+    """ASGI dispatcher: the X-RegImpact-Scenario header selects a scenario's own app."""
+
+    def __init__(self, default: FastAPI, apps: dict[str, FastAPI]) -> None:
+        self.default, self.apps = default, apps
+
+    def __getattr__(self, name: str) -> Any:
+        return getattr(self.default, name)
+
+    async def __call__(self, scope: Any, receive: Any, send: Any) -> None:
+        if scope["type"] == "lifespan":
+            await self.default(scope, receive, send)
+            return
+        key = next(
+            (
+                value.decode("latin-1").strip().lower()
+                for name, value in scope.get("headers", [])
+                if name == SCENARIO_HEADER.encode()
+            ),
+            None,
+        )
+        target = self.apps.get(key) if key else self.default
+        if target is None:
+            payload = ErrorEnvelope(
+                error=ErrorBody(code="SCENARIO_NOT_FOUND", message="Unknown scenario.", details=[]),
+                meta=ErrorMeta(request_id=str(uuid4())),
+            )
+            response = JSONResponse(
+                payload.model_dump(mode="json"),
+                status_code=404,
+                headers={"Cache-Control": "no-store"},
+            )
+            await response(scope, receive, send)
+            return
+        await target(scope, receive, send)
+
+
+def create_server(settings: Settings | None = None) -> ScenarioRouter:
+    settings = settings or Settings()
+    specs = enabled_scenarios(settings.scenarios)
+    primary = create_app(settings, specs[0])
+    apps = {specs[0].key: primary}
+    for spec in specs[1:]:
+        apps[spec.key] = create_app(settings, spec, primary.state.shared)
+    listing = [item for scenario_app in apps.values() for item in scenario_app.state.scenario_list]
+    for scenario_app in apps.values():
+        scenario_app.state.scenario_list = listing
+    return ScenarioRouter(primary, apps)
+
+
+app = create_server()

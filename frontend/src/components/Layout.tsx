@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import {
   Activity,
   ArrowUpRight,
@@ -18,9 +19,10 @@ import {
   MessageSquareText,
   Workflow,
 } from 'lucide-react';
+import { request, scenarioKey, setScenarioKey } from '../api/client';
 import { useReset } from '../api/queries';
 import { DemoContext } from '../hooks/demo';
-import type { ReviewerRole } from '../types/api';
+import type { ReviewerRole, ScenarioOption } from '../types/api';
 import { ErrorState, Trail } from './Primitives';
 
 const navigation = [
@@ -34,6 +36,46 @@ const navigation = [
   { to: '/ask', label: 'Ask RegImpact', icon: MessageSquareText },
   { to: '/runs', label: 'Workflow runs', icon: Workflow },
 ];
+
+function ScenarioSwitcher() {
+  const client = useQueryClient();
+  const navigate = useNavigate();
+  const [current, setCurrent] = useState(scenarioKey());
+  const options = useQuery({
+    queryKey: ['scenarios'],
+    queryFn: () => request<ScenarioOption[]>('/scenarios'),
+    staleTime: Infinity,
+    retry: false,
+  });
+  if (!Array.isArray(options.data) || options.data.length < 2) {
+    return (
+      <span className="local-mode">
+        <span />
+        Demonstration workspace
+      </span>
+    );
+  }
+  return (
+    <label className="reviewer-select scenario-select">
+      <span>REGULATION</span>
+      <select
+        value={current}
+        onChange={(event) => {
+          setScenarioKey(event.target.value);
+          setCurrent(event.target.value);
+          navigate('/dashboard');
+          void client.resetQueries();
+        }}
+      >
+        {options.data.map((option) => (
+          <option key={option.key} value={option.key}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
 
 export function Layout() {
   const [role, setRole] = useState<ReviewerRole>('Regulatory Specialist');
@@ -124,10 +166,7 @@ export function Layout() {
               <Trail current={current} />
             </div>
             <div className="topbar-actions">
-              <span className="local-mode">
-                <span />
-                Demonstration workspace
-              </span>
+              <ScenarioSwitcher />
               <label className="reviewer-select">
                 <span>DEMO REVIEWER ROLE</span>
                 <select

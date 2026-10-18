@@ -7,6 +7,7 @@ import type { ControlImpactAssessment, ControlImpactReviewInput } from '../../ty
 import { Badge, ErrorState, LoadingState } from '../../components/Primitives';
 import { Dialog } from '../../components/Dialog';
 import { humanize } from '../../utils/format';
+import { useScenarioMode } from '../../hooks/scenario';
 
 function ImpactReviewDialog({
   assessment,
@@ -16,6 +17,7 @@ function ImpactReviewDialog({
   onClose: () => void;
 }) {
   const { role } = useDemo();
+  const { copy } = useScenarioMode();
   const mutation = useControlImpactReview();
   const [decision, setDecision] = useState<ControlImpactReviewInput['decision']>('APPROVE');
   const [rationale, setRationale] = useState('');
@@ -39,7 +41,7 @@ function ImpactReviewDialog({
       <p className="id-label page-section">{assessment.control_id}</p>
       <h3>{assessment.title}</h3>
       <div className="mapping-target">
-        <span className="eyebrow">PROPOSED SCOPE TO REVIEW</span>
+        <span className="eyebrow">{copy.scopeEyebrow}</span>
         <p>{saved.scope_note}</p>
       </div>
       <div className="callout page-section">
@@ -169,20 +171,20 @@ function ImpactReviewDialog({
 
 export function ControlImpactReview({ changeId }: { changeId: string }) {
   const query = useQuery(impactAssessmentsQuery(changeId));
+  const { copy, final } = useScenarioMode();
   const [selected, setSelected] = useState<ControlImpactAssessment | null>(null);
   return (
     <section className="panel page-section control-review-panel">
       <div className="panel-header">
         <div>
-          <p className="eyebrow">GATE 6 / PROSPECTIVE ASSESSMENT</p>
+          <p className="eyebrow">
+            {final ? 'GATE 6 / CONTROL ASSESSMENT' : 'GATE 6 / PROSPECTIVE ASSESSMENT'}
+          </p>
           <h2>Authorize control impact</h2>
         </div>
         <Badge>Demo Policy Owner</Badge>
       </div>
-      <p className="muted">
-        Review which control objectives need attention if the proposal is adopted. Decisions
-        preserve the enterprise catalog.
-      </p>
+      <p className="muted">{copy.controlReviewIntro} Decisions preserve the enterprise catalog.</p>
       {query.isPending ? (
         <LoadingState label="Loading prospective impact assessments…" />
       ) : query.error ? (

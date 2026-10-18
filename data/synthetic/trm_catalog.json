@@ -1,0 +1,433 @@
+{
+  "disclosure": "Synthetic enterprise technology-risk catalog for the hackathon demonstration. No institution's real policies or controls.",
+  "nodes": [
+    {
+      "id": "PR-TRM-UAM",
+      "title": "User access management",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Grant access by role on least privilege and need-to-use; approve, change, review and revoke access promptly; log user access activity.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-AUTH",
+      "title": "Strong authentication standard",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Enforce strong passwords and multi-factor authentication for sensitive system functions and remote access.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-PAM",
+      "title": "Privileged and service accounts",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Restrict privileged access to need-to-use; log, monitor and review privileged, system and service account activity.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-REMOTE",
+      "title": "Secure remote access",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Encrypt remote connections, require strong authentication and allow only devices that meet security standards.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-VENDOR",
+      "title": "Service provider access",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Apply the same access restrictions and monitoring to service providers as to staff.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-VA",
+      "title": "Vulnerability assessment standard",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Run regular vulnerability assessments covering configurations, open ports, applications and common web vulnerabilities.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-PT",
+      "title": "Penetration testing standard",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Commission independent penetration tests of internet-facing and critical systems on a defined frequency and after major changes.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-EXERCISE",
+      "title": "Cyber exercises and attack simulation",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Run scenario-based cyber exercises and adversarial attack simulations with defined rules of engagement and threat-intelligence-based scenarios.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-REMEDIATE",
+      "title": "Security issue remediation",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Track, prioritise and resolve assessment findings by severity within defined timeframes, with risk acceptance for deviations.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-API",
+      "title": "API security standard",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Vet API partners, secure API development and keys, test before production, log and monitor API usage, and protect API capacity.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "PR-TRM-OSS",
+      "title": "Third-party and open-source code",
+      "type": "POLICY_REQUIREMENT",
+      "text": "Review and test third-party and open-source code before use, and track its updates and reported vulnerabilities.",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-UAM-01",
+      "title": "Quarterly user access recertification",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Quarterly user access recertification",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-UAM-02",
+      "title": "Joiner-mover-leaver access revocation",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Joiner-mover-leaver access revocation",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-AUTH-01",
+      "title": "MFA enforcement for sensitive functions",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "MFA enforcement for sensitive functions",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-PAM-01",
+      "title": "Privileged session logging and review",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Privileged session logging and review",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-REMOTE-01",
+      "title": "Managed-device check for remote access",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Managed-device check for remote access",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-VENDOR-01",
+      "title": "Vendor access monitoring",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Vendor access monitoring",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-VA-01",
+      "title": "Scheduled vulnerability scanning coverage",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Scheduled vulnerability scanning coverage",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-PT-01",
+      "title": "Annual penetration test of internet-facing systems",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Annual penetration test of internet-facing systems",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-EXERCISE-01",
+      "title": "Annual scenario-based cyber exercise",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Annual scenario-based cyber exercise",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-EXERCISE-02",
+      "title": "Red-team attack simulation under rules of engagement",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Red-team attack simulation under rules of engagement",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-REMEDIATE-01",
+      "title": "Remediation tracking against severity deadlines",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "Remediation tracking against severity deadlines",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-API-01",
+      "title": "API partner vetting and access review",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "API partner vetting and access review",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "CO-TRM-API-02",
+      "title": "API monitoring, rate limiting and key revocation",
+      "type": "CONTROL_OBJECTIVE",
+      "text": "API monitoring, rate limiting and key revocation",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RT-TRM-CYBER",
+      "title": "Cyber risk",
+      "type": "RISK_TYPE",
+      "text": "Cyber risk",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RT-TRM-TECH",
+      "title": "Technology risk",
+      "type": "RISK_TYPE",
+      "text": "Technology risk",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RT-TRM-THIRD",
+      "title": "Third-party risk",
+      "type": "RISK_TYPE",
+      "text": "Third-party risk",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RD-TRM-ACCESS",
+      "title": "Excessive or stale access",
+      "type": "RISK_DRIVER",
+      "text": "Excessive or stale access",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RD-TRM-AUTH",
+      "title": "Weak authentication",
+      "type": "RISK_DRIVER",
+      "text": "Weak authentication",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RD-TRM-UNTESTED",
+      "title": "Untested cyber defences",
+      "type": "RISK_DRIVER",
+      "text": "Untested cyber defences",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RD-TRM-VULN",
+      "title": "Unremediated vulnerabilities",
+      "type": "RISK_DRIVER",
+      "text": "Unremediated vulnerabilities",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RD-TRM-API",
+      "title": "Insecure third-party API connections",
+      "type": "RISK_DRIVER",
+      "text": "Insecure third-party API connections",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    },
+    {
+      "id": "RD-TRM-CODE",
+      "title": "Unvetted third-party code",
+      "type": "RISK_DRIVER",
+      "text": "Unvetted third-party code",
+      "data_origin": "SYNTHETIC_HACKATHON"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E-CO-TRM-UAM-01",
+      "source_id": "PR-TRM-UAM",
+      "target_id": "CO-TRM-UAM-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: quarterly user access recertification implements user access management.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-UAM-02",
+      "source_id": "PR-TRM-UAM",
+      "target_id": "CO-TRM-UAM-02",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: joiner-mover-leaver access revocation implements user access management.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-AUTH-01",
+      "source_id": "PR-TRM-AUTH",
+      "target_id": "CO-TRM-AUTH-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: mfa enforcement for sensitive functions implements strong authentication standard.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-PAM-01",
+      "source_id": "PR-TRM-PAM",
+      "target_id": "CO-TRM-PAM-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: privileged session logging and review implements privileged and service accounts.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-REMOTE-01",
+      "source_id": "PR-TRM-REMOTE",
+      "target_id": "CO-TRM-REMOTE-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: managed-device check for remote access implements secure remote access.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-VENDOR-01",
+      "source_id": "PR-TRM-VENDOR",
+      "target_id": "CO-TRM-VENDOR-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: vendor access monitoring implements service provider access.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-VA-01",
+      "source_id": "PR-TRM-VA",
+      "target_id": "CO-TRM-VA-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: scheduled vulnerability scanning coverage implements vulnerability assessment standard.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-PT-01",
+      "source_id": "PR-TRM-PT",
+      "target_id": "CO-TRM-PT-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: annual penetration test of internet-facing systems implements penetration testing standard.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-EXERCISE-01",
+      "source_id": "PR-TRM-EXERCISE",
+      "target_id": "CO-TRM-EXERCISE-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: annual scenario-based cyber exercise implements cyber exercises and attack simulation.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-EXERCISE-02",
+      "source_id": "PR-TRM-EXERCISE",
+      "target_id": "CO-TRM-EXERCISE-02",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: red-team attack simulation under rules of engagement implements cyber exercises and attack simulation.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-REMEDIATE-01",
+      "source_id": "PR-TRM-REMEDIATE",
+      "target_id": "CO-TRM-REMEDIATE-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: remediation tracking against severity deadlines implements security issue remediation.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-API-01",
+      "source_id": "PR-TRM-API",
+      "target_id": "CO-TRM-API-01",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: api partner vetting and access review implements api security standard.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    },
+    {
+      "id": "E-CO-TRM-API-02",
+      "source_id": "PR-TRM-API",
+      "target_id": "CO-TRM-API-02",
+      "relationship": "IMPLEMENTED_BY",
+      "status": "APPROVED",
+      "evidence_ids": [],
+      "data_origin": "SYNTHETIC_HACKATHON",
+      "provenance": {
+        "proposed_by": "SEED",
+        "decision_source": "GOLDEN_LABELS",
+        "reason": "Synthetic enterprise catalog: api monitoring, rate limiting and key revocation implements api security standard.",
+        "reviewer": "Curated demonstration fixture"
+      }
+    }
+  ]
+}

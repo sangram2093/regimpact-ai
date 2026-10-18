@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import { changeQuery } from '../../api/queries';
 import { EvidenceCard } from '../../components/EvidenceCard';
 import { Badge, ErrorState, LoadingState } from '../../components/Primitives';
+import { useScenarioMode } from '../../hooks/scenario';
 
 function SourceReferences({ changeId }: { changeId: string }) {
+  const { copy } = useScenarioMode();
   const query = useQuery(changeQuery(changeId));
   if (query.error) return <ErrorState error={query.error} retry={() => void query.refetch()} />;
   if (query.isPending) return <LoadingState label="Loading source and provision references…" />;
@@ -25,7 +27,7 @@ function SourceReferences({ changeId }: { changeId: string }) {
             proposal: false,
           },
           {
-            title: 'Proposal source / provision',
+            title: copy.sourceGroup,
             evidence: detail.proposal_evidence,
             proposal: true,
           },
@@ -33,7 +35,7 @@ function SourceReferences({ changeId }: { changeId: string }) {
           <section key={group.title} aria-label={group.title}>
             <div className="source-context-heading">
               <h3>{group.title}</h3>
-              {group.proposal && <Badge tone="amber">Proposed</Badge>}
+              {group.proposal && <Badge tone="amber">{copy.sourceBadge}</Badge>}
             </div>
             {group.evidence.length === 0 ? (
               <p className="source-context-empty">

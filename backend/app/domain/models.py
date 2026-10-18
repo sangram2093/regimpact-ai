@@ -74,15 +74,18 @@ class RegulationVersion(FrozenModel):
     id: str
     instrument_id: str
     legal_force: Literal["GUIDANCE"] = "GUIDANCE"
-    status: Literal["IN_FORCE"] = "IN_FORCE"
+    # A consultation draft can be the baseline a bank prepared against before final rules.
+    status: Literal["IN_FORCE", "CONSULTATION_DRAFT"] = "IN_FORCE"
 
 
 class ChangeProposal(FrozenModel):
+    """The change source: a consultation proposal, or a final instrument in final mode."""
+
     id: str
     source_id: str
     baseline_version_id: str
-    status: Literal["PROPOSED"] = "PROPOSED"
-    legal_force_after: Literal["PROPOSED_BINDING"] = "PROPOSED_BINDING"
+    status: Literal["PROPOSED", "FINAL"] = "PROPOSED"
+    legal_force_after: Literal["PROPOSED_BINDING", "GUIDANCE"] = "PROPOSED_BINDING"
 
 
 class Provision(FrozenModel):
@@ -165,7 +168,7 @@ class ChangeItem(FrozenModel):
     baseline_evidence_ids: tuple[str, ...]
     proposal_evidence_ids: tuple[str, ...]
     safety_checks: SafetyChecks
-    is_proposal: Literal[True] = True
+    is_proposal: bool = True
 
 
 class ImpactScenario(FrozenModel):
@@ -174,8 +177,13 @@ class ImpactScenario(FrozenModel):
     regulator: str
     baseline_label: str
     proposal_label: str
-    status: Literal["PROPOSED"] = "PROPOSED"
+    # PROPOSED: horizon analysis of a consultation. FINAL: a final instrument replaced the
+    # baseline the institution prepared against, so reuse can be proven paragraph by paragraph.
+    status: Literal["PROPOSED", "FINAL"] = "PROPOSED"
     proposal_notice: str = "PROPOSED — NOT AN IN-FORCE REQUIREMENT"
+    context_note: str | None = None
+    legal_force_note: str | None = None
+    suggested_questions: tuple[str, ...] = ()
     baseline_version_id: str
     proposal_id: str
     baseline_mandate_ids: tuple[str, ...]
@@ -319,6 +327,13 @@ class SeedBundle(FrozenModel):
             raise ValueError("Unknown baseline version in scenario")
         if self.scenario.proposal_id not in proposal_ids:
             raise ValueError("Unknown proposal in scenario")
+        final = self.scenario.status == "FINAL"
+        for proposal in self.proposals:
+            if (proposal.status == "FINAL") != final:
+                raise ValueError("Change source status must match the scenario mode")
+        for change in self.changes:
+            if change.is_proposal == final:
+                raise ValueError(f"Change {change.id} does not match the scenario mode")
         return self
 
 

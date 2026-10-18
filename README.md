@@ -10,7 +10,13 @@ Regulatory Change-to-Control Intelligence · Team RegNexus AI
 - **2:47 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
 - **Pitch deck (PDF):** https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pdf · [PPTX in the prescribed template](https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pptx)
 
-## Working example
+## Two worked examples
+
+Use the **Regulation** selector at the top of the app to switch between them.
+
+**1. Technology risk: consultation draft to final rules (reuse).** A bank prepared its interpretation on MAS's March 2019 consultation draft of the Technology Risk Management Guidelines. MAS issued the final Guidelines on 18 January 2021. RegImpact compares 34 prepared obligations (Access Control, Cyber Security Assessment and API Development) paragraph by paragraph with the final text: 19 are unchanged, 14 changed, 1 was removed and 2 are new. The 57 mappings of unchanged obligations pass all four safeguards and are carried forward with one specialist acknowledgement, so only 45 of 102 existing mappings need individual review (54.9% less re-review, computed, not hard-coded). Small wording changes with real effect are still caught: "is encouraged to" became "should" for adversarial attack simulation. Both official PDFs are fingerprinted and stored; excerpts are verbatim.
+
+**2. Marketing safeguards: guideline versus a consultation (safety net).** The example below shows the opposite case.
 
 The complete example uses the official MAS FSG-G02 marketing and distribution guideline (2016) and its 2023 consultation proposal. It is explicitly a historical baseline-versus-proposed-revision scenario, **not a claim that the proposal is current binding law**. A later October 2026 response is recorded separately in the source manifest. Both official PDFs are completely extracted and stored with source hashes; enterprise policies and controls are synthetic demonstration data.
 

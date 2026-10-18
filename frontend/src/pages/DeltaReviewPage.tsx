@@ -66,7 +66,7 @@ export function DeltaReviewPage() {
           </div>
           <p>
             {eligible
-              ? 'These mappings passed the scenario safeguards and are ready for specialist acknowledgement.'
+              ? `${metrics.carry_forward_candidates} mappings belong to obligations whose new text has no effect on them, and each passed all four safeguards. One acknowledgement carries them forward; the other ${metrics.individual_rechecks} get individual review.`
               : 'Unsafe reuse blocked. No mapping meets all four carry-forward safeguards: the gift safeguard is directly targeted, and the identity safeguard — whose wording is unchanged — is caught by the proposed binding treatment for investment products. A text diff would have carried it forward silently.'}
           </p>
           <p className="fine-print">

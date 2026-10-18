@@ -25,6 +25,8 @@ class Settings(BaseSettings):
     enable_live_ai: bool = False
     ai_calls_per_minute: int = Field(default=5, ge=1, le=60)
     ai_calls_per_day: int = Field(default=100, ge=1, le=10000)
+    # Comma-separated scenario keys served by this deployment; the first is the default.
+    scenarios: str = "mas-2023,trm-2021"
     gcp_project_id: str = Field(default="", validation_alias="GCP_PROJECT_ID")
     gcp_region: str = Field(default="", validation_alias="GCP_REGION")
     vertex_location: str = Field(default="", validation_alias="VERTEX_LOCATION")

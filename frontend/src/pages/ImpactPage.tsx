@@ -15,11 +15,17 @@ import { ExplainEdge } from '../components/ExplainEdge';
 import { FocusedLineage } from '../features/impact/FocusedLineage';
 import { SourceContext } from '../features/impact/SourceContext';
 import { ControlImpactReview } from '../features/impact/ControlImpactReview';
+import { useScenarioMode } from '../hooks/scenario';
 
 export function ImpactPage() {
   const { id } = useParams();
   const dashboard = useQuery(dashboardQuery);
-  const changeId = id ?? dashboard.data?.changes[0]?.id ?? '';
+  const { copy } = useScenarioMode();
+  // Unchanged obligations reuse prior review; tabs focus on what changed.
+  const tabs = (dashboard.data?.changes ?? []).filter(
+    (item) => item.classification !== 'UNCHANGED' || item.id === id,
+  );
+  const changeId = id ?? tabs[0]?.id ?? '';
   const [includeScenario, setIncludeScenario] = useState(false);
   const query = useQuery(impactQuery(changeId, includeScenario));
   const [edgeId, setEdgeId] = useState<string | null>(null);
@@ -46,7 +52,7 @@ export function ImpactPage() {
       />
       <ProposalBanner />
       <nav className="change-tabs" aria-label="Select change for impact">
-        {dashboard.data.changes.map((item) => (
+        {tabs.map((item) => (
           <Link
             key={item.id}
             className={changeId === item.id ? 'selected' : ''}
@@ -59,7 +65,7 @@ export function ImpactPage() {
       <div className="impact-view-controls">
         <div className="impact-source-context">
           <Link to="/sources">{dashboard.data.scenario.baseline_label}</Link>
-          <span>Scenario: {dashboard.data.scenario.proposal_label}</span>
+          <span>Compared with: {dashboard.data.scenario.proposal_label}</span>
         </div>
         <div className="lineage-approval-filter">
           <label className="checkbox-label">
@@ -118,7 +124,7 @@ export function ImpactPage() {
         <div className="coverage-callout page-section">
           <Network size={30} />
           <div>
-            <Badge tone="amber">NEW PROPOSED OBLIGATION</Badge>
+            <Badge tone="amber">{copy.newObligation.toUpperCase()}</Badge>
             <h2>No approved policy mapping</h2>
             <p>
               This mandate has no approved path to an enterprise policy or control. Zero downstream
@@ -126,7 +132,7 @@ export function ImpactPage() {
               required.
             </p>
             <Link className="text-link" to={`/changes/${changeId}`}>
-              Inspect proposed obligation <ArrowRight size={15} />
+              Inspect the new obligation <ArrowRight size={15} />
             </Link>
             {change && (
               <Link
@@ -141,8 +147,10 @@ export function ImpactPage() {
       ) : (
         <section className="panel page-section">
           <div className="panel-header">
-            <h2>Controls to review if adopted</h2>
-            <Badge>Prospective impact</Badge>
+            <h2>{copy.controlsHeading}</h2>
+            <Badge>
+              {copy.changeBadge === 'Final' ? 'Final-rule impact' : 'Prospective impact'}
+            </Badge>
           </div>
           <div className="control-list">
             {impact.coverage === 'PARTIAL' && (

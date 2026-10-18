@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { AlertCircle, ChevronRight, LoaderCircle, ShieldCheck } from 'lucide-react';
 import { ApiError } from '../api/client';
+import { useScenarioMode } from '../hooks/scenario';
 
 export function Badge({
   children,
@@ -12,13 +13,18 @@ export function Badge({
   return <span className={`badge badge-${tone}`}>{children}</span>;
 }
 export function ProposalBanner() {
+  const { final, scenario } = useScenarioMode();
   return (
-    <div className="proposal-banner">
+    <div className={`proposal-banner ${final ? 'final-banner' : ''}`}>
       <ShieldCheck size={17} aria-hidden="true" />
       <span>
-        <strong>PROPOSED — NOT AN IN-FORCE REQUIREMENT</strong>
+        <strong>
+          {final ? scenario?.proposal_notice : 'PROPOSED — NOT AN IN-FORCE REQUIREMENT'}
+        </strong>
         <span className="banner-detail">
-          Historical 2016 → 2023 scenario. Approved baseline preserved.
+          {final
+            ? scenario?.context_note
+            : 'Historical 2016 → 2023 scenario. Approved baseline preserved.'}
         </span>
       </span>
     </div>

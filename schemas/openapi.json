@@ -518,8 +518,11 @@
             "type": "boolean"
           },
           "legal_force_after": {
-            "const": "PROPOSED_BINDING",
             "default": "PROPOSED_BINDING",
+            "enum": [
+              "PROPOSED_BINDING",
+              "GUIDANCE"
+            ],
             "title": "Legal Force After",
             "type": "string"
           },
@@ -530,8 +533,15 @@
             "type": "string"
           },
           "legal_force_note": {
-            "title": "Legal Force Note",
-            "type": "string"
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Legal Force Note"
           },
           "mandate": {
             "$ref": "#/components/schemas/MandateSummary"
@@ -567,6 +577,15 @@
           },
           "scenario_id": {
             "title": "Scenario Id",
+            "type": "string"
+          },
+          "scenario_status": {
+            "default": "PROPOSED",
+            "enum": [
+              "PROPOSED",
+              "FINAL"
+            ],
+            "title": "Scenario Status",
             "type": "string"
           },
           "summary": {
@@ -931,7 +950,7 @@
             "type": "string"
           },
           "scenario_id": {
-            "const": "SCENARIO-MAS-2023",
+            "pattern": "^SCENARIO-[A-Z0-9-]+$",
             "title": "Scenario Id",
             "type": "string"
           },
@@ -1003,13 +1022,7 @@
             "type": "string"
           },
           "path": {
-            "enum": [
-              "/sources",
-              "/delta-review",
-              "/changes/CHANGE-GIFT",
-              "/impact",
-              "/ask"
-            ],
+            "pattern": "^/(sources|delta-review|impact|ask|runs|changes/[A-Z0-9-]+)$",
             "title": "Path",
             "type": "string"
           }
@@ -1570,6 +1583,29 @@
         "title": "Envelope[WorkflowRun]",
         "type": "object"
       },
+      "Envelope_list_dict_str__str___": {
+        "properties": {
+          "data": {
+            "items": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            "title": "Data",
+            "type": "array"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[list[dict[str, str]]]",
+        "type": "object"
+      },
       "Envelope_tuple_RegulatoryInstrument__________": {
         "properties": {
           "data": {
@@ -2063,6 +2099,17 @@
             "title": "Baseline Version Id",
             "type": "string"
           },
+          "context_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Context Note"
+          },
           "disclosure": {
             "title": "Disclosure",
             "type": "string"
@@ -2070,6 +2117,17 @@
           "id": {
             "title": "Id",
             "type": "string"
+          },
+          "legal_force_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Legal Force Note"
           },
           "proposal_id": {
             "title": "Proposal Id",
@@ -2089,10 +2147,21 @@
             "type": "string"
           },
           "status": {
-            "const": "PROPOSED",
             "default": "PROPOSED",
+            "enum": [
+              "PROPOSED",
+              "FINAL"
+            ],
             "title": "Status",
             "type": "string"
+          },
+          "suggested_questions": {
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "title": "Suggested Questions",
+            "type": "array"
           },
           "title": {
             "title": "Title",
@@ -5868,6 +5937,122 @@
           }
         },
         "summary": "Regulation"
+      }
+    },
+    "/api/v1/scenarios": {
+      "get": {
+        "operationId": "scenario_list_api_v1_scenarios_get",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-Demo-Session",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Demo-Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_dict_str__str___"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        },
+        "summary": "Scenario List"
       }
     },
     "/api/v1/sources": {

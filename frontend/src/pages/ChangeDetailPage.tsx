@@ -12,10 +12,12 @@ import {
 } from '../components/Primitives';
 import { EvidenceCard } from '../components/EvidenceCard';
 import { ClassificationPanel } from '../features/review/ClassificationPanel';
+import { useScenarioMode } from '../hooks/scenario';
 
 export function ChangeDetailPage() {
   const { id = '' } = useParams();
   const query = useQuery(changeQuery(id));
+  const { copy, scenario } = useScenarioMode();
   if (query.isPending) return <LoadingState label="Loading source comparison…" />;
   if (query.error) return <ErrorState error={query.error} retry={() => void query.refetch()} />;
   const change = query.data;
@@ -23,10 +25,10 @@ export function ChangeDetailPage() {
     <>
       <Link className="back-link" to="/changes">
         <ArrowLeft size={15} />
-        All proposed changes
+        {copy.allChanges}
       </Link>
       <PageHeading
-        eyebrow={`${change.id} / MAS CONSULTATION`}
+        eyebrow={`${change.id} / ${copy.sourceEyebrow}`}
         title={change.title}
         description={change.summary}
       />
@@ -44,31 +46,34 @@ export function ChangeDetailPage() {
           <div className="panel-header">
             <div>
               <p className="eyebrow">BEFORE</p>
-              <h2>Approved baseline</h2>
+              <h2>{copy.baselineTitle}</h2>
             </div>
-            <Badge tone="teal">MAS guideline</Badge>
+            <Badge tone="teal">{copy.baselineBadge}</Badge>
           </div>
-          <p className="panel-description">FSG-G02 · 23 December 2016 · Baseline guidance</p>
+          <p className="panel-description">{scenario?.baseline_label}</p>
           {change.baseline_evidence.length ? (
             change.baseline_evidence.map((item) => <EvidenceCard key={item.id} evidence={item} />)
           ) : (
-            <div className="empty-evidence">
-              No equivalent baseline obligation is asserted for this proposed change.
-            </div>
+            <div className="empty-evidence">{copy.noBaseline}</div>
           )}
         </article>
         <article className="panel panel-proposal">
           <div className="panel-header">
             <div>
-              <p className="eyebrow">IF ADOPTED</p>
-              <h2>Change proposal</h2>
+              <p className="eyebrow">{copy.changeEyebrow}</p>
+              <h2>{copy.changeTitle}</h2>
             </div>
-            <Badge tone="amber">Consultation</Badge>
+            <Badge tone="amber">{copy.changeBadge}</Badge>
           </div>
-          <p className="panel-description">MAS 2023 consultation · Prospective assessment</p>
-          {change.proposal_evidence.map((item) => (
-            <EvidenceCard key={item.id} evidence={item} />
-          ))}
+          <p className="panel-description">{scenario?.proposal_label}</p>
+          {change.proposal_evidence.length ? (
+            change.proposal_evidence.map((item) => <EvidenceCard key={item.id} evidence={item} />)
+          ) : (
+            <div className="empty-evidence">
+              Not kept as a separate paragraph in the final text. Confirm whether other requirements
+              cover it before retiring the mapping.
+            </div>
+          )}
         </article>
       </section>
       <ClassificationPanel key={change.id} change={change} />
@@ -80,10 +85,7 @@ export function ChangeDetailPage() {
           </div>
           <p className="id-label">{change.mandate.id}</p>
           <h3>{change.mandate.title}</h3>
-          <p className="muted">
-            Curated interpretation for specialist review. Proposal decisions do not alter the
-            approved baseline.
-          </p>
+          <p className="muted">{copy.interpretationNote}</p>
           <div className="inline-badges">
             {change.risk_tags.map((tag) => (
               <Badge key={tag}>{tag}</Badge>

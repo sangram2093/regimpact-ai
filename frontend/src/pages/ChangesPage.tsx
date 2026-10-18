@@ -2,15 +2,17 @@ import { useQuery } from '@tanstack/react-query';
 import { dashboardQuery } from '../api/queries';
 import { ErrorState, LoadingState, PageHeading, ProposalBanner } from '../components/Primitives';
 import { ChangeCard } from '../features/dashboard/ChangeCard';
+import { useScenarioMode } from '../hooks/scenario';
 
 export function ChangesPage() {
   const query = useQuery(dashboardQuery);
+  const { copy } = useScenarioMode();
   return (
     <>
       <PageHeading
-        eyebrow="MAS / HORIZON SCENARIO"
+        eyebrow={copy.changesEyebrow}
         title="Change analysis"
-        description="Trace each proposed change to its baseline, supporting evidence and prospective control impact."
+        description={copy.changesDescription}
       />
       <ProposalBanner />
       {query.isPending ? (

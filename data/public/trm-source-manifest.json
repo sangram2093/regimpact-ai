@@ -1,0 +1,41 @@
+{
+ "schema_version": "1.0",
+ "checked_at": "2026-10-18",
+ "verification_method": "Official MAS PDFs retrieved directly over HTTPS from mas.gov.sg; PDF signature, size and SHA-256 recorded. The 2019 consultation paper contains the full proposed revised Guidelines.",
+ "sources": [
+  {
+   "source_id": "MAS-TRM-CP-2019",
+   "title": "Consultation Paper on Proposed Revisions to Technology Risk Management Guidelines (P003-2019)",
+   "instrument_status": "PROPOSED",
+   "legal_force": "GUIDANCE",
+   "publication_date": "2019-03-07",
+   "source_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+   "pdf_url": "https://www.mas.gov.sg/-/media/Consultation-Paper-on-Proposed-Revisions-to-Technology-Risk-Management-Guidelines.pdf",
+   "status_verification": "March 2019 consultation draft of the revised Guidelines. In this scenario it is the text an institution prepared against before the final Guidelines were issued.",
+   "data_origin": "PUBLIC_REGULATORY_SOURCE",
+   "evidence_verification": "PRIMARY_SOURCE_PDF_BYTES_VERIFIED",
+   "retrieved_at": "2026-10-18T00:29:26.507932+00:00",
+   "sha256": "4e3781f1e014ec1de6867c9a3e1f80760f6d19fdfc0589bdd602143273b02ad3",
+   "local_path": "downloads/MAS-TRM-CP-2019.pdf",
+   "byte_length": 1059973,
+   "fetch_status": "FETCHED"
+  },
+  {
+   "source_id": "MAS-TRM-2021",
+   "title": "Technology Risk Management Guidelines (January 2021)",
+   "instrument_status": "IN_FORCE",
+   "legal_force": "GUIDANCE",
+   "publication_date": "2021-01-18",
+   "source_url": "https://www.mas.gov.sg/regulation/guidelines/technology-risk-management-guidelines",
+   "pdf_url": "https://www.mas.gov.sg/-/media/MAS/Regulations-and-Financial-Stability/Regulatory-and-Supervisory-Framework/Risk-Management/TRM-Guidelines-18-January-2021.pdf",
+   "status_verification": "Final Guidelines issued 18 January 2021 (guidance). Used as the final text compared with the 2019 draft; not an exhaustive statement of current law.",
+   "data_origin": "PUBLIC_REGULATORY_SOURCE",
+   "evidence_verification": "PRIMARY_SOURCE_PDF_BYTES_VERIFIED",
+   "retrieved_at": "2026-10-18T00:29:26.507932+00:00",
+   "sha256": "2b8959e883bd66cb17286bdfc3e04fc181a6cd0ad786c99d4998c2d6c3e0efcb",
+   "local_path": "downloads/MAS-TRM-2021.pdf",
+   "byte_length": 592631,
+   "fetch_status": "FETCHED"
+  }
+ ]
+}

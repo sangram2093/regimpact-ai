@@ -5,6 +5,7 @@ from typing import Any
 
 from app.adapters.local_json import LocalJsonRepository
 from app.adapters.sqlite_sessions import SQLiteSessionBackend
+from app.config.scenarios import MAS_2023, ScenarioSpec
 from app.config.settings import Settings
 from app.repositories.ports import GraphRepository, RegulatoryRepository
 from app.repositories.sessions import SessionBackend
@@ -22,11 +23,45 @@ class Adapters:
     screen: Any = None
     vertex_client: Any = None
     storage: Any = None
+    database: Any = None
 
 
-def create_adapters(settings: Settings) -> Adapters:
+def create_adapters(
+    settings: Settings, spec: ScenarioSpec = MAS_2023, shared: Adapters | None = None
+) -> Adapters:
+    """Build one scenario's adapters. `shared` reuses clients and session storage."""
+    if shared is not None:
+        if settings.mode == "local":
+            repository = LocalJsonRepository(settings.data_dir, spec)
+            return Adapters(
+                repository=repository,
+                graph=repository,
+                session_backend=shared.session_backend,
+            )
+        from app.adapters.gcp.repository import SpannerRegulatoryRepository
+        from app.adapters.gcp.search import SpannerSearchRepository
+
+        repository = SpannerRegulatoryRepository(shared.database, spec.scenario_id)
+        repository.snapshot()  # Each scenario requires its own explicitly imported bundle.
+        return Adapters(
+            repository=repository,
+            graph=repository,
+            session_backend=shared.session_backend,
+            search=SpannerSearchRepository(
+                shared.database, spec.scenario_id, embedding_model=settings.embedding_model
+            )
+            if shared.transport
+            else None,
+            embeddings=shared.embeddings,
+            transport=shared.transport,
+            ask_transport=shared.ask_transport,
+            screen=shared.screen,
+            vertex_client=shared.vertex_client,
+            storage=shared.storage,
+            database=shared.database,
+        )
     if settings.mode == "local":
-        repository = LocalJsonRepository(settings.data_dir)
+        repository = LocalJsonRepository(settings.data_dir, spec)
         backend = (
             SQLiteSessionBackend(
                 settings.session_db, settings.session_ttl_seconds, settings.max_sessions
@@ -56,7 +91,7 @@ def create_adapters(settings: Settings) -> Adapters:
     database = make_database(
         settings.gcp_project_id, settings.spanner_instance, settings.spanner_database
     )
-    repository = SpannerRegulatoryRepository(database, "SCENARIO-MAS-2023")
+    repository = SpannerRegulatoryRepository(database, spec.scenario_id)
     repository.snapshot()  # Require an explicitly imported, validated corpus before startup.
     result = Adapters(
         repository=repository,
@@ -65,6 +100,7 @@ def create_adapters(settings: Settings) -> Adapters:
             database, settings.session_ttl_seconds, settings.max_sessions
         ),
         storage=GCSObjectStorage.from_project(settings.gcp_project_id, settings.gcs_bucket),
+        database=database,
     )
     if settings.enable_live_ai:
         from app.ai.adk_ask import AdkAskTransport
@@ -81,7 +117,7 @@ def create_adapters(settings: Settings) -> Adapters:
         result.ask_transport = AdkAskTransport(client=client, model=settings.gemini_model)
         result.embeddings = VertexEmbeddingClient(client=client, model=settings.embedding_model)
         result.search = SpannerSearchRepository(
-            database, "SCENARIO-MAS-2023", embedding_model=settings.embedding_model
+            database, spec.scenario_id, embedding_model=settings.embedding_model
         )
         if settings.model_armor_template:
             result.screen = ModelArmorScreen(settings.model_armor_template)

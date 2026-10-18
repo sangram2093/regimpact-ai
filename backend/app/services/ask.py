@@ -49,7 +49,8 @@ class AskService:
                 if self.transport
                 else "Local mode supports deterministic graph questions."
             ),
-            suggested_questions=(
+            suggested_questions=self.bundle.scenario.suggested_questions
+            or (
                 "What changes in the gift safeguard, and which controls should we review?",
                 "Why does the gift safeguard map to the gifts policy?",
                 "Where are the coverage gaps for the new intent and consent obligation?",
@@ -67,7 +68,21 @@ class AskService:
             mandate = next(m for m in self.bundle.mandates if m.id == change.mandate_id)
             label_terms = set(re.findall(r"[a-z]+", f"{change.title} {mandate.title}".lower()))
             # Deliberately narrow local intent matching; unknown questions fail closed.
-            discriminative = label_terms & {"gift", "gifts", "consent", "intent", "identity"}
+            discriminative = label_terms & {
+                "gift",
+                "gifts",
+                "consent",
+                "intent",
+                "identity",
+                "privileged",
+                "remote",
+                "penetration",
+                "adversarial",
+                "api",
+                "apis",
+                "vulnerability",
+                "open",
+            }
             if any(re.search(rf"\b{re.escape(term)}s?\b", lowered) for term in discriminative):
                 changes.append(change)
         if "gap" in lowered and not changes:

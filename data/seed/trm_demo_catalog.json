@@ -1,0 +1,33 @@
+{
+  "scenario_id": "SCENARIO-TRM-2021",
+  "title": "Prepared on the draft, ready for the final rules",
+  "baseline": "Prepared baseline: MAS TRM consultation draft (March 2019), 34 approved obligations",
+  "comparison": "Final rules: MAS Technology Risk Management Guidelines (January 2021)",
+  "notice": "Both official PDFs are fingerprinted. Change labels compare each draft paragraph with the final text; enterprise policies and controls are synthetic.",
+  "source_ids": [
+    "MAS-TRM-CP-2019",
+    "MAS-TRM-2021"
+  ],
+  "steps": [
+    {
+      "label": "1. See the two official texts",
+      "path": "/sources"
+    },
+    {
+      "label": "2. Reuse what still holds",
+      "path": "/delta-review"
+    },
+    {
+      "label": "3. A quiet but material change",
+      "path": "/changes/CHANGE-TRM-13-4-1"
+    },
+    {
+      "label": "4. Trace affected controls",
+      "path": "/impact"
+    },
+    {
+      "label": "5. Ask Gemini with evidence",
+      "path": "/ask"
+    }
+  ]
+}

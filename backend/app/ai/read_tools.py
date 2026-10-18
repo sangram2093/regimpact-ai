@@ -74,7 +74,11 @@ class ReadOnlyTools:
         )
         citations.update(
             {
-                item.id: AskCitation(id=item.id, label=item.title, type="PROPOSED_CHANGE")
+                item.id: AskCitation(
+                    id=item.id,
+                    label=item.title,
+                    type="PROPOSED_CHANGE" if item.is_proposal else "FINAL_CHANGE",
+                )
                 for item in self.bundle.changes
             }
         )
@@ -87,7 +91,9 @@ class ReadOnlyTools:
             }
         )
         citations[self.bundle.scenario.id] = AskCitation(
-            id=self.bundle.scenario.id, label=self.bundle.scenario.title, type="PROPOSED_SCENARIO"
+            id=self.bundle.scenario.id,
+            label=self.bundle.scenario.title,
+            type="PROPOSED_SCENARIO" if self.bundle.scenario.status == "PROPOSED" else "SCENARIO",
         )
         return citations
 
@@ -199,11 +205,15 @@ class ReadOnlyTools:
             raise DomainError("CHANGE_NOT_FOUND", "Proposed change not found.", 404)
         impact = self.impact.change_impact(change_event_id)
         refs = (change.id, change.mandate_id)
+        final = not change.is_proposal
+        status = "FINAL" if final else "PROPOSED"
         facts = [
             self.fact(
-                f"Proposed change: {change.summary} This is not an in-force requirement.",
+                f"Final change ({self.bundle.scenario.proposal_label}): {change.summary}"
+                if final
+                else f"Proposed change: {change.summary} This is not an in-force requirement.",
                 refs + change.proposal_evidence_ids,
-                "PROPOSED",
+                status,
             )
         ]
         if not impact.controls:
@@ -212,7 +222,7 @@ class ReadOnlyTools:
                     impact.gap_reason
                     or "No approved control path exists for this proposed mandate.",
                     refs,
-                    "PROPOSED",
+                    status,
                 )
             )
         mandate = self.citations[change.mandate_id].label
@@ -237,10 +247,15 @@ class ReadOnlyTools:
             )
             facts.append(
                 self.fact(
-                    f"Prospective control to review if the proposal is adopted: {control.title}."
+                    (
+                        f"Control to review under the final guideline: {control.title}."
+                        if final
+                        else "Prospective control to review if the proposal is adopted: "
+                        f"{control.title}."
+                    )
                     + why,
                     refs + policy_ids + (control.id,),
-                    "PROPOSED",
+                    status,
                 )
             )
         return self._record(facts)

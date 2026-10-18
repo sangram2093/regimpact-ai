@@ -13,11 +13,11 @@ export function ExplainEdge({ id, onClose }: { id: string; onClose: () => void }
   const provenance = edge?.provenance;
   const hasRun = Boolean(
     provenance &&
-      (provenance.model ||
-        provenance.prompt_version ||
-        provenance.vector_rank != null ||
-        provenance.lexical_rank != null ||
-        provenance.rrf_rank != null),
+    (provenance.model ||
+      provenance.prompt_version ||
+      provenance.vector_rank != null ||
+      provenance.lexical_rank != null ||
+      provenance.rrf_rank != null),
   );
   return (
     <Dialog title="Explain this relationship" onClose={onClose}>

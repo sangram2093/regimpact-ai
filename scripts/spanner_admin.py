@@ -15,8 +15,10 @@ async def run(args, settings) -> dict:
     from app.adapters.gcp.repository import SpannerRegulatoryRepository
     from app.adapters.gcp.search import SearchEntity, SpannerSearchRepository
     from app.adapters.local_json import LocalJsonRepository
+    from app.config.scenarios import MAS_2023, SCENARIOS
 
-    local_bundle = LocalJsonRepository(settings.data_dir).snapshot()
+    spec = next((s for s in SCENARIOS if s.scenario_id == args.scenario_id), MAS_2023)
+    local_bundle = LocalJsonRepository(settings.data_dir, spec).snapshot()
     scenario_id = args.scenario_id or local_bundle.scenario.id
     if args.action == "plan":
         return {

@@ -115,7 +115,6 @@
           "type": "string"
         },
         "is_proposal": {
-          "const": true,
           "default": true,
           "title": "Is Proposal",
           "type": "boolean"
@@ -159,6 +158,7 @@
     },
     "ChangeProposal": {
       "additionalProperties": false,
+      "description": "The change source: a consultation proposal, or a final instrument in final mode.",
       "properties": {
         "baseline_version_id": {
           "title": "Baseline Version Id",
@@ -169,8 +169,11 @@
           "type": "string"
         },
         "legal_force_after": {
-          "const": "PROPOSED_BINDING",
           "default": "PROPOSED_BINDING",
+          "enum": [
+            "PROPOSED_BINDING",
+            "GUIDANCE"
+          ],
           "title": "Legal Force After",
           "type": "string"
         },
@@ -179,8 +182,11 @@
           "type": "string"
         },
         "status": {
-          "const": "PROPOSED",
           "default": "PROPOSED",
+          "enum": [
+            "PROPOSED",
+            "FINAL"
+          ],
           "title": "Status",
           "type": "string"
         }
@@ -454,6 +460,18 @@
           "title": "Baseline Version Id",
           "type": "string"
         },
+        "context_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Note"
+        },
         "disclosure": {
           "title": "Disclosure",
           "type": "string"
@@ -461,6 +479,18 @@
         "id": {
           "title": "Id",
           "type": "string"
+        },
+        "legal_force_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Legal Force Note"
         },
         "proposal_id": {
           "title": "Proposal Id",
@@ -480,10 +510,21 @@
           "type": "string"
         },
         "status": {
-          "const": "PROPOSED",
           "default": "PROPOSED",
+          "enum": [
+            "PROPOSED",
+            "FINAL"
+          ],
           "title": "Status",
           "type": "string"
+        },
+        "suggested_questions": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Suggested Questions",
+          "type": "array"
         },
         "title": {
           "title": "Title",
@@ -667,8 +708,11 @@
           "type": "string"
         },
         "status": {
-          "const": "IN_FORCE",
           "default": "IN_FORCE",
+          "enum": [
+            "IN_FORCE",
+            "CONSULTATION_DRAFT"
+          ],
           "title": "Status",
           "type": "string"
         }

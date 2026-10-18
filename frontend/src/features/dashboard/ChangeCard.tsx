@@ -3,8 +3,10 @@ import { ArrowRight, Gift, MessageSquareText, UserRoundCheck } from 'lucide-reac
 import { Link } from 'react-router-dom';
 import type { Change } from '../../types/api';
 import { Badge } from '../../components/Primitives';
+import { useScenarioMode } from '../../hooks/scenario';
 
 export function ChangeCard({ change, index = 0 }: { change: Change; index?: number }) {
+  const { copy } = useScenarioMode();
   const Icon = change.id.includes('GIFT')
     ? Gift
     : change.classification === 'NEW'
@@ -19,13 +21,15 @@ export function ChangeCard({ change, index = 0 }: { change: Change; index?: numb
           <Icon size={21} />
         </span>
         <div className="inline-badges">
-          <Badge tone={change.classification === 'NEW' ? 'amber' : 'teal'}>
+          <Badge tone={change.classification === 'UNCHANGED' ? 'teal' : 'amber'}>
             {change.classification}
           </Badge>
-          <Badge>Proposal</Badge>
+          <Badge>{copy.cardBadge}</Badge>
         </div>
       </div>
-      <p className="card-kicker">CHANGE {String(index + 1).padStart(2, '0')} / MAS CONSULTATION</p>
+      <p className="card-kicker">
+        CHANGE {String(index + 1).padStart(2, '0')} / {copy.sourceEyebrow}
+      </p>
       <h3>
         <Link to={`/changes/${change.id}`}>{change.title}</Link>
       </h3>

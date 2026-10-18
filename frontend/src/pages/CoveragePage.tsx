@@ -9,15 +9,17 @@ import {
   PageHeading,
   ProposalBanner,
 } from '../components/Primitives';
+import { useScenarioMode } from '../hooks/scenario';
 
 export function CoveragePage() {
   const query = useQuery(dashboardQuery);
+  const { copy } = useScenarioMode();
   return (
     <>
       <PageHeading
         eyebrow="PROSPECTIVE COVERAGE"
         title="Make the gaps visible."
-        description="New proposed obligations need explicit mapping. They are never silently absorbed into the approved graph."
+        description={`${copy.newObligations} need explicit mapping. They are never silently absorbed into the approved graph.`}
       />
       <ProposalBanner />
       {query.isPending ? (
@@ -32,7 +34,7 @@ export function CoveragePage() {
               <section className="coverage-callout" key={change.id}>
                 <CircleDot size={33} />
                 <div>
-                  <Badge tone="amber">New proposed obligation</Badge>
+                  <Badge tone="amber">{copy.newObligation}</Badge>
                   <h2>{change.title}</h2>
                   <p>{change.summary}</p>
                   <p className="muted">
@@ -49,7 +51,7 @@ export function CoveragePage() {
               </section>
             ))}
           {query.data.metrics.new_obligations === 0 && (
-            <p className="panel">No new proposed obligations in this scenario.</p>
+            <p className="panel">No {copy.newObligations.toLowerCase()} in this scenario.</p>
           )}
         </div>
       )}

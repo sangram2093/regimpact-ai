@@ -59,9 +59,7 @@ describe('RegImpact review workflows', () => {
     expect(screen.getByText('Safety net engaged')).toBeInTheDocument();
     expect(screen.getByText('PROPOSED — NOT AN IN-FORCE REQUIREMENT')).toBeInTheDocument();
     expect(screen.getByText(/Live Gemini runs appear/)).toBeInTheDocument();
-    expect(
-      screen.getByText(/0 silent carry-forwards/),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/0 silent carry-forwards/)).toBeInTheDocument();
     expect(screen.getByText(/synthetic hackathon data/)).toBeInTheDocument();
   });
 

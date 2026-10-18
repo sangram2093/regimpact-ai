@@ -38,6 +38,12 @@ class ScenarioService:
         self.changes = {change.id: change for change in self.bundle.changes}
         self.by_mandate = {change.mandate_id: change for change in self.bundle.changes}
         self.edges = {edge.id: edge for edge in self.bundle.edges}
+        self.proposal = next(
+            p for p in self.bundle.proposals if p.id == self.bundle.scenario.proposal_id
+        )
+        self.baseline_version = next(
+            v for v in self.bundle.versions if v.id == self.bundle.scenario.baseline_version_id
+        )
 
     def safety_checks(self, change: ChangeItem) -> SafetyChecks:
         # Recompute PCS blockers from graph data. A mislabeled fixture flag must
@@ -61,7 +67,7 @@ class ScenarioService:
                 continue
             if (
                 workflow_review.workflow == "pcs-extract"
-                and workflow_review.source_id == self.bundle.proposals[0].source_id
+                and workflow_review.source_id == self.proposal.source_id
             ):
                 for statement in output.get("statements", []):
                     safety["high_confidence_pcs_target"] |= (
@@ -264,9 +270,14 @@ class ScenarioService:
             risk_tags=self.impact.risk_tags(mandate.id),
             safety_checks=self.safety_checks(change),
             proposal_notice=self.bundle.scenario.proposal_notice,
-            legal_force_note=(
+            scenario_status=self.bundle.scenario.status,
+            legal_force_after=self.proposal.legal_force_after,
+            legal_force_note=self.bundle.scenario.legal_force_note
+            or (
                 "Proposed Notices apply to investment products and long-term accident "
                 "and health policies. Other products retain guideline treatment."
+                if self.bundle.scenario.status == "PROPOSED"
+                else None
             ),
         )
 

@@ -23,6 +23,15 @@ export interface Scenario {
   proposal_label: string;
   status: string;
   proposal_notice: string;
+  context_note?: string | null;
+  legal_force_note?: string | null;
+  suggested_questions?: string[];
+}
+export interface ScenarioOption {
+  key: string;
+  scenario_id: string;
+  label: string;
+  status: string;
 }
 export interface Change {
   id: string;
@@ -68,6 +77,9 @@ export interface ChangeDetail extends Change {
   mandate: { id: string; title: string };
   risk_tags: string[];
   proposal_notice: string;
+  scenario_status?: string;
+  legal_force_after?: string;
+  legal_force_note?: string | null;
   classification_review?: {
     classification: string;
     reviewer: string;

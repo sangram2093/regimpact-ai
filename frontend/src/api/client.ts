@@ -1,6 +1,24 @@
 import type { Envelope } from '../types/api';
 
 const SESSION_KEY = 'regimpact-demo-session';
+const SCENARIO_KEY = 'regimpact-scenario';
+export const DEFAULT_SCENARIO = 'mas-2023';
+
+export function scenarioKey(): string {
+  try {
+    return sessionStorage.getItem(SCENARIO_KEY) || DEFAULT_SCENARIO;
+  } catch {
+    return DEFAULT_SCENARIO;
+  }
+}
+
+export function setScenarioKey(key: string): void {
+  try {
+    sessionStorage.setItem(SCENARIO_KEY, key);
+  } catch {
+    // Without storage the default scenario remains selected.
+  }
+}
 
 export function sessionId(): string {
   let id = sessionStorage.getItem(SESSION_KEY);
@@ -30,6 +48,7 @@ export async function request<T>(path: string, body?: unknown): Promise<T> {
       headers: {
         'Content-Type': 'application/json',
         'X-Demo-Session': sessionId(),
+        'X-RegImpact-Scenario': scenarioKey(),
       },
       ...(body === undefined ? {} : { body: JSON.stringify(body) }),
     });

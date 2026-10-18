@@ -13,7 +13,11 @@ from app.services.ingestion import IngestionService, PdfDocumentExtractor
 
 class SourceService:
     def __init__(
-        self, data_dir: Path, runtime_dir: Path, storage: ObjectStorage | None = None
+        self,
+        data_dir: Path,
+        runtime_dir: Path,
+        storage: ObjectStorage | None = None,
+        manifest: str = "source-manifest.json",
     ) -> None:
         self.public_dir = data_dir / "public"
         self.output_dir = runtime_dir / "sources"
@@ -22,7 +26,7 @@ class SourceService:
         self._cloud_documents: dict[str, IngestedDocument | None] = {}
         self._cloud_originals: set[str] = set()
         manifest = json.loads(
-            (self.public_dir / "source-manifest.json").read_text(encoding="utf-8")
+            (self.public_dir / manifest).read_text(encoding="utf-8")
         )
         self.sources = {item["source_id"]: item for item in manifest["sources"]}
         for source_id in self.sources:

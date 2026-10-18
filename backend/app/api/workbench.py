@@ -268,7 +268,7 @@ async def workflow_run(
     context = {
         "sources": [
             i.model_dump(mode="json")
-            | {"legal_force": "GUIDANCE" if i.status == "IN_FORCE" else "PROPOSED_BINDING"}
+            | {"legal_force": "PROPOSED_BINDING" if i.status == "PROPOSED" else "GUIDANCE"}
             for i in bundle.instruments
         ],
         "evidence": [e.model_dump(mode="json") for e in bundle.evidence],
@@ -282,9 +282,9 @@ async def workflow_run(
     }
     if workflow in {"interpret", "pcs-extract"}:
         source_id = (
-            bundle.versions[0].instrument_id
+            app.scenarios.baseline_version.instrument_id
             if workflow == "interpret"
-            else bundle.proposals[0].source_id
+            else app.scenarios.proposal.source_id
         )
         await app.sources.refresh(source_id)
         document = app.sources.document(source_id)
@@ -334,19 +334,29 @@ async def workflow_run(
         impact = await asyncio.to_thread(app.scenarios.impact.change_impact, change.id)
         context["impact"] = impact.model_dump(mode="json")
         if workflow == "impact-explain":
+            final = not change.is_proposal
+            status = "FINAL_GUIDANCE" if final else "PROPOSED"
             context["allowed_claims"] = [
                 {
-                    "text": f"If adopted, review control {c['title']} "
-                    "through approved mandate-policy-control lineage.",
+                    "text": (
+                        f"Under the final guideline, review control {c['title']} "
+                        if final
+                        else f"If adopted, review control {c['title']} "
+                    )
+                    + "through approved mandate-policy-control lineage.",
                     "entity_ids": [change.mandate_id, c["id"]],
-                    "legal_status": "PROPOSED",
+                    "legal_status": status,
                 }
                 for c in context["impact"]["controls"]
             ] or [
                 {
-                    "text": "The proposed obligation has no approved mandate-policy-control path.",
+                    "text": (
+                        "The new final obligation has no approved mandate-policy-control path."
+                        if final
+                        else "The proposed obligation has no approved mandate-policy-control path."
+                    ),
                     "entity_ids": [change.mandate_id],
-                    "legal_status": "PROPOSED",
+                    "legal_status": status,
                 }
             ]
     result = await app.workflows.run(workflow, context)

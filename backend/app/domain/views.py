@@ -53,9 +53,10 @@ class ChangeDetail(ChangeSummary):
     risk_tags: tuple[str, ...]
     safety_checks: SafetyChecks
     proposal_notice: str
+    scenario_status: Literal["PROPOSED", "FINAL"] = "PROPOSED"
     legal_force_before: Literal["GUIDANCE"] = "GUIDANCE"
-    legal_force_after: Literal["PROPOSED_BINDING"] = "PROPOSED_BINDING"
-    legal_force_note: str
+    legal_force_after: Literal["PROPOSED_BINDING", "GUIDANCE"] = "PROPOSED_BINDING"
+    legal_force_note: str | None
 
 
 class AssessmentView(ScenarioMappingAssessment):
