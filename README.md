@@ -7,7 +7,7 @@ Regulatory Change-to-Control Intelligence · Team RegNexus AI
 ## Submission links
 
 - **Working prototype:** https://regimpact-ai.web.app
-- **2:47 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
+- **2:53 demonstration video:** https://regimpact-ai.web.app/submission/RegImpact_AI_Demo.mp4
 - **Pitch deck (PDF):** https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pdf · [PPTX in the prescribed template](https://regimpact-ai.web.app/submission/RegImpact_AI_Submission.pptx)
 
 ## Two worked examples

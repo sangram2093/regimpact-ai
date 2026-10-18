@@ -1,11 +1,11 @@
 {
   "bucket": "regimpact-ai-builds-61760046387",
-  "prefix": "submission-assets/20261018-video-v3",
+  "prefix": "submission-assets/20261018-video-v4",
   "files": [
     {
       "name": "index.html",
-      "sha256": "3e55ea867784fb0e3369d5ae7ac7b9a005faa0215d3384651a7b06b46aa3a361",
-      "bytes": 3602
+      "sha256": "85080df7ad6b2a0bd2a1b8ecd8a3d7f6e81e1b82419d7daaccead3c847d0438c",
+      "bytes": 3869
     },
     {
       "name": "submission.css",
@@ -14,29 +14,29 @@
     },
     {
       "name": "RegImpact_AI_Submission.pptx",
-      "sha256": "10d53b152efd321eed2e03e8f28830b25b2882048bb8a577fb4c8a2fe3f88c29",
-      "bytes": 1477808
+      "sha256": "adfd1890888155af0ea9acad6c56afebd0cdaba35ce1dc8439779d293084bdbe",
+      "bytes": 1450975
     },
     {
       "name": "RegImpact_AI_Submission.pdf",
-      "sha256": "9e28c620df884f626bf62335b4946a8f61369203b3aff81df6fb875cc94be7d0",
-      "bytes": 604187
+      "sha256": "212a2dfb01aa60a88127ac4e752148af946d06d82d76a56d1bf9b2f13ce88395",
+      "bytes": 617859
     },
     {
       "name": "RegImpact_AI_Demo.mp4",
-      "sha256": "38bee47ba3257a9b51b5fc23e4893a069d3543eaf8bc023cd2d9f37930512f75",
-      "bytes": 8368521
+      "sha256": "27873d84fb7d9f2ac3b0c75982a2c2f63c77f8b292b03fc56e5aa7f5979d57e3",
+      "bytes": 8257656
     },
     {
       "name": "RegImpact_AI_Demo.vtt",
-      "sha256": "05dae89311197cd06bc34fbd095b4ff9b180ecd0d163c90adfde90a01b5b94c5",
-      "bytes": 3669
+      "sha256": "fc3a9f74cf94f71609ddf9503412d815a29354e2ea183276af0765ead025efff",
+      "bytes": 3653
     },
     {
       "name": "prototype.png",
-      "sha256": "15239c11ea8e8036227623dcf756b1ee4d5cb3296d1817a3802efe9054e59db2",
-      "bytes": 406785
+      "sha256": "e30b3313448fbd2a285e19cd21a918c4727552542638d3a0a3ea6ec6caa50b32",
+      "bytes": 392123
     }
   ],
-  "note": "Revised 2:47 demonstration with a live Gemini run, revised deck with searchable PDF; stored privately for reproducible Hosting deployment and hash verification."
+  "note": "Story-led 2:53 demonstration with Google Cloud TTS narration and the MAS TRM reuse scenario; stored privately for reproducible Hosting deployment and hash verification."
 }
