@@ -1,11 +1,11 @@
 {
   "bucket": "regimpact-ai-builds-61760046387",
-  "prefix": "submission-assets/20261018-video-v8",
+  "prefix": "submission-assets/20261018-video-v9",
   "files": [
     {
       "name": "index.html",
-      "sha256": "81b6b9a5867b373a03d4824fa42078bc9ff50a71df3233ed5db77e7d71a5be31",
-      "bytes": 5324
+      "sha256": "ce1456c39f2a99d26555178cec3753be1449f2785857c1a131d46e4172387ab0",
+      "bytes": 5351
     },
     {
       "name": "submission.css",
@@ -14,23 +14,23 @@
     },
     {
       "name": "RegImpact_AI_Submission.pptx",
-      "sha256": "928fb99d6ca124d68e7ebeda1776b332913f32fe886f2c4cb24dd2b8873dae42",
-      "bytes": 1461543
+      "sha256": "99d337460efcfe4e582a68b3c2c69153adbb41d15357bd7ba14a8f42ea48607a",
+      "bytes": 1468365
     },
     {
       "name": "RegImpact_AI_Submission.pdf",
-      "sha256": "9dfafba2cb286ac344c7dee128e74b942b996d9630687e97797a9964682e852d",
-      "bytes": 650115
+      "sha256": "669630c4e220846bab89d2f1b882178e0eff933bd71b75d1ad6104e0947da1bd",
+      "bytes": 667856
     },
     {
       "name": "RegImpact_AI_Demo.mp4",
-      "sha256": "eb5c82487b6b9559cf97742177f38795d67b1255db759e895f7b09650a9ec2b7",
-      "bytes": 8434509
+      "sha256": "6c9e5f3d4292406d8e28be5a8ca2263d29639220e8b4d9fb4f77fc75aa980192",
+      "bytes": 8716467
     },
     {
       "name": "RegImpact_AI_Demo.vtt",
-      "sha256": "353b0acdd7349a52262afc1df3103b5ca198f9808cdd51e2b561bbfe877b6b98",
-      "bytes": 3877
+      "sha256": "6dcf7c8d1dc6e8942339709e4f5f869210f5e29323ccd5ae2716e7287e0a5b5a",
+      "bytes": 3797
     },
     {
       "name": "prototype.png",
@@ -38,5 +38,5 @@
       "bytes": 392123
     }
   ],
-  "note": "2:53 demonstration with the 54.9% hook and Sarah story; deck v9 after judge review (hook, comparison, vision); stored privately for reproducible Hosting deployment and hash verification."
+  "note": "Deck v10 (architecture data flow, knowledge graph, measured unit economics) and video with live screen-recorded clips; stored privately for reproducible Hosting deployment and hash verification."
 }
